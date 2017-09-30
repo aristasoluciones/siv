@@ -41,7 +41,7 @@
 <script src="{$WEB_ROOT}/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
 <script src="{$WEB_ROOT}/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 <script src="{$WEB_ROOT}/assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
-<script src="{$WEB_ROOT}/js/functions.js" type="text/javascript"></script> 
+<script src="{$WEB_ROOT}/js/functions.js?{$time}" type="text/javascript"></script> 
 <!-- {if $page=="login"}
 <script src="{$WEB_ROOT}/assets/pages/scripts/login.min.js" type="text/javascript"></script>   
 {/if} -->

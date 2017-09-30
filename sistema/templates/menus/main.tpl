@@ -183,6 +183,37 @@
 
       </li>
 	{/if}
+	
+	{if in_array(3,$privilegios) or $Usr.role_id eq 1} 
+	 <li class="nav-item {if $page =='pedido' || $page =='detalle-pedido'}active open{/if}">
+        <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-list"></i> 
+        <span class="title">SIV</span>
+		{if $page=='pedido' || $page =='detalle-pedido'}
+		 <span class="selected"></span>
+         <span class="arrow open"></span>
+        {else}
+		   <span class="arrow"></span>
+		{/if}
+        </a>
+        <ul class="sub-menu">
+			<li class="nav-item {if $page=='analisis-cliente'}active open{/if}">
+				<a href="javascript:;" onClick="verSubMenu(1)">
+				Analisis de Clientes
+				<span class="arrow"></span>
+				</a>
+				<ul class="sub-menu" style='display:none' id="mnuPrincipal_1">
+					<li><a href="#">Edad por Colonias</a></li>
+					<li><a href="#">GeoInformacion</a></li>
+					<li><a href="#">Personalizado</a></li>
+				</ul>
+			</li>
+       		
+		</ul>
+
+
+      </li>
+	{/if}
 
 
 </ul>

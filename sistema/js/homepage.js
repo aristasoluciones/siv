@@ -210,3 +210,8 @@ function ShowCalendarIni(){
 function ShowCalendarFin(){
 	$("#fechaFin").datepicker("show");
 }
+
+
+function verSubMenu(id){
+	$("#mnuPrincipal_"+id).toggle();
+}

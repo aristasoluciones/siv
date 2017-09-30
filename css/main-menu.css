@@ -28,8 +28,8 @@
 	.nav-wrap1 #nav a:after, .nav-wrap2.mn4 #nav a:after { content:""; display:none; }
 	.nav-wrap2.mn4 #nav > li > a { padding:7px 20px;}
 	
-	.nav-wrap2.darknavi { background: #96be14; border-top:2px solid #96be14; border-bottom-color: #96be14; height: 35px}
-	.nav-wrap2.darknavi #nav > li > a { color:white; background:#96be14; border-color:#96be14; height: 11px}
+	.nav-wrap2.darknavi { background: #04188c; border-top:2px solid #04188c; border-bottom-color: #04188c; height: 35px}
+	.nav-wrap2.darknavi #nav > li > a { color:white; background:#04188c; border-color:#04188c; height: 11px}
 	.nav-wrap2.darknavi #nav > li > a:hover, .nav-wrap2.darknavi #nav > li:hover > a { background-color:#622181; height: 20px}
 	.nav-wrap2.darknavi #nav ul { border-color:#622181; }
 	
