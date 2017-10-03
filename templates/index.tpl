@@ -108,7 +108,7 @@ content: " ";
 					<h1><b><font style="color:black; font-weight: 900" >Descarga nuestro Catálogo</font></b></h1>
 					<h6><font style="color:black; font-weight: 900" >Con Nosotros encuentra lo que necesitas</font></h6>
 					</div>
-					<a class="button" style="background:#622181; " href="{$WEB_ROOT}/docs/catalogo.pdf" target="_blank">Descargar</a>
+					<a class="button" style="background:; " href="{$WEB_ROOT}/docs/catalogo.pdf" target="_blank">Descargar</a>
 				</div>
 				<div class="pattern-bg">
 				</div>
@@ -135,6 +135,7 @@ content: " ";
 		jQuery(document).ready(function() {    
 		   App.init(); // initlayout and core plugins		   
 		});
-	</script>
+	</script>	
 </body>
+
 </html>

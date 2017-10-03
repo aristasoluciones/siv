@@ -1,9 +1,9 @@
 var urlLoc = document.location.hostname;
 
 if(urlLoc == "localhost")
-	var WEB_ROOT = "http://" + urlLoc + "/fsalinas";
+	var WEB_ROOT = "http://" + urlLoc + "/siv";
 else if(urlLoc == "desarrollot.no-ip.biz" || urlLoc == "192.168.1.200")
-	var WEB_ROOT = "http://" + urlLoc + "/fsalinas";
+	var WEB_ROOT = "http://" + urlLoc + "/siv";
 else
 	var WEB_ROOT = "http://" + urlLoc + "/";
 

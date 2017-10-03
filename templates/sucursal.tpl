@@ -56,7 +56,7 @@
 </article>
 </div>
 <hr class="vertical-space2">
-<!--
+
    <h4 class="subtitle">Icon Box1</h4>
    <hr class="vertical-space1">
    		<div class="one_fourth">

@@ -116,7 +116,7 @@ content: " ";
 					<h6><font style="color:black; font-weight: 900" >Con Nosotros encuentra lo que necesitas</font></h6>
 					</div>
 					<a class="button" style="background:#622181; " href="{$WEB_ROOT}/docs/catalogo.pdf" target="_blank">Descargar</a>
-				</div>
+				</div
 				<div class="pattern-bg">
 				</div>
 			</section>

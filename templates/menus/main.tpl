@@ -1,8 +1,8 @@
-<header id="header" style="background:#622181; ">
+<header id="header" style="background:#99ADAD; ">
 				<div  class="container" >
 				<div class="four columns logo">
 				<br>
-				<a href="index"><img src="{$WEB_ROOT}/images/logo.png" width="" id="img-logo" alt="logo"></a></div>
+				<a href="index"><img src="{$WEB_ROOT}/images/logosiv11.png" width="" id="img-logo" alt="logo"></a></div>
 				<div class="twelve columns top-inf alignright">
 							<hr class="vertical-space">
 							<div>

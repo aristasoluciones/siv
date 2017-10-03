@@ -1,7 +1,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Farmacias Salinas G</title>
+	<title>SISTEMA INTEGRAL DE VENTAS</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 

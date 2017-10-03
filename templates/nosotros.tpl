@@ -20,7 +20,7 @@
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
     <div class="container">
-      <h3><font color="#622181">¿Quienes Somos?</font></h3>	
+      <h3><font color="#622181">¿Quienes Somos1?</font></h3>	
 	 
     </div>
 </section>
