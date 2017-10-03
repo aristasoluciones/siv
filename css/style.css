@@ -8,7 +8,7 @@
 	Version: 2.0.0
 	
 	------------------------------------------------------------------------*/
-	@import url('./main-menu.css'); /* Import Menu Stylesheet */
+	@import url('./main-menu.css?sdf'); /* Import Menu Stylesheet */
 	@import url('./base.css'); /* Import Basic Styles, Typography, Forms etc stylesheet */
 	@import url('./skeleton.css'); /* Import Skeleton (Responsive Grid System) Stylesheet */
 	@import url('./elements.css'); /* Import Elements stylesheet */

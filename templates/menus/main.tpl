@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <header id="header" style="background:#99ADAD; ">
+=======
+<header id="header" style="background:white; ">
+>>>>>>> 0dd75d4433e5c800f7e8ef347bcf23a00dd2453c
 				<div  class="container" >
 				<div class="four columns logo">
 				<br>
@@ -10,13 +14,13 @@
 								<font color="white">Socializa con Nosotros</font>
 								<br>-->
 								<img src="{$WEB_ROOT}/images/cel.png" class="ls-bg" alt="" width="2%">
-								&nbsp;&nbsp;<font color="white">01 (961) 65 69 104</font>
+								&nbsp;&nbsp;<font color="black">01 (961) 65 69 104</font>
 								<br>
 								<img src="{$WEB_ROOT}/images/rep.png" class="ls-bg" alt="" width="2%">
 								&nbsp;
-								<font color="white">Servicio a Domicilio</font>
+								<font color="black">Servicio a Domicilio</font>
 								<br>
-								<font color="white" size='5'>{$countCar} </font><b><font color="white">Articulo(s)</font></b>
+								<font color="black" size='5'>{$countCar} </font><b><font color="white">Articulo(s)</font></b>
 							</div>
 
 
