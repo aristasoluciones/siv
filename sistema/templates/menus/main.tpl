@@ -185,11 +185,11 @@
 	{/if}
 	
 	{if in_array(3,$privilegios) or $Usr.role_id eq 1} 
-	 <li class="nav-item {if $page =='pedido' || $page =='detalle-pedido'}active open{/if}">
+	 <li class="nav-item {if $page =='analisis-cliente' || $page =='birthday'}active open{/if}">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
         <span class="title">SIV</span>
-		{if $page=='pedido' || $page =='detalle-pedido'}
+		{if $page=='analisis-cliente' || $page =='birthday'}
 		 <span class="selected"></span>
          <span class="arrow open"></span>
         {else}
@@ -197,18 +197,31 @@
 		{/if}
         </a>
         <ul class="sub-menu">
-			<li class="nav-item {if $page=='analisis-cliente'}active open{/if}">
+			<li class="nav-item {if $page=='analisis-cliente' || $page=='birthday'}active open{/if}">
 				<a href="javascript:;" onClick="verSubMenu(1)">
 				Analisis de Clientes
 				<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu" style='display:none' id="mnuPrincipal_1">
-					<li><a href="#">Edad por Colonias</a></li>
-					<li><a href="#">GeoInformacion</a></li>
-					<li><a href="#">Personalizado</a></li>
+					<li><a href="{$WEB_ROOT}/birthday">Cumpleaños</a></li>
+					<li><a href="{$WEB_ROOT}/age-ubication">Edad por Colonias</a></li>
+					<li><a href="{$WEB_ROOT}/sex-ubication">Genero por Colonias</a></li>
+					<!--<li><a href="#">GeoInformacion</a></li>-->
+					<li><a href="{$WEB_ROOT}/customer-basic">Personalizado</a></li>
 				</ul>
 			</li>
-       		
+       		<li class="nav-item {if $page=='analisis'}active open{/if}">
+				<a href="javascript:;" onClick="verSubMenu(2)">
+				Analisis de Pedidos
+				<span class="arrow"></span>
+				</a>
+				<ul class="sub-menu" style='display:none' id="mnuPrincipal_2">
+					<li><a href="{$WEB_ROOT}/order-ubication">Pedidos por Colonias</a></li>
+					<!--<li><a href="{$WEB_ROOT}/pep-time">Hora por Colonias</a></li>-->
+					<li><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
+					<li><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>
+				</ul>
+			</li>
 		</ul>
 
 

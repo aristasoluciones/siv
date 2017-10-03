@@ -21,7 +21,26 @@ class Cliente extends Main
 	private $ciudad;
 	private $estado;
 	private $pais;
+	private $sexo;
+	private $inicio;
+	private $fin;
 	
+	public function setSexo($value){	
+	
+			$this->Util()->ValidateString($value);
+			$this->sexo = $value;
+	
+	}
+	
+	public function setInicio($value){
+		// $this->Util()->ValidateInteger($value);
+		$this->inicio = $value;
+	}
+	
+	public function setFin($value){
+		// $this->Util()->ValidateInteger($value);
+		$this->fin = $value;
+	}
 	
 	
 	public function tipoReporte($value){
@@ -159,13 +178,61 @@ class Cliente extends Main
 	
 	public function Enumerate(){
 		
-		$sql = 'SELECT * FROM clientes ORDER BY nombre ASC';
-		$this->Util()->DB()->setQuery($sql);
-		$registros = $this->Util()->DB()->GetResult();
-							
-		return $registros;
+		$filtro =  '';
 		
-	}//EnumerateAll
+		if($this->nombre){
+			$filtro .= ' and nombre like "%'.$this->nombre.'%"';
+		}
+		
+		if($this->sexo){
+			$filtro .= ' and sexo = "'.$this->sexo.'"';
+		}
+		
+		if($this->inicio and $this->fin){
+			$filtro .= ' and fechaNacimiento >= "'.$this->inicio.'" and fechaNacimiento <= "'.$this->fin.'"';
+		}
+		
+		 $sql = 'SELECT 
+					count(*)
+				FROM 
+					clientes
+				where 1 '.$filtro.'
+				ORDER BY nombre DESC';
+		$this->Util()->DB()->setQuery($sql);
+		$total = $this->Util()->DB()->GetSingle();
+		
+		// echo $total;
+		// exit;
+		$resPage = $this->Util->HandlePagesAjax($this->page, $total , '');		
+		$sqlLim = "LIMIT ".$resPage['pages']['start'].", ".$resPage['pages']['items_per_page'];
+		 
+		 $sql = 'SELECT 
+				*
+				FROM clientes 
+				where 1 '.$filtro.'
+				ORDER BY nombre DESC
+				'.$sqlLim;
+				// exit;
+		$this->Util()->DB()->setQuery($sql);
+		$data['result'] = $this->Util()->DB()->GetResult();
+		
+		$data['pages'] = $resPage['pages'];
+		$data['info'] = $resPage['info'];
+					
+		return $data;
+		
+	}//Enumerate		
+	
+	// public function Enumerate(){
+		
+
+		// $sql = 'SELECT * FROM clientes ORDER BY nombre ASC';
+		// $this->Util()->DB()->setQuery($sql);
+		// $registros = $this->Util()->DB()->GetResult();
+							
+		// return $registros;
+		
+	// }//EnumerateAll
 	
 	public function EnumerateAllChat(){
 		
@@ -304,6 +371,148 @@ class Cliente extends Main
 		return true;
 		
 	}//Delete
+	
+	
+	
+	public function birthReport(){
+		
+		$mesActual = date('m');  
+		$fechaInicio = date('Y').'-'.$mesActual.'-01';
+		$fechaFinal = date('Y').'-'.$mesActual.'-31';
+		
+		$mesProximo = $mesActual+1;  
+		$fechaIniciop = date('Y').'-'.$mesProximo.'-01';
+		$fechaFinalp = date('Y').'-'.$mesProximo.'-31';
+
+		$sql = 'SELECT * FROM clientes where fechaNacimiento >= "'.$fechaInicio.'" and fechaNacimiento <= "'.$fechaFinal.'" group  by fechaNacimiento';
+		$this->Util()->DB()->setQuery($sql);
+		$registros = $this->Util()->DB()->GetResult();
+		
+		$sql = 'SELECT * FROM clientes where fechaNacimiento >= "'.$fechaIniciop.'" and fechaNacimiento <= "'.$fechaFinalp.'" group  by fechaNacimiento';
+		$this->Util()->DB()->setQuery($sql);
+		$registrosp = $this->Util()->DB()->GetResult();
+
+		foreach($registros as $key=>$aux){
+			$sql = 'SELECT * FROM clientes where fechaNacimiento = "'.$aux['fechaNacimiento'].'"';
+			$this->Util()->DB()->setQuery($sql);
+			$regi = $this->Util()->DB()->GetResult();
+			$registros[$key]['clientes'] = $regi;
+		}
+		
+		foreach($registrosp as $key=>$aux){
+			$sql = 'SELECT * FROM clientes where fechaNacimiento = "'.$aux['fechaNacimiento'].'"';
+			$this->Util()->DB()->setQuery($sql);
+			$regi = $this->Util()->DB()->GetResult();
+			$registrosp[$key]['clientes'] = $regi;
+		}
+
+
+		$data['actual'] = $registros;
+		$data['proximo'] = $registrosp;
+
+		return $data;
+		
+	}//birthReport
+	
+	
+	public function sexUbicationReport(){
+		
+		$filtro ="";
+		
+
+		 $sql = 'SELECT
+					*,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and sexo = "masculino") as hombres,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and sexo = "femenino") as mujeres,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId ) as total
+				FROM 
+					clientes as c
+				left join colonias as co on co.coloniaId = c.coloniaId
+				WHERE 1 and  c.coloniaId <> 0 group by c.coloniaId';
+
+		$this->Util()->DB()->setQuery($sql);
+		$data = $this->Util()->DB()->GetResult();
+ 
+
+		return $data;
+		
+	}//sexUbicationReport
+	
+	public function ageUbicationReport(){
+		
+		$filtro ="";
+		
+
+		 $sql = 'SELECT
+					*,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento = "0000-00-00") as fuera,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "1999-01-01" and fechaNacimiento >= "1993-01-01") as rango1,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "1992-01-01" and fechaNacimiento >= "1958-01-01") as rango2,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "1957-01-01" and fechaNacimiento <> "0000-00-00") as rango3,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId ) as total
+				FROM 
+					clientes as c
+				left join colonias as co on co.coloniaId = c.coloniaId
+				WHERE 1 and  c.coloniaId <> 0 group by c.coloniaId';
+// exit;
+		$this->Util()->DB()->setQuery($sql);
+		$data = $this->Util()->DB()->GetResult();
+ 
+
+		// echo '<pre>'; print_r($data );
+		// exit;
+		return $data;
+		
+	}//ageUbicationReport
+	
+	
+	public function orderUbicationReport(){
+		
+		$filtro ="";
+		
+
+		 $sql = 'SELECT
+					*,
+					(select count(*) from ventas as v1 left join clientes as c1 on c1.clienteId = v1.clienteId where v1.coloniaId = v.coloniaId and c1.sexo = "masculino") as hombres,
+					(select count(*) from ventas as v1 left join clientes as c1 on c1.clienteId = v1.clienteId where v1.coloniaId = v.coloniaId and c1.sexo = "femenino") as mujeres,
+					(select count(*) from ventas as v1 left join clientes as c1 on c1.clienteId = v1.clienteId where v1.coloniaId = v.coloniaId) as total
+				FROM 
+					ventas as v
+				left join colonias as co on co.coloniaId = v.coloniaId
+				WHERE 1 and  v.coloniaId <> 0 group by v.coloniaId
+				';
+
+		$this->Util()->DB()->setQuery($sql);
+		$data = $this->Util()->DB()->GetResult();
+ 
+
+
+		return $data;
+		
+	}//orderUbicationReport
+	
+	
+	public function ubicacionPedidos(){
+		
+		$filtro ="";
+		
+
+		 $sql = 'SELECT
+					*
+				FROM 
+					ventas as v
+				left join clientes as c on c.clienteId = v.clienteId
+				WHERE 1 
+				';
+
+		$this->Util()->DB()->setQuery($sql);
+		$data = $this->Util()->DB()->GetResult();
+ 
+
+
+		return $data;
+		
+	}//orderUbicationReport
 	
 }
 

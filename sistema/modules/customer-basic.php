@@ -17,6 +17,8 @@
 	$util->PrintErrors2();
 	$clientes = $cliente->Enumerate();
 	
+	// echo '<pre>'; print_r($clientes);
+	// exit;
 	
 
 	if(!empty($clientes))

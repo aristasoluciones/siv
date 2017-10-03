@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:54:50
+<?php /* Smarty version Smarty3-b7, created on 2017-10-02 15:02:15
          compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2572359cfcc5aab5dd6-75458760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3185559d29b477ac885-15849539%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7552597af869075936d756ced38ceacb6144fcea' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/menus/main.tpl',
-      1 => 1506790487,
+      1 => 1506974413,
     ),
   ),
-  'nocache_hash' => '2572359cfcc5aab5dd6-75458760',
+  'nocache_hash' => '3185559d29b477ac885-15849539',
   'function' => 
   array (
   ),
@@ -209,11 +209,11 @@ $_smarty_tpl->decodeProperties(array (
 	<?php }?>
 	
 	<?php if (in_array(3,$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?> 
-	 <li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='pedido'||$_smarty_tpl->getVariable('page')->value=='detalle-pedido'){?>active open<?php }?>">
+	 <li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='analisis-cliente'||$_smarty_tpl->getVariable('page')->value=='birthday'){?>active open<?php }?>">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
         <span class="title">SIV</span>
-		<?php if ($_smarty_tpl->getVariable('page')->value=='pedido'||$_smarty_tpl->getVariable('page')->value=='detalle-pedido'){?>
+		<?php if ($_smarty_tpl->getVariable('page')->value=='analisis-cliente'||$_smarty_tpl->getVariable('page')->value=='birthday'){?>
 		 <span class="selected"></span>
          <span class="arrow open"></span>
         <?php }else{ ?>
@@ -221,18 +221,39 @@ $_smarty_tpl->decodeProperties(array (
 		<?php }?>
         </a>
         <ul class="sub-menu">
-			<li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='analisis-cliente'){?>active open<?php }?>">
+			<li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='analisis-cliente'||$_smarty_tpl->getVariable('page')->value=='birthday'){?>active open<?php }?>">
 				<a href="javascript:;" onClick="verSubMenu(1)">
 				Analisis de Clientes
 				<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu" style='display:none' id="mnuPrincipal_1">
-					<li><a href="#">Edad por Colonias</a></li>
-					<li><a href="#">GeoInformacion</a></li>
-					<li><a href="#">Personalizado</a></li>
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/birthday">Cumpleaños</a></li>
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/age-ubication">Edad por Colonias</a></li>
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/sex-ubication">Genero por Colonias</a></li>
+					<!--<li><a href="#">GeoInformacion</a></li>-->
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/customer-basic">Personalizado</a></li>
 				</ul>
 			</li>
-       		
+       		<li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='analisis'){?>active open<?php }?>">
+				<a href="javascript:;" onClick="verSubMenu(2)">
+				Analisis de Pedidos
+				<span class="arrow"></span>
+				</a>
+				<ul class="sub-menu" style='display:none' id="mnuPrincipal_2">
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/order-ubication">Pedidos por Colonias</a></li>
+					<!--<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/pep-time">Hora por Colonias</a></li>-->
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/geolocation">GeoInformacion</a></li>
+					<li><a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/pep-basic">Personalizado</a></li>
+				</ul>
+			</li>
 		</ul>
 
 

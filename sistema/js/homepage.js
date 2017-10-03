@@ -212,6 +212,4 @@ function ShowCalendarFin(){
 }
 
 
-function verSubMenu(id){
-	$("#mnuPrincipal_"+id).toggle();
-}
+

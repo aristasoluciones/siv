@@ -40,7 +40,13 @@
 		
 		#documentos
 		'doc_crear',
-		'doc_lista'
+		'doc_lista',
+		'birthday',
+		'age-ubication',
+		'sex-ubication',
+		'customer-basic',
+		'order-ubication',
+		'geolocation',
 		
 	);
 	

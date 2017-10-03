@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:04:33
+<?php /* Smarty version Smarty3-b7, created on 2017-10-03 11:17:35
          compiled from "C:/wamp/www/siv/sistema/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2694159cfc091060031-37957048%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:80259d3b81fd36ff2-11587752%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e72229c8c9042a3197b5c69b4ab1dbddb9f88b6a' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/index.tpl',
-      1 => 1506726201,
+      1 => 1507047451,
     ),
   ),
-  'nocache_hash' => '2694159cfc091060031-37957048',
+  'nocache_hash' => '80259d3b81fd36ff2-11587752',
   'function' => 
   array (
   ),
@@ -27,6 +27,7 @@ $_smarty_tpl->decodeProperties(array (
 	<?php $_template = new Smarty_Internal_Template("{$_smarty_tpl->getVariable('DOC_ROOT')->value}/templates/2-default-css.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate();?><?php $_template->updateParentVariables(0);?><?php unset($_template);?>
 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC85iwEXPOlJsw4CKpkGMxmnq4aLz48Eo4&sensor=true"></script>
 </head>
 <body  class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
 <!-- <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-boxed"> --> <!-- agregar container para page boxed-->
