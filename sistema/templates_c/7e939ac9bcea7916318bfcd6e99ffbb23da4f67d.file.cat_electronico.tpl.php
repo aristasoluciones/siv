@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 01:39:37
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 03:52:18
          compiled from "C:/wamp/www/siv/sistema/templates/cat_electronico.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2971159d48229917b48-54787700%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1386659d4a1424dc970-32937869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7e939ac9bcea7916318bfcd6e99ffbb23da4f67d' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/cat_electronico.tpl',
-      1 => 1507066337,
+      1 => 1507107135,
     ),
   ),
-  'nocache_hash' => '2971159d48229917b48-54787700',
+  'nocache_hash' => '1386659d4a1424dc970-32937869',
   'function' => 
   array (
   ),
@@ -32,12 +32,12 @@ $_smarty_tpl->decodeProperties(array (
 				<a href="#">Configuracion</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">Catalogo electronico</a></li>
+			<li><a href="#">Catalogo electrónico</a></li>
 		</ul>
 		</div>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
-		<h1 class="page-title">Catalogo electronico
+		<h1 class="page-title">Catalogo electrónico
 			<small></small>
 		</h1>
 	 <!-- END PAGE TITLE-->

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 16:39:11
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 03:47:48
          compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:245459d4037f186dc5-37572957%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3251159d4a034ca5863-59249329%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7552597af869075936d756ced38ceacb6144fcea' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/menus/main.tpl',
-      1 => 1507066337,
+      1 => 1507106791,
     ),
   ),
-  'nocache_hash' => '245459d4037f186dc5-37572957',
+  'nocache_hash' => '3251159d4a034ca5863-59249329',
   'function' => 
   array (
   ),
@@ -27,7 +27,7 @@ $_smarty_tpl->decodeProperties(array (
     <li class="nav-item start <?php if ($_smarty_tpl->getVariable('page')->value=='homepage'){?>active<?php }?>">
         <a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 " class="nav-link nav-toggle"> 
-        <i class="icon-home"></i> 
+        <i class="fa fa-home"></i> 
         <span class="title">Inicio</span>
         <?php if ($_smarty_tpl->getVariable('page')->value=="homepage"){?>
 		 <span class="selected"></span>
@@ -35,7 +35,7 @@ $_smarty_tpl->decodeProperties(array (
         <?php }?>
         </a>
     </li>
-	<li class="heading">
+	<li class="heading">	
        <h3 class="uppercase">Menu de opciones</h3>
     </li>
     <?php if (in_array("1",$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?> 
