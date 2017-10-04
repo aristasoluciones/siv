@@ -46,7 +46,7 @@
 	/* Shop Sidebar */
 	
 	.side-cart { padding:0 0 10px 0; margin-bottom:30px; position:relative;}
-	.side-cart h4.subtitle { margin-top:0px; color:#622181; margin-bottom:2px; margin-left:0;}
+	.side-cart h4.subtitle { margin-top:0px; color:#FFA500; margin-bottom:2px; margin-left:0;}
 	.side-cart i { float:left; display:in-block; font-size:18px; color:inherit; margin-right:5px; margin-top:4px;}
 	.side-cart .side-list { border-top:3px solid #96be14;  margin-bottom:2px; }
 	.side-cart .total { border-top:2px solid #dfdfdf; padding-top:12px;}

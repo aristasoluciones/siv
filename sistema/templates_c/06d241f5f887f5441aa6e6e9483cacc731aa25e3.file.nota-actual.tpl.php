@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:20:18
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 02:56:46
          compiled from "C:/wamp/www/siv/sistema/templates/forms/nota-actual.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3039459cfc442ec7bc5-58761441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:109459d4943e0f5060-25211043%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06d241f5f887f5441aa6e6e9483cacc731aa25e3' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/forms/nota-actual.tpl',
-      1 => 1506726201,
+      1 => 1507066337,
     ),
   ),
-  'nocache_hash' => '3039459cfc442ec7bc5-58761441',
+  'nocache_hash' => '109459d4943e0f5060-25211043',
   'function' => 
   array (
   ),

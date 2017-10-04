@@ -60,7 +60,7 @@
 	
 	<div id="loader"></div>
 	<div id="txtErrMsg" style="color:red"></div>
-	<button class="button small" style="background:#622181" onclick="DoLogin()">Iniciar Sesión</button> 
+	<button class="button small" style="background:#008080" onclick="DoLogin()">Iniciar Sesión</button> 
 	</div>
 	
 	

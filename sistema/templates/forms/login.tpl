@@ -1,6 +1,6 @@
 <div style="background-color: rgba(255,255,255, 0.3)">
     	<a href="{$WEB_ROOT}" >
-            <img src="{$WEB_ROOT}/images/logo.png" border="0" width="100%"   />
+            <img src="{$WEB_ROOT}/images/SIV-LOGO2.png" border="0" width="100%"   />
         </a>
 	</div>	
 
@@ -35,7 +35,7 @@
     <div class="form-actions" class="content" style="background-color: rgba(255,255,255, 0.0)">
         <label class="checkbox">				
         </label>
-        <button type="button" class="btn green pull-right" onClick="DoLogin()">
+        <button type="button" style="background-color:#0f6971" class="btn green pull-right" onClick="DoLogin()">
         Ingresar <i class="m-icon-swapright m-icon-white"></i>
         </button>            
     </div>

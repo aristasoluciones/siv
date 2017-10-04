@@ -173,7 +173,7 @@
 	.partner-website a:hover { color: #fff; }
 	.partner-website a i { margin: 0 5px; -webkit-transition: all .18s ease; -moz-transition: all .18s ease; -ms-transition: all .18s ease; -o-transition: all .18s ease; transition: all .18s ease; }
 	.partner-website a:hover i { margin-left: 10px; }
-	.footbot { margin: 0 auto; position: relative; background: #222; padding: 26px 0 18px; text-align: right; border-top-right-radius: 2px; border-top-left-radius: 1px; }
+	.footbot { margin: 0 auto; position: relative; background: #99ADAD; padding: 26px 0 18px; text-align: right; border-top-right-radius: 2px; border-top-left-radius: 1px; }
 	#footer.litex .footbot { background:#e9e9e9}
 	#footer.litex .footbot, #footer.litex .footer-in h4, #footer.litex .footer-in hr { border-color: #e0e0e0; color: #5b5b5b; }
 	.footbot img { position: relative; margin: 6px 40px 0 0; opacity: 0.93; }

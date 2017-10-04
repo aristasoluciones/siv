@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 10:59:39
+<?php /* Smarty version Smarty3-b7, created on 2017-10-03 22:49:19
          compiled from "C:/wamp/www/siv/sistema/templates/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2682759cfbf6b2dcd61-05331230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:401959d45a3f92c0c1-97619834%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c70e86c45bffc89ec87a8ce0782e749a5c829ec7' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/login.tpl',
-      1 => 1506726201,
+      1 => 1507088952,
     ),
   ),
-  'nocache_hash' => '2682759cfbf6b2dcd61-05331230',
+  'nocache_hash' => '401959d45a3f92c0c1-97619834',
   'function' => 
   array (
   ),
@@ -38,7 +38,7 @@ $_smarty_tpl->decodeProperties(array (
 </head>
 
 <body class="login"  style="background: url(<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/body1.jpg) !important;  background-repeat: no-repeat;">
+/images/body2.jpg) !important;  background-repeat: no-repeat;">
 	    
 	<div class="logo">
     
