@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty3-b7, created on 2017-10-04 00:52:33
+=======
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:13:50
+>>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
          compiled from "C:/wamp/www/siv/sistema/templates/age-ubication.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3057559d47721368331-08560350%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_smarty_tpl->decodeProperties(array (
     '8474e744e584738f4245ac74687ce8aa11b2b4a1' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/age-ubication.tpl',
+<<<<<<< HEAD
       1 => 1507096350,
+=======
+      1 => 1507066320,
+>>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
     ),
   ),
   'nocache_hash' => '3057559d47721368331-08560350',

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:15:45
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:01:50
          compiled from "C:/wamp/www/siv/sistema/templates/lists/rol.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:606459cfc331f0ca69-89519597%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2024059d53e2e1db7b7-76783452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cacaa869c27a45e67d73b121ee48179bbec8e22c' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/rol.tpl',
-      1 => 1506726201,
+      1 => 1507147306,
     ),
   ),
-  'nocache_hash' => '606459cfc331f0ca69-89519597',
+  'nocache_hash' => '2024059d53e2e1db7b7-76783452',
   'function' => 
   array (
   ),
@@ -42,16 +42,14 @@ if (count($_from) > 0){
              <td><?php echo $_smarty_tpl->getVariable('item')->value['Description'];?>
 </td>     
             <td><div align="center">
-				<a href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['ID'];?>
-)" title="Editar tramite">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['ID'];?>
+)" title="Editar Rol">					
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
-				<a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+				<a class="btn btn-xs red" href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 /config_role/id/<?php echo $_smarty_tpl->getVariable('item')->value['ID'];?>
 " title="Configurar rol" data-toggle="modal" class="btn">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/png-icon/big/glyphicons_136_cogwheel.png">
+					<i class="fa fa-file-code-o" aria-hidden="true"></i>
 				</a>
 				
             </div>

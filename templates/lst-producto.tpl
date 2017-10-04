@@ -13,7 +13,7 @@
 				
 			 <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"><img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt=""></a>
 			<figcaption>
-				<h4><a href="{$WEB_ROOT}/dt/q/{$item.productoId}" style="color:#622181">{$item.nombre}</a> </h4>
+				<h4><a href="{$WEB_ROOT}/dt/q/{$item.productoId}" style="color:#FFA500">{$item.nombre}</a> </h4>
 				<font style="font-size:12px">{$item.sustancia}</font>
 				  <p class="price">
 					{if $item.promocion eq "si"}

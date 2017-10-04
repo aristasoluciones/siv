@@ -27,13 +27,13 @@
                 <img src="{$WEB_ROOT}/images/icons/view.png" border="0">
             </a> -->
             {if in_array('edit_usuario',$privilegios) or $Usr.role_id eq 1} 
-            <a href="javascript:void(0)" onClick="EditReg({$item.usuarioId})" title="Editar">
-                <img src="{$WEB_ROOT}/images/icons/edit.png" border="0">
+            <a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.usuarioId})" title="Editar">                
+				<i class="fa fa-pencil-square-o" ></i> 
             </a>
             {/if}
             {if in_array('delet_usuario',$privilegios) or $Usr.role_id eq 1}
-            <a href="javascript:void(0)" onClick="DeleteReg({$item.usuarioId})" title="Eliminar">
-                <img src="{$WEB_ROOT}/images/icons/delete.gif" border="0">
+            <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg({$item.usuarioId})" title="Eliminar">
+                <i class="fa fa-trash" aria-hidden="true"></i>
             </a>
             {/if}
             </div>

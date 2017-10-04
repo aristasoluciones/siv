@@ -1,16 +1,29 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty3-b7, created on 2017-10-03 23:29:07
          compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:409859d46393531509-52161000%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+=======
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 14:47:19
+         compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:607559d53ac729cb19-97909390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+>>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7552597af869075936d756ced38ceacb6144fcea' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/menus/main.tpl',
+<<<<<<< HEAD
       1 => 1507091343,
     ),
   ),
   'nocache_hash' => '409859d46393531509-52161000',
+=======
+      1 => 1507146429,
+    ),
+  ),
+  'nocache_hash' => '607559d53ac729cb19-97909390',
+>>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
   'function' => 
   array (
   ),
@@ -27,7 +40,7 @@ $_smarty_tpl->decodeProperties(array (
     <li class="nav-item start <?php if ($_smarty_tpl->getVariable('page')->value=='homepage'){?>active<?php }?>">
         <a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 " class="nav-link nav-toggle"> 
-        <i class="icon-home"></i> 
+        <i class="fa fa-home"></i> 
         <span class="title">Inicio</span>
         <?php if ($_smarty_tpl->getVariable('page')->value=="homepage"){?>
 		 <span class="selected"></span>
@@ -35,7 +48,7 @@ $_smarty_tpl->decodeProperties(array (
         <?php }?>
         </a>
     </li>
-	<li class="heading">
+	<li class="heading">	
        <h3 class="uppercase">Menu de opciones</h3>
     </li>
     <?php if (in_array("1",$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?> 
@@ -76,6 +89,15 @@ $_smarty_tpl->decodeProperties(array (
 /usuario">
 						<i class="icon-settings"></i>
 						<span class="title">Usuarios</span>
+					</a>
+				</li>
+			<?php }?>
+			<?php if (in_array('8',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?> 
+				<li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='usuario'){?>active open<?php }?>">
+					<a class="nav-link " href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/colonia">
+						<i class="icon-settings"></i>
+						<span class="title">Colonia</span>
 					</a>
 				</li>
 			<?php }?>

@@ -24,11 +24,11 @@
 			</td>
             <td><div align="center">
                 {if in_array('edit_producto',$privilegios) or $typeUser==1}
-				<a href="javascript:void(0)" onClick="EditReg({$item.imagenId})" title="Editar producto">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs red" href="javascript:void(0)" onClick="EditReg({$item.imagenId})" title="Editar producto">
+					<i class="fa fa-pencil-square-o" ></i>
 				</a> 
                 {/if}
-                				
+               
             </div>
             </td>
         </tr>

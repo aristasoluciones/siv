@@ -1,7 +1,7 @@
 <section class="container" >
-				<hr class="vertical-space3">
+				<!--<hr class="vertical-space3">
 <!-- Latest-from-Blog-start -->
-    	<div class="latest-f-blog clearfix">
+    	<!--<div class="latest-f-blog clearfix">
     		<div class="sixteen columns">
     			<div class="sub-content">
 					<h1 class="h-sub-content">TE RECOMENDAMOS</h1>
@@ -28,10 +28,12 @@
 				{$infoNota.texto}
 				</p>
 	            <a href=""  class="readmore">Ver</a> </div>
-        </article>
-      </div>
+				
+        </article>-->
+		
+      <!--</div>
 	  <!-- latest-f-blog-line-start -->
-	  <div class="seven columns omega">
+	  <!--<div class="seven columns omega">
 	  <h2>Promociones</h2>
 		{foreach from=$lstPromoinde item=item key=key}  
       	<article class="blog-line clearfix">
@@ -43,10 +45,24 @@
 			  <p class="price"><small>$ {$item.precioAnterior}</small><span class="amount">$ {$item.precioActual}</span></p>
         </article>
 		{/foreach}
-
-
       </div>
-    </div>	
+    </div>	-->
+	
+	<section class="latest-works">   	
+<hr class="vertical-space1">
+<div class="icon-top-title aligncenter">
+<i class="li_diamond"></i>
+<hr class="vertical-space1">
+<h1>Producto Estrella</h1>
+<h4>Son aquellos con un alto crecimiento y una alta cuota de mercado. Se caracterizan por ser productos líderes y requerir grandes inversiones para sostener su crecimiento. En el futuro, estos productos serán los denominados “Vacas lecheras”.</h4>
+<br>
+
+</div>
+<hr class="vertical-space2">	
+	<script src="isotope/isotope.js"></script>
+    <script src="isotope/isotope-custom.js"></script>
+    <script src="js/jquery.prettyPhoto.js" ></script>
+</section>
 	
 <hr class="vertical-space3">
 </section>

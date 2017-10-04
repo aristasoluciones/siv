@@ -25,18 +25,18 @@
              </td>
             <td><div align="center">
                 {if in_array('edit_categoria',$privilegios) or $Usr.role_id eq 1}
-				<a href="javascript:void(0)" onClick="EditReg({$item.categoriaId})" title="Editar categoria">
-					<img src="{$WEB_ROOT}/images/icons/pencil-16.png" border="0">
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.categoriaId})" title="Editar categoria">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
                 {/if}
                 {if in_array('add_pcategoria',$privilegios) or $Usr.role_id eq 1}
-                <a href="{$WEB_ROOT}/producto_cat/id/{$item.categoriaId}"  title="Agregar producto">
-                    <img src="{$WEB_ROOT}/images/icons/add-16.png" border="0">
+                <a class="btn btn-xs green" href="{$WEB_ROOT}/producto_cat/id/{$item.categoriaId}"  title="Agregar producto">
+                   <i class="fa fa-plus" aria-hidden="true"></i>
                 </a>
                 {/if}
                  {if in_array('del_categoria',$privilegios) or $Usr.role_id eq 1}
-                <a href="javascript:void(0)" onClick="DeleteReg({$item.categoriaId})" title="Eliminar categoria">
-                    <img src="{$WEB_ROOT}/images/icons/delete.png" border="0">
+                <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg({$item.categoriaId})" title="Eliminar categoria">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                 </a>
                 {/if}
                 				

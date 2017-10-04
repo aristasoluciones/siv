@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty3-b7, created on 2017-10-04 00:32:00
+=======
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:13:45
+>>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
          compiled from "C:/wamp/www/siv/sistema/templates/lists/birthday.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2631259d47250acf857-54129630%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_smarty_tpl->decodeProperties(array (
     'b15544c596496d5fe0211c519c70cc931b92d958' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/birthday.tpl',
+<<<<<<< HEAD
       1 => 1507095118,
+=======
+      1 => 1507066320,
+>>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
     ),
   ),
   'nocache_hash' => '2631259d47250acf857-54129630',

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:20:12
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 01:39:37
          compiled from "C:/wamp/www/siv/sistema/templates/forms/add-catalogo-electronico.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1438059cfc43c945495-51317265%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1142059d48229a58290-47065150%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '053dbd5c774cdb63846f71e02e6a127fa5b39d9d' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/forms/add-catalogo-electronico.tpl',
-      1 => 1506726201,
+      1 => 1507066337,
     ),
   ),
-  'nocache_hash' => '1438059cfc43c945495-51317265',
+  'nocache_hash' => '1142059d48229a58290-47065150',
   'function' => 
   array (
   ),

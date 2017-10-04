@@ -20,7 +20,7 @@
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
     <div class="container">
-      <h3><font color="#622181">¿Quienes Somos1?</font></h3>	
+      <h3><font color="#7F0000">¿Quienes Somos?</font></h3>	
 	 
     </div>
 </section>
@@ -31,19 +31,16 @@
 
 		<section id="main-content">
 		<div class="eleven columns">
-		
+		<font color="#7F0000"></font>
 		<br>
-		<p>Grupo Farmacéutico Salinas del Sureste S.A. de C.V. nace por un grupo de invesrionistas que vieron la necesidad de la población de los diferentes municipios de la
-		república mexicana la dificultad de adquirir los diferentes productos farmacéuticos, dando asi inicio el 23 de diciembre del 2016, a una empresa comprometida con 
-		la sociedad.</p>
+		<p>Somos una empresa dedicada a comercializar un Sistema Integral de Ventas y enfocada principalmente a las micros y medianas empresas; cubriendo la necesidades de nuestros clientes, incorporando nuevas tecnologías de la información en todo momento.</p>
 		<br class="clear">
 		<p>&nbsp;</p>
 		<!-- Question #1 -->
 		<span class="acc-trigger active"><a href="#"><h3>Misión</h3></a></span>
 		<div class="acc-container">
 		<div class="content">
-		<p>Cubrir las necesidades de nuestros clientes brindando la mejor atención personalizada y una excelente oferta de productos para la salud e higiene personal 
-		que contribuyan al bienestar y la economía familiar mediante precios accesibles y horarios convenientes. 
+		<p>Cubrir las necesidades de nuestros clientes brindando la mejor atención personalizada y un excelente servicio contribuyan a la organización de nuestros clientes. 
 		</p>
 		</div>
 		</div>
@@ -52,8 +49,7 @@
 		<span class="acc-trigger"><a href="#"><h3>Visión</h3></a></span>
 		<div class="acc-container">
 		<div class="content">
-		<p>Ser una de las cadenas de farmacias de mayor preferencia y gusto entre los consumidores del sur de México avalado por nuestro surtido, atención y
-		responsabilidad social, y ser reconocido por profesionales, pacientes y entorno social como una organización de excelencia</p>
+		<p>Ser una de las cadenas desarrolladora de software de mayor preferencia entre los consumidores del Estado de Chiapas, siendo reconocido por nuestro trabajo constante y responsable como organización de excelencia.</p>
 		</div>
 		</div>
 	

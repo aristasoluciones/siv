@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:20:28
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:13:33
          compiled from "C:/wamp/www/siv/sistema/templates/lists/pedido.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2877159cfc44c4e87e1-49223991%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2866359d540ede8c646-27489958%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '870870475cb871cbcff63cfa864481477029808b' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/pedido.tpl',
-      1 => 1506726201,
+      1 => 1507148010,
     ),
   ),
-  'nocache_hash' => '2877159cfc44c4e87e1-49223991',
+  'nocache_hash' => '2866359d540ede8c646-27489958',
   'function' => 
   array (
   ),
@@ -54,19 +54,17 @@ if (count($_from) > 0){
                 
                 <?php if (in_array('del_pedido',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
                     <?php if ($_smarty_tpl->getVariable('item')->value['estatus']!='cancelado'){?>
-                    <a href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['ventaId'];?>
+                    <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['ventaId'];?>
 )" title="Cancelar pedido">
-                        <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/delete.png" border="0">
+                      <i class="fa fa-minus-circle" aria-hidden="true"></i>
                     </a>
                     <?php }?>
                 <?php }?>
                 <?php if (in_array('ver_pedido',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-                <a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+                <a class="btn btn-xs green" href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 /detalle-pedido/id/<?php echo $_smarty_tpl->getVariable('item')->value['ventaId'];?>
 "  title="Ver pedido">
-                    <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/view.png" border="0">
+                   <i class="fa fa-external-link" aria-hidden="true"></i>
                 </a>
                 <?php }?>
                 				

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:15:43
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 03:59:30
          compiled from "C:/wamp/www/siv/sistema/templates/empresa.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1335759cfc32f6efa96-81916940%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:425559d4a2f240c165-20681934%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '773e407ca51a09e46abd290dc1e3440b487b5cbb' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/empresa.tpl',
-      1 => 1506726201,
+      1 => 1507107568,
     ),
   ),
-  'nocache_hash' => '1335759cfc32f6efa96-81916940',
+  'nocache_hash' => '425559d4a2f240c165-20681934',
   'function' => 
   array (
   ),

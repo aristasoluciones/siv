@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:20:23
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 16:29:45
          compiled from "C:/wamp/www/siv/sistema/templates/lists/sucursal.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1560459cfc44790c9f2-10401783%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2201259d552c9b14fc3-22929956%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '57f3306592bb8b034f28ef0f9a72d82441ee64f4' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/sucursal.tpl',
-      1 => 1506726201,
+      1 => 1507152406,
     ),
   ),
-  'nocache_hash' => '1560459cfc44790c9f2-10401783',
+  'nocache_hash' => '2201259d552c9b14fc3-22929956',
   'function' => 
   array (
   ),
@@ -58,24 +58,21 @@ if (count($_from) > 0){
 </td>
 			<td><div align="center">
                <?php if (in_array('edit_sucursal',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-				<a href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['sucursalid'];?>
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['sucursalid'];?>
 )" title="Editar sucursal">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/png-icon/big/glyphicons_150_edit.png" border="0">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
                 <?php }?>
 				<?php if (in_array('active_sucursal',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
                     <?php if ($_smarty_tpl->getVariable('item')->value['status']=="Baja"){?>
-                        <a href="javascript:void(0)" onClick="ActiveReg(<?php echo $_smarty_tpl->getVariable('item')->value['sucursalid'];?>
+                        <a class="btn btn-xs green" href="javascript:void(0)" onClick="ActiveReg(<?php echo $_smarty_tpl->getVariable('item')->value['sucursalid'];?>
 )" title="Activar sucursal">
-                            <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/activar.png" border="0">
+                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                         </a>
                     <?php }else{ ?>
-                    <a href="javascript:void(0)" onClick="RemoveReg(<?php echo $_smarty_tpl->getVariable('item')->value['sucursalid'];?>
+                    <a class="btn btn-xs red" href="javascript:void(0)" onClick="RemoveReg(<?php echo $_smarty_tpl->getVariable('item')->value['sucursalid'];?>
 )" title="Desactivar sucursal">
-                        <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/desactivar.png" border="0">
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                     </a>
                     <?php }?>
                 <?php }?>

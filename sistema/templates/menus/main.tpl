@@ -8,7 +8,7 @@
 		</li>   
     <li class="nav-item start {if $page == 'homepage'}active{/if}">
         <a href="{$WEB_ROOT}" class="nav-link nav-toggle"> 
-        <i class="icon-home"></i> 
+        <i class="fa fa-home"></i> 
         <span class="title">Inicio</span>
         {if $page == "homepage"}
 		 <span class="selected"></span>
@@ -16,7 +16,7 @@
         {/if}
         </a>
     </li>
-	<li class="heading">
+	<li class="heading">	
        <h3 class="uppercase">Menu de opciones</h3>
     </li>
     {if in_array("1",$privilegios) or $Usr.role_id eq 1} 
@@ -61,6 +61,14 @@
 					<a class="nav-link " href="{$WEB_ROOT}/usuario">
 						<i class="icon-settings"></i>
 						<span class="title">Usuarios</span>
+					</a>
+				</li>
+			{/if}
+			{if in_array('8',$privilegios) or $Usr.role_id eq 1} 
+				<li class="nav-item {if $page=='usuario'}active open{/if}">
+					<a class="nav-link " href="{$WEB_ROOT}/colonia">
+						<i class="icon-settings"></i>
+						<span class="title">Colonia</span>
 					</a>
 				</li>
 			{/if}

@@ -88,7 +88,7 @@
 	
 	<div id="loader"></div>
 	<div id="txtErrMsg" style="color:red"></div>
-	<button class="button small" style="background:#622181" onclick="SaveCuenta()">Crear Cuenta</button> 
+	<button class="button small" style="background:#008080" onclick="SaveCuenta()">Crear Cuenta</button> 
 	</div>
 	
 	

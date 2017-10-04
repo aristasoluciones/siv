@@ -147,6 +147,12 @@ class Config extends Main
 		$single = $this->Util()->DB()->GetSingle();		
 		return $single;
 	}
+	public function EnumerateColonia(){
+		$sql = 'SELECT * FROM colonias WHERE 1';
+		$this->Util()->DB()->setQuery($sql);
+		$info = $this->Util()->DB()->GetResult();
+		return $info;
+	}
 	public function ComprobarCat(){
 						
 		if($this->Util()->PrintErrors()){ 

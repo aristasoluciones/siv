@@ -14,11 +14,11 @@
             <td>{$item.Title}</td>
              <td>{$item.Description}</td>     
             <td><div align="center">
-				<a href="javascript:void(0)" onClick="EditReg({$item.ID})" title="Editar tramite">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.ID})" title="Editar Rol">					
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
-				<a href="{$WEB_ROOT}/config_role/id/{$item.ID}" title="Configurar rol" data-toggle="modal" class="btn">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_136_cogwheel.png">
+				<a class="btn btn-xs red" href="{$WEB_ROOT}/config_role/id/{$item.ID}" title="Configurar rol" data-toggle="modal" class="btn">
+					<i class="fa fa-file-code-o" aria-hidden="true"></i>
 				</a>
 				
             </div>

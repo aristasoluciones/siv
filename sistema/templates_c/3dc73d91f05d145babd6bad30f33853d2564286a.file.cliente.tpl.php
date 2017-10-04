@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:05:02
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:40:17
          compiled from "C:/wamp/www/siv/sistema/templates/lists/cliente.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2579259cfc0ae59f1e6-32482711%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:923059d54731dcba66-15826745%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3dc73d91f05d145babd6bad30f33853d2564286a' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/cliente.tpl',
-      1 => 1506726201,
+      1 => 1507149615,
     ),
   ),
-  'nocache_hash' => '2579259cfc0ae59f1e6-32482711',
+  'nocache_hash' => '923059d54731dcba66-15826745',
   'function' => 
   array (
   ),
@@ -55,24 +55,21 @@ if (count($_from) > 0){
 </td>
 			<td><div align="center">
                <?php if (in_array('edit_cliente',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-				<a href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
 )" title="Editar cliente">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/png-icon/big/glyphicons_150_edit.png" border="0">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
                 <?php }?>
 				<?php if (in_array('active_cliente',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
                     <?php if ($_smarty_tpl->getVariable('item')->value['activo']=="no"){?>
-                        <a href="javascript:void(0)" onClick="ActiveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
+                        <a class="btn btn-xs green" href="javascript:void(0)" onClick="ActiveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
 )" title="Activar cliente">
-                            <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/activar.png" border="0">
+                            <i class="fa fa-upload" aria-hidden="true"></i>
                         </a>
                     <?php }else{ ?>
-                    <a href="javascript:void(0)" onClick="RemoveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
+                    <a class="btn btn-xs red" href="javascript:void(0)" onClick="RemoveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
 )" title="Dar de baja cliente">
-                        <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/desactivar.png" border="0">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                     <?php }?>
                 <?php }?>

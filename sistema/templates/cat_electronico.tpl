@@ -14,12 +14,12 @@
 				<a href="#">Configuracion</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">Catalogo electronico</a></li>
+			<li><a href="#">Catalogo electrónico</a></li>
 		</ul>
 		</div>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
-		<h1 class="page-title">Catalogo electronico
+		<h1 class="page-title">Catalogo electrónico
 			<small></small>
 		</h1>
 	 <!-- END PAGE TITLE-->

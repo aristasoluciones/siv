@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 10:59:39
+<?php /* Smarty version Smarty3-b7, created on 2017-10-03 23:28:25
          compiled from "C:/wamp/www/siv/sistema/templates/forms/login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2135059cfbf6b82c4a9-16370014%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1354559d4636987e402-66199124%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b2d9058ba7818dbfd4d7f759f002520e5f4d4e6c' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/forms/login.tpl',
-      1 => 1506726201,
+      1 => 1507091303,
     ),
   ),
-  'nocache_hash' => '2135059cfbf6b82c4a9-16370014',
+  'nocache_hash' => '1354559d4636987e402-66199124',
   'function' => 
   array (
   ),
@@ -20,7 +20,7 @@ $_smarty_tpl->decodeProperties(array (
     	<a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 " >
             <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/logo.png" border="0" width="100%"   />
+/images/SIV-LOGO2.png" border="0" width="100%"   />
         </a>
 	</div>	
 
@@ -55,7 +55,7 @@ $_smarty_tpl->decodeProperties(array (
     <div class="form-actions" class="content" style="background-color: rgba(255,255,255, 0.0)">
         <label class="checkbox">				
         </label>
-        <button type="button" class="btn green pull-right" onClick="DoLogin()">
+        <button type="button" style="background-color:#0f6971" class="btn green pull-right" onClick="DoLogin()">
         Ingresar <i class="m-icon-swapright m-icon-white"></i>
         </button>            
     </div>

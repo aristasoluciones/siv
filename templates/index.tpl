@@ -101,14 +101,14 @@ content: " ";
 		{include file="{$DOC_ROOT}/templates/menus/main.tpl"}	
 	</div>			
 			{include file="{$DOC_ROOT}/templates/slider.tpl"}
-			<section class="blox dark blackbox promoblox" style="background: url({$WEB_ROOT}/images/ari/{$img1}?{$time}) no-repeat center center; border-top: 3px solid #622181; border-bottom: 2px solid #622181">
+			<section class="blox dark blackbox promoblox" style="background: url({$WEB_ROOT}/images/ari/{$img1}?{$time}) no-repeat center center; border-top: 3px solid #7F0000; border-bottom: 2px solid #7F0000">
 				<!--rgba(98, 33, 129, 0.7); width:100%; height:100%;--->
 				<div class="container" style="background-color: ">
 					<div class="twelve columns"> 
-					<h1><b><font style="color:black; font-weight: 900" >Descarga nuestro Catálogo</font></b></h1>
+					<h1><b><font style="color:black; font-weight: 900" >Bienvenidos.. !!</font></b></h1>
 					<h6><font style="color:black; font-weight: 900" >Con Nosotros encuentra lo que necesitas</font></h6>
 					</div>
-					<a class="button" style="background:; " href="{$WEB_ROOT}/docs/catalogo.pdf" target="_blank">Descargar</a>
+					<a class="button" style="background:; " href="{$WEB_ROOT}/docs/online.pdf" target="_blank">obten beneficios SIEMPRE  en tu tienda en línea</a>
 				</div>
 				<div class="pattern-bg">
 				</div>

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:19:56
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:04:42
          compiled from "C:/wamp/www/siv/sistema/templates/lists/usuario.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:684359cfc42c819c98-69039643%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2743459d53edade7267-12473839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f8401fa7938ed52000da020497b7d679d340b2f0' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/usuario.tpl',
-      1 => 1506726201,
+      1 => 1507147479,
     ),
   ),
-  'nocache_hash' => '684359cfc42c819c98-69039643',
+  'nocache_hash' => '2743459d53edade7267-12473839',
   'function' => 
   array (
   ),
@@ -60,17 +60,15 @@ if (count($_from) > 0){
 /images/icons/view.png" border="0">
             </a> -->
             <?php if (in_array('edit_usuario',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?> 
-            <a href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
-)" title="Editar">
-                <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/edit.png" border="0">
+            <a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
+)" title="Editar">                
+				<i class="fa fa-pencil-square-o" ></i> 
             </a>
             <?php }?>
             <?php if (in_array('delet_usuario',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-            <a href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
+            <a class="btn btn-xs red"href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
 )" title="Eliminar">
-                <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/delete.gif" border="0">
+                <i class="fa fa-trash" aria-hidden="true"></i>
             </a>
             <?php }?>
             </div>

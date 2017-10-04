@@ -21,6 +21,7 @@
 		'cat_electronico',
 		'empresa',
 		'nota',
+		'colonia',
 		
 		
 		#catalogos

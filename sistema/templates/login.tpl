@@ -15,7 +15,7 @@
     
 </head>
 
-<body class="login"  style="background: url({$WEB_ROOT}/images/body1.jpg) !important;  background-repeat: no-repeat;">
+<body class="login"  style="background: url({$WEB_ROOT}/images/body2.jpg) !important;  background-repeat: no-repeat;">
 	    
 	<div class="logo">
     

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:20:20
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 01:39:40
          compiled from "C:/wamp/www/siv/sistema/templates/producto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2698759cfc444b915d1-45728602%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3182359d4822c79a195-71973402%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd317a7d87699043486c4c2f9109f74a0de423c91' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/producto.tpl',
-      1 => 1506726202,
+      1 => 1507066337,
     ),
   ),
-  'nocache_hash' => '2698759cfc444b915d1-45728602',
+  'nocache_hash' => '3182359d4822c79a195-71973402',
   'function' => 
   array (
   ),

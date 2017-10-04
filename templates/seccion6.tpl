@@ -10,7 +10,7 @@
       <hr>
       <div class="aligncenter">
 	  <hr class="vertical-space1">
-        <h1 class="mex-title">¿Quiénes Somos?</h1>		
+        <h1 class="mex-title">SISTEMA INTEGRAL DE VENTAS</h1>
       </div>
       <div id="left-tab">
         <div class="tabbable tabs-left">
@@ -18,7 +18,7 @@
             <li class="active"><a href="#lA" data-toggle="tab">CAPTACIÓN DE CLIENTES</a></li>
             <li><a href="#lB" data-toggle="tab">REPORTES</a></li>
             <li><a href="#lC" data-toggle="tab">PROMOCIONES</a></li>
-            <li><a href="#lA" data-toggle="tab">BASE DE DATOS CENTRALIZADA</a></li>
+            <li><a href="#lx" data-toggle="tab">BASE DE DATOS CENTRALIZADA</a></li>
            
           </ul>
 		  <!-- /end-Left tab Titles -->
@@ -42,22 +42,29 @@
                   </ul>
                 </div>
               </div>
-              <div class="one_third column-last"><img src="images/biz-pic1.jpg" alt=""></div>
+              <div class="one_third column-last"><img src="images/nosotros/marketingonline.png" alt=""></div>
             </article>
             <article class="tab-pane" id="lB">
               <div class="two_third"> <br>
                 <h5><strong>REPORTES</strong></h5>
-                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.<br>
-                  Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                <p>el sistema integral de ventas permite poder almacenar información histórica, la cual nos permite obtener resultados, para la toma de decisiones, generando reportes estadísticos y gráficos. <br>
+                  </p>
               </div>
-              <div class="one_third column-last"><img src="images/biz-pic2.jpg" alt=""></div>
+              <div class="one_third column-last"><img src="images/nosotros/reportes.png" alt=""></div>
             </article>
             <article class="tab-pane" id="lC">
               <div class="two_third"> <br>
                 <h5><strong>PROMOCIONES</strong></h5>
-                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                <p>Aprovecha las promociones especiales de nuestros productos, por otro lado asiste a eventos exclusivos y obtén grandes descuentos.</p>
               </div>
-              <div class="one_third column-last"><img src="images/biz-pic3.jpg" alt=""></div>
+              <div class="one_third column-last"><img src="images/nosotros/promo1.png" alt=""></div>
+            </article>
+			<article class="tab-pane" id="lx">
+              <div class="two_third"> <br>
+                <h5><strong>BASE DE DATOS CENTRALIZADA</strong></h5>
+                <p>son aquellas que se ejecutan en un único sistema informático sin interaccionar con ninguna otra computadora. Tales sistemas comprenden el rango desde los sistemas de bases de datos monousuario ejecutandose en computadoras personales hasta los sistemas de bases de datos de alto rendimiento ejecutándose en grandes sistemas.</p>
+              </div>
+              <div class="one_third column-last"><img src="images/nosotros/Actividad_No.1.png" alt=""></div>
             </article>
 			
           </div>
