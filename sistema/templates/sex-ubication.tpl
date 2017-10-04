@@ -11,7 +11,7 @@
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">SIV</a>
 				<i class="fa fa-circle"></i>
 			</li>
 			<li><a href="#">Genero Por Colonias</a></li>
@@ -39,7 +39,7 @@
 						Agregar <i class="fa fa-plus"></i>
 					</a>
 					</div> -->
-					<div class="btn-group" >
+					<!--<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
                        <span class="hidden-xs">Acciones</span>
@@ -67,7 +67,7 @@
 								<i class="icon-cloud-upload"></i> Exportar CSV</a>
 						</li>
 					 </ul>
-					</div>	
+					</div>	-->
 				</div>
 			</div>
 			

@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 17:02:03
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 00:43:17
          compiled from "C:/wamp/www/siv/sistema/templates/lists/age-ubication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3194259d0145bbdf639-57562031%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1083059d474f5c74d12-58465989%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '66f970b50aa8656e5cd8938848048ffa74e4f3c0' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/age-ubication.tpl',
-      1 => 1506808921,
+      1 => 1507095795,
     ),
   ),
-  'nocache_hash' => '3194259d0145bbdf639-57562031',
+  'nocache_hash' => '1083059d474f5c74d12-58465989',
   'function' => 
   array (
   ),
@@ -25,6 +25,7 @@ $_smarty_tpl->decodeProperties(array (
         <tr>
             <th>#</th>
             <th>Colonia </th>
+            <th>Fuera de Rango  </th>
             <th>18 - 24  </th>
             <th>25 - 59 </th>
             <th>60 - adelante </th>
@@ -43,6 +44,8 @@ if (count($_from) > 0){
             <td><?php echo $_smarty_tpl->getVariable('key')->value+1;?>
 </td>
             <td><?php echo $_smarty_tpl->getVariable('item')->value['nombreColonia'];?>
+</td>
+            <td><?php echo $_smarty_tpl->getVariable('item')->value['fuera'];?>
 </td>
             <td><?php echo $_smarty_tpl->getVariable('item')->value['rango1'];?>
 </td>

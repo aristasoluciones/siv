@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-02 11:08:24
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 00:53:02
          compiled from "C:/wamp/www/siv/sistema/templates/sex-ubication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3044159d264780f7f65-38669646%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2367659d4773e065cb9-74888947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '13d3e6e2bbeb1ceb420c25ed84d03012d36814d8' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/sex-ubication.tpl',
-      1 => 1506959669,
+      1 => 1507096379,
     ),
   ),
-  'nocache_hash' => '3044159d264780f7f65-38669646',
+  'nocache_hash' => '2367659d4773e065cb9-74888947',
   'function' => 
   array (
   ),
@@ -29,7 +29,7 @@ $_smarty_tpl->decodeProperties(array (
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">SIV</a>
 				<i class="fa fa-circle"></i>
 			</li>
 			<li><a href="#">Genero Por Colonias</a></li>
@@ -57,7 +57,7 @@ $_smarty_tpl->decodeProperties(array (
 						Agregar <i class="fa fa-plus"></i>
 					</a>
 					</div> -->
-					<div class="btn-group" >
+					<!--<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
                        <span class="hidden-xs">Acciones</span>
@@ -85,7 +85,7 @@ $_smarty_tpl->decodeProperties(array (
 								<i class="icon-cloud-upload"></i> Exportar CSV</a>
 						</li>
 					 </ul>
-					</div>	
+					</div>	-->
 				</div>
 			</div>
 			

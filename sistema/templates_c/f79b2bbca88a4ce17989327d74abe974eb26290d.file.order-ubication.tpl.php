@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-02 13:17:24
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 00:56:30
          compiled from "C:/wamp/www/siv/sistema/templates/order-ubication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:452259d282b4915259-91053034%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1450359d4780e5208b6-70572083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f79b2bbca88a4ce17989327d74abe974eb26290d' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/order-ubication.tpl',
-      1 => 1506968237,
+      1 => 1507096588,
     ),
   ),
-  'nocache_hash' => '452259d282b4915259-91053034',
+  'nocache_hash' => '1450359d4780e5208b6-70572083',
   'function' => 
   array (
   ),
@@ -57,7 +57,7 @@ $_smarty_tpl->decodeProperties(array (
 						Agregar <i class="fa fa-plus"></i>
 					</a>
 					</div> -->
-					<div class="btn-group" >
+					<!--<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
                        <span class="hidden-xs">Acciones</span>
@@ -85,7 +85,7 @@ $_smarty_tpl->decodeProperties(array (
 								<i class="icon-cloud-upload"></i> Exportar CSV</a>
 						</li>
 					 </ul>
-					</div>	
+					</div>-->	
 				</div>
 			</div>
 			<div class="portlet-body" id="tblContent">

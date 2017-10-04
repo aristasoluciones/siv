@@ -11,15 +11,15 @@
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">SIV</a>
+				<a href="#">Catalogos</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">Clientes</a></li>
+			<li><a href="#">SmartTest</a></li>
 		</ul>
 		</div>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
-		<h1 class="page-title">Clientes
+		<h1 class="page-title">SmartTest
 			<small></small>
 		</h1>
 	 <!-- END PAGE TITLE-->
@@ -31,15 +31,15 @@
 			<div class="portlet-title">
 				<div class="caption">
 				   <i class="icon-settings font-green"></i>
-				   <span class="caption-subject font-green sbold">Lista de clientes</span>
+				   <span class="caption-subject font-green sbold">SmartTest</span>
 				 </div>  
 				<div class="actions">
-				    <!-- <div class="btn-group btn-group-devided" data-toggle="buttons"> 
-					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
+				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
+					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg({$encuestaId})">
 						Agregar <i class="fa fa-plus"></i>
 					</a>
-					</div> -->
-					<!--<div class="btn-group" >
+					</div>
+					<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
                        <span class="hidden-xs">Acciones</span>
@@ -67,32 +67,11 @@
 								<i class="icon-cloud-upload"></i> Exportar CSV</a>
 						</li>
 					 </ul>
-					</div>	-->
+					</div>	
 				</div>
 			</div>
-			<form id="frmFiltro">
-				<input type="hidden" name="type" value="buscarCliente">
-				<div style="float:left">
-				Nombre<input type="text" name="nombre" class="form-control" style="width:200px">
-				</div>
-				<div style="float:left">
-				Sexo<select class="form-control" name="sexo"  class="form-control" style="width:200px">
-					<option></option>
-					<option>masculino</option>
-					<option>femenino</option>
-				</select>
-				</div>
-				<div style="float:left">
-				Rango de fecha de nacimiento<br>
-				<input type="text" name="inicio" id="fecha_1" class="form-control" style="width:100px; float:left" onClick="fechaPick(1)" >
-				<input type="text" name="fin"   id="fecha_2" class="form-control" style="width:100px; float:left" onClick="fechaPick(2)">
-				</div>
-				<br>
-				
-			</form>
-			<button class="btn green" onclick="buscarCliente()">Buscar</button>
 			<div class="portlet-body" id="tblContent">
-			 {include file="{$DOC_ROOT}/templates/lists/{$page}.tpl"}
+			 {include file="{$DOC_ROOT}/templates/lists/question.tpl"}
 			</div>
 		</div>
 	</div>

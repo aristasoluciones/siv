@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 14:20:53
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 00:32:00
          compiled from "C:/wamp/www/siv/sistema/templates/lists/birthday.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2228459cfee95bc7543-72705593%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2631259d47250acf857-54129630%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b15544c596496d5fe0211c519c70cc931b92d958' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/birthday.tpl',
-      1 => 1506799251,
+      1 => 1507095118,
     ),
   ),
-  'nocache_hash' => '2228459cfee95bc7543-72705593',
+  'nocache_hash' => '2631259d47250acf857-54129630',
   'function' => 
   array (
   ),
@@ -31,7 +31,7 @@ if (count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['item']->key;
 ?> 
-	<b><?php echo $_smarty_tpl->getVariable('item')->value['fechaNacimiento'];?>
+	<b><?php echo $_smarty_tpl->getVariable('item')->value['day'];?>
 </b><br>
 	
 <table class="table table-striped table-bordered table-hover" 0>
@@ -100,7 +100,7 @@ if (count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars['item']->value){
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['item']->key;
 ?> 
-<b><?php echo $_smarty_tpl->getVariable('item')->value['fechaNacimiento'];?>
+<b><?php echo $_smarty_tpl->getVariable('item')->value['day'];?>
 </b><br>	
 <table class="table table-striped table-bordered table-hover" 0>
     <thead>

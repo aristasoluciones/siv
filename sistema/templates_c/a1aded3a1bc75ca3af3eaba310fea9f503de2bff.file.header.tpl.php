@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-09-30 11:04:33
+<?php /* Smarty version Smarty3-b7, created on 2017-10-03 20:09:45
          compiled from "C:/wamp/www/siv/sistema/templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:542659cfc0912d10c6-81743049%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:945659d434d9a0ef34-43819200%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a1aded3a1bc75ca3af3eaba310fea9f503de2bff' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/header.tpl',
-      1 => 1506726201,
+      1 => 1507079382,
     ),
   ),
-  'nocache_hash' => '542659cfc0912d10c6-81743049',
+  'nocache_hash' => '945659d434d9a0ef34-43819200',
   'function' => 
   array (
   ),
@@ -24,7 +24,7 @@ $_smarty_tpl->decodeProperties(array (
 		  <a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 ">
 			<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/logo.png" alt="logo" class="logo-default" width="90"  height="30px"/> 
+/images/logo.png?dd" alt="logo" class="logo-default" width="90"  height="30px"/> 
 		  </a>
 		  <div class="menu-toggler sidebar-toggler">
 				<span></span>

@@ -179,13 +179,17 @@
 			</li>
 			{/if}
 		</ul>
-
-
       </li>
 	{/if}
 	
 	{if in_array(3,$privilegios) or $Usr.role_id eq 1} 
-	 <li class="nav-item {if $page =='analisis-cliente' || $page =='birthday'}active open{/if}">
+	 <li class="nav-item {if $page =='analisis-cliente' || $page =='birthday' 
+		|| $page=='age-ubication' 
+		|| $page=='sex-ubication' 
+		|| $page=='order-ubication'
+		|| $page=='geolocation'
+		|| $page=='pep-basic'
+		|| $page=='customer-basic'}active open{/if}">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
         <span class="title">SIV</span>
@@ -197,29 +201,33 @@
 		{/if}
         </a>
         <ul class="sub-menu">
-			<li class="nav-item {if $page=='analisis-cliente' || $page=='birthday'}active open{/if}">
+			<li class="nav-item {if $page=='analisis-cliente' 
+			|| $page=='birthday' 
+			|| $page=='age-ubication' 
+			|| $page=='sex-ubication'
+			|| $page=='customer-basic'} active open {/if}">
 				<a href="javascript:;" onClick="verSubMenu(1)">
 				Analisis de Clientes
 				<span class="arrow"></span>
 				</a>
-				<ul class="sub-menu" style='display:none' id="mnuPrincipal_1">
-					<li><a href="{$WEB_ROOT}/birthday">Cumpleaños</a></li>
-					<li><a href="{$WEB_ROOT}/age-ubication">Edad por Colonias</a></li>
-					<li><a href="{$WEB_ROOT}/sex-ubication">Genero por Colonias</a></li>
+				<ul class="sub-menu" style='display:none' id="mnuPrincipal_1"  >
+					<li  class="nav-item {if $page =='birthday'}active open{/if}"><a href="{$WEB_ROOT}/birthday">Cumpleaños</a></li>
+					<li  class="nav-item {if $page =='age-ubication'}active open{/if}"><a href="{$WEB_ROOT}/age-ubication">Edad por Colonias</a></li>
+					<li class="nav-item {if $page =='sex-ubication'}active open{/if}"><a href="{$WEB_ROOT}/sex-ubication">Genero por Colonias</a></li>
 					<!--<li><a href="#">GeoInformacion</a></li>-->
-					<li><a href="{$WEB_ROOT}/customer-basic">Personalizado</a></li>
+					<li class="nav-item {if $page =='customer-basic'}active open{/if}"><a href="{$WEB_ROOT}/customer-basic">Personalizado</a></li>
 				</ul>
 			</li>
-       		<li class="nav-item {if $page=='analisis'}active open{/if}">
+       		<li class="nav-item {if $page=='order-ubication' || $page=='order-ubication' || $page=='geolocation' || $page=='pep-basic'}active open{/if}">
 				<a href="javascript:;" onClick="verSubMenu(2)">
 				Analisis de Pedidos
 				<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu" style='display:none' id="mnuPrincipal_2">
-					<li><a href="{$WEB_ROOT}/order-ubication">Pedidos por Colonias</a></li>
+					<li class="nav-item {if $page =='order-ubication'}active open{/if}" ><a href="{$WEB_ROOT}/order-ubication">Pedidos por Colonias</a></li>
 					<!--<li><a href="{$WEB_ROOT}/pep-time">Hora por Colonias</a></li>-->
-					<li><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
-					<li><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>
+					<li class="nav-item {if $page =='geolocation'}active open{/if}" ><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
+					<li class="nav-item {if $page =='pep-basic'}active open{/if}"><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -227,6 +235,30 @@
 
       </li>
 	{/if}
+	
+	 <li class="nav-item {if $page =='poll'}active open{/if}">
+        <a href="javascript:;" class="nav-link nav-toggle">
+        <i class="icon-list"></i> 
+        <span class="title">SmartTest</span>
+		{if $page=='pedido' || $page =='detalle-pedido'}
+		 <span class="selected"></span>
+         <span class="arrow open"></span>
+        {else}
+		   <span class="arrow"></span>
+		{/if}
+        </a>
+        <ul class="sub-menu">
+       		{if in_array('13',$privilegios) or $Usr.role_id eq 1} 
+
+        	<li class="nav-item {if $page=='poll'}active open{/if}">
+				<a class="nav-link " href="{$WEB_ROOT}/poll">
+					<i class="icon-list"></i>
+					<span class="title">Encuesta</span>
+				</a>
+			</li>
+			{/if}
+		</ul>
+      </li>
 
 
 </ul>
