@@ -64,6 +64,14 @@
 					</a>
 				</li>
 			{/if}
+			{if in_array('8',$privilegios) or $Usr.role_id eq 1} 
+				<li class="nav-item {if $page=='usuario'}active open{/if}">
+					<a class="nav-link " href="{$WEB_ROOT}/colonia">
+						<i class="icon-settings"></i>
+						<span class="title">Colonia</span>
+					</a>
+				</li>
+			{/if}
         </ul>
 	</li>  
 	{/if}

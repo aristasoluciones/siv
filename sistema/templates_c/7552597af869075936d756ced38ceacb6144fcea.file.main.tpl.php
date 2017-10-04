@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 03:47:48
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 04:05:19
          compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3251159d4a034ca5863-59249329%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:595159d4a44f2f6339-96229956%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7552597af869075936d756ced38ceacb6144fcea' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/menus/main.tpl',
-      1 => 1507106791,
+      1 => 1507107916,
     ),
   ),
-  'nocache_hash' => '3251159d4a034ca5863-59249329',
+  'nocache_hash' => '595159d4a44f2f6339-96229956',
   'function' => 
   array (
   ),
@@ -76,6 +76,15 @@ $_smarty_tpl->decodeProperties(array (
 /usuario">
 						<i class="icon-settings"></i>
 						<span class="title">Usuarios</span>
+					</a>
+				</li>
+			<?php }?>
+			<?php if (in_array('8',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?> 
+				<li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='usuario'){?>active open<?php }?>">
+					<a class="nav-link " href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/colonia">
+						<i class="icon-settings"></i>
+						<span class="title">Colonia</span>
 					</a>
 				</li>
 			<?php }?>
