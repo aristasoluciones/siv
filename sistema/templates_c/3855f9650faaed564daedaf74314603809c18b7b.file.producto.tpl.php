@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 01:39:40
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 16:20:22
          compiled from "C:/wamp/www/siv/sistema/templates/lists/producto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1225259d4822c927b01-39952009%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2021559d550961fb045-48122279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3855f9650faaed564daedaf74314603809c18b7b' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/producto.tpl',
-      1 => 1507066337,
+      1 => 1507152018,
     ),
   ),
-  'nocache_hash' => '1225259d4822c927b01-39952009',
+  'nocache_hash' => '2021559d550961fb045-48122279',
   'function' => 
   array (
   ),
@@ -61,25 +61,22 @@ if (count($_from) > 0){
              </td>
             <td><div align="center">
                 <?php if (in_array('edit_categoria',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-				<a href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['categoriaId'];?>
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['categoriaId'];?>
 )" title="Editar categoria">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/pencil-16.png" border="0">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
                 <?php }?>
                 <?php if (in_array('add_pcategoria',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-                <a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+                <a class="btn btn-xs green" href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 /producto_cat/id/<?php echo $_smarty_tpl->getVariable('item')->value['categoriaId'];?>
 "  title="Agregar producto">
-                    <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/add-16.png" border="0">
+                   <i class="fa fa-plus" aria-hidden="true"></i>
                 </a>
                 <?php }?>
                  <?php if (in_array('del_categoria',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-                <a href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['categoriaId'];?>
+                <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['categoriaId'];?>
 )" title="Eliminar categoria">
-                    <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/delete.png" border="0">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                 </a>
                 <?php }?>
                 				

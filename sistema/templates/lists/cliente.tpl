@@ -23,18 +23,18 @@
             <td>{$item.activo}</td>
 			<td><div align="center">
                {if in_array('edit_cliente',$privilegios) or $Usr.role_id eq 1}
-				<a href="javascript:void(0)" onClick="EditReg({$item.clienteId})" title="Editar cliente">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.clienteId})" title="Editar cliente">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
                 {/if}
 				{if in_array('active_cliente',$privilegios) or $Usr.role_id eq 1}
                     {if $item.activo=="no"}
-                        <a href="javascript:void(0)" onClick="ActiveReg({$item.clienteId})" title="Activar cliente">
-                            <img src="{$WEB_ROOT}/images/icons/activar.png" border="0">
+                        <a class="btn btn-xs green" href="javascript:void(0)" onClick="ActiveReg({$item.clienteId})" title="Activar cliente">
+                            <i class="fa fa-upload" aria-hidden="true"></i>
                         </a>
                     {else}
-                    <a href="javascript:void(0)" onClick="RemoveReg({$item.clienteId})" title="Dar de baja cliente">
-                        <img src="{$WEB_ROOT}/images/icons/desactivar.png" border="0">
+                    <a class="btn btn-xs red" href="javascript:void(0)" onClick="RemoveReg({$item.clienteId})" title="Dar de baja cliente">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                     {/if}
                 {/if}

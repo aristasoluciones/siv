@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 20:03:29
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:42:26
          compiled from "C:/wamp/www/siv/sistema/templates/lists/imagenes.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:757659d43361b096a4-75437444%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1057159d547b276cda8-44389732%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5c2f2ed90c7822e58e0b8973162b7e18d2443617' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/imagenes.tpl',
-      1 => 1507066337,
+      1 => 1507149743,
     ),
   ),
-  'nocache_hash' => '757659d43361b096a4-75437444',
+  'nocache_hash' => '1057159d547b276cda8-44389732',
   'function' => 
   array (
   ),
@@ -56,13 +56,12 @@ if (count($_from) > 0){
 			</td>
             <td><div align="center">
                 <?php if (in_array('edit_producto',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('typeUser')->value==1){?>
-				<a href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['imagenId'];?>
+				<a class="btn btn-xs red" href="javascript:void(0)" onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['imagenId'];?>
 )" title="Editar producto">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/png-icon/big/glyphicons_150_edit.png" border="0">
+					<i class="fa fa-pencil-square-o" ></i>
 				</a> 
                 <?php }?>
-                				
+               
             </div>
             </td>
         </tr>
