@@ -23,14 +23,14 @@
                 
                 {if in_array('del_pedido',$privilegios) or $Usr.role_id eq 1}
                     {if $item.estatus neq 'cancelado'}
-                    <a href="javascript:void(0)" onClick="DeleteReg({$item.ventaId})" title="Cancelar pedido">
-                        <img src="{$WEB_ROOT}/images/icons/delete.png" border="0">
+                    <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg({$item.ventaId})" title="Cancelar pedido">
+                      <i class="fa fa-minus-circle" aria-hidden="true"></i>
                     </a>
                     {/if}
                 {/if}
                 {if in_array('ver_pedido',$privilegios) or $Usr.role_id eq 1}
-                <a href="{$WEB_ROOT}/detalle-pedido/id/{$item.ventaId}"  title="Ver pedido">
-                    <img src="{$WEB_ROOT}/images/icons/view.png" border="0">
+                <a class="btn btn-xs green" href="{$WEB_ROOT}/detalle-pedido/id/{$item.ventaId}"  title="Ver pedido">
+                   <i class="fa fa-external-link" aria-hidden="true"></i>
                 </a>
                 {/if}
                 				
