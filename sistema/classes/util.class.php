@@ -799,7 +799,7 @@ class Util extends Error
 	
 	}	
 	
-	function validateDateFormat($date, $field) 
+	function validateDateFormat($date, $field)
 	{
 		//match the format of the date
 		if (preg_match ("/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/", $date, $parts))
