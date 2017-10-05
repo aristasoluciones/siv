@@ -11,10 +11,10 @@
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">SmartTest</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">SmartTest</a></li>
+			<li><a href="#">Agregar Preguntas</a></li>
 		</ul>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 			<div class="portlet-title">
 				<div class="caption">
 				   <i class="icon-settings font-green"></i>
-				   <span class="caption-subject font-green sbold">SmartTest</span>
+				   <span class="caption-subject font-green sbold">Nombre de la encuesta: {$info.nombre}</span>
 				 </div>  
 				<div class="actions">
 				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
@@ -39,7 +39,7 @@
 						Agregar <i class="fa fa-plus"></i>
 					</a>
 					</div>
-					<div class="btn-group" >
+					<!--<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
                        <span class="hidden-xs">Acciones</span>
@@ -67,7 +67,7 @@
 								<i class="icon-cloud-upload"></i> Exportar CSV</a>
 						</li>
 					 </ul>
-					</div>	
+					</div>-->	
 				</div>
 			</div>
 			<div class="portlet-body" id="tblContent">

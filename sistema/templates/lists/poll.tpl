@@ -18,24 +18,20 @@
             <td>{$item.fechaRegistro}</td>
             <td>{$item.inicio} - {$item.fin}</td>
 			<td><div align="center">
-<a href="javascript:void(0)" class="btn btn-xs yellow"  onClick="EditReg({$item.usuarioId})" title="Editar">
+				<a href="javascript:void(0)" class="btn btn-xs yellow"  onClick="EditReg({$item.encuestaId})" title="Editar">
 					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
 				
-				<a href="javascript:void(0)" onClick="ActiveReg({$item.clienteId})" title="Editar">
-                    <img src="{$WEB_ROOT}/images/icons/activar.png" border="0">
+				 <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg({$item.encuestaId})" title="Eliminar">
+					<i class="fa fa-trash" aria-hidden="true"></i>
 				</a>
-
-				<a href="javascript:void(0)" onClick="RemoveReg({$item.clienteId})" title="Eliminar">
-					<img src="{$WEB_ROOT}/images/icons/desactivar.png" border="0">
-				</a>
-				
-				 <a href="{$WEB_ROOT}/question/x/{$item.encuestaId}"  title="AGREGAR PREGUNTAS">
-					<img src="{$WEB_ROOT}/images/icons/calendar_edit.png" border="0">
+								
+				<a class="btn btn-xs blue" href="{$WEB_ROOT}/question/x/{$item.encuestaId}"  title="AGREGAR PREGUNTAS">
+					<i class="fa fa-plus" aria-hidden="true"></i>
 				</a>
 				
-				<a href="javascript:void(0)" onClick="({$item.encuestaId})" title="Ver Resultado">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs green" href="{$WEB_ROOT}/question/x/{$item.encuestaId}" title="Ver Resultado">
+					<i class="fa fa-bar-chart" aria-hidden="true"></i>
 				</a>
             </div>
             </td>

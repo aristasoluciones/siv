@@ -14,7 +14,7 @@
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
-    <div class="container">
+    <div class="container"><div class="container"><div class="one_third column-last"><img src="images/nosotros/usuarios1.png" alt=""></div>
       <h3>Ingresa tus Datos</h3>
     </div>
 </section>
@@ -50,7 +50,7 @@
 			<td>
 				Apellido Materno
 				<input type="text" name="apellidom" id="apellidom" onblur="valida('contrasena',2)">
-			</td>
+			</td>			
 		</tr>
 		<tr>
 			<td>
@@ -68,9 +68,10 @@
 				
 			</td>
 			<td>
-				<!--Fecha de Nacimiento
-				<input type="text" name="fnacimiento" id="fnacimiento" onblur="valida('contrasena',2)" onClick="fnFechaNa()">-->
+				Fecha de Nacimiento
+				<input type="text" name="fnacimiento" id="fnacimiento" onblur="valida('contrasena',2)" onClick="fnFechaNa()">
 			</td>
+			
 		</tr>
 		<tr>
 			<td>

@@ -16,8 +16,14 @@
 	switch($_POST['type']){
 	
 		case 'add':
-								
+					
+				$encuesta->setId($_POST['id']);
+				$info = $encuesta->Info();
+				
+				// echo '<pre>'; print_r($info);
+				// exit;
 				echo 'ok[#]';	
+				$smarty->assign('info',$info);				
 				$smarty->assign('titleFrm','Agregar cliente');				
 				$smarty->display(DOC_ROOT.'/templates/boxes/poll.tpl');
 																
@@ -25,10 +31,35 @@
 		
 		
 		case 'addQuestion':
-								
-				// echo '<pre>'; print_r($_POST);
+				
+				
+				
+				$encuesta->setId($_POST['id']);
+				$info = $encuesta->InfoPregunta();
+
+				$r = explode("_",$info["rango"]);
+				$de = $r[0];
+				$a = $r[1];
+				
+				$r = explode("_",$info["opcional"]);
+				$o1 = $r[0];
+				$o2 = $r[1];
+				$o3 = $r[2];
+				$o4 = $r[3];
+				$o5 = $r[4];
+			// echo '<pre>'; print_r($info);
 				// exit;
+						
+				$smarty->assign('o1',$o1);				
+				$smarty->assign('o2',$o2);				
+				$smarty->assign('o3',$o3);				
+				$smarty->assign('o4',$o4);				
+				$smarty->assign('o5',$o5);				
+				$smarty->assign('de',$de);				
+				$smarty->assign('a',$a);	
 				echo 'ok[#]';	
+				$smarty->assign('info',$info);				
+				$smarty->assign('preguntaId',$_POST['id']);				
 				$smarty->assign('encuestaId',$_POST['Id']);				
 				$smarty->assign('titleFrm','Agregar Pregunta');				
 				$smarty->display(DOC_ROOT.'/templates/boxes/question.tpl');
@@ -51,6 +82,7 @@
 				$encuesta->setNombre($_POST['nombre']);
 				$encuesta->setInicio($_POST['inicio']);
 				$encuesta->setFin($_POST['fin']);
+				$encuesta->setId($_POST['encuestaId']);
 				
 				$success = $encuesta->Save();
 				
@@ -102,7 +134,7 @@
 					$encuesta->setNumCaracter($_POST['caracter']);
 				}
 				
-				$encuesta->setId($idReg);
+				$encuesta->setId($_POST['preguntaId']);
 				
 				
 				
@@ -134,10 +166,10 @@
 				
 			break;
 								
-		case 'remove':
+		case 'DeleteReg':
 				
-				$cliente->setId($_POST['id']);
-				if($cliente->Delete()){					
+				$encuesta->setId($_POST['id']);
+				if($encuesta->Delete()){					
 					echo 'ok[#]';				
 				}else
 				{
@@ -156,8 +188,20 @@
 				
 	    break;
 		
-			
-	break;
+		
+		
+		case 'DeleteQuestion':
+				
+				$encuesta->setId($_POST['id']);
+				if($encuesta->DeleteQuestion()){					
+					echo 'ok[#]';				
+				}else
+				{
+					echo 'fail[#]';
+				}
+				
+	    break;
+		
 }//switch
 
 ?>

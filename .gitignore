@@ -7,8 +7,8 @@
 
 /config.php
 /images/productos_categorias/
-/sistema/ajax/templates_c
-/sistema/templates_c
+#/sistema/ajax/templates_c
+#/sistema/templates_c
 /sistema/config.php
 
 libs/pdf/lib/fonts/*.afm.php
@@ -17,7 +17,7 @@ libs/pdf/lib/fonts/log.htm
 
 
 
-// HACER CASO OMISO ES PARTE DL PHPSTORM
+#HACER CASO OMISO ES PARTE DL PHPSTORM
 
 
 # Created by https://www.gitignore.io/api/phpstorm
@@ -93,3 +93,6 @@ fabric.properties
 
 
 
+docs/
+images/blog/
+images/slide/

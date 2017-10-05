@@ -18,12 +18,16 @@
 	$encuesta->setId($_GET['x']);
 	$data = $encuesta->EnumeratePreguntas();
 	
-	// echo '<pre>'; print_r($data);
+	$encuesta->setId($_GET['x']);
+	$info = $encuesta->Info();
+	
+	// echo '<pre>'; print_r($info);
 	// exit;
 	if(!empty($clientes))
 		$smarty->assign('datatable_flag',true);
 
 	$smarty->assign('encuestaId',$_GET['x']);
+	$smarty->assign('info',$info);
 	$smarty->assign('registros',$data);
 	
 ?>

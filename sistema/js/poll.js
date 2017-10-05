@@ -10,6 +10,18 @@ function dateInicio(Id)
 
 	}
 
+	
+	
+function cargaDate(Id)
+	{
+		// alert("hola")
+		$.datepicker.setDefaults( $.datepicker.regional['es'] );
+		$('#fecha_'+Id).datepicker({
+		 dateFormat: 'yy-mm-dd',
+		}).focus();
+
+	}	
+	
 function AddReg(){
 	
 	$.ajax({
@@ -37,7 +49,7 @@ function EditReg(id){
 	$.ajax({
 	  	type: "POST",
 	  	url: AJAX_PATH,
-	  	data: "type=edit&id="+id,		
+	  	data: "type=add&id="+id,		
 	  	success: function(response) {	
 		console.log(response)		
 			var splitResp = response.split("[#]");
@@ -90,12 +102,17 @@ function SaveReg(){
     });
 		
 }//SaveReg
-function RemoveReg(id){
+function DeleteReg(id){
+	
+	var resp = confirm("Esta seguro de eliminar este registro?");
+	
+	if(!resp)
+		return;
 	
 	$.ajax({
 	  	type: "POST",
 	  	url: AJAX_PATH,
-	  	data: "type=remove&id="+id,		
+	  	data: "type=DeleteReg&id="+id,		
 	  	success: function(response) {	
 		console.log(response)		
 			var splitResp = response.split("[#]");					

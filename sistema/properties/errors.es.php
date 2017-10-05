@@ -80,5 +80,6 @@ $property['error'][10137] = 'Hubo un error al mover archivo intentelo de nuevo';
 $property['error'][10138] = 'Solo se aceptan imagenes PNG / JPG revisar archivo';
 $property['error'][10139] = 'Solo se aceptan archivos ';
 $property['error'][10140] = 'El catalogo electronico se actualizo correctamente ';
+$property['error'][10141] = 'Los datos se guardaron exitosamente ';
 
 ?>
