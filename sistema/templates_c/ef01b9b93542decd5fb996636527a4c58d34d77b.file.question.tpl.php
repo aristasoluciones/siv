@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:16:19
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:29:30
          compiled from "C:/wamp/www/siv/sistema/templates/question.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1660159d56bc32f73c9-29054468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2290359d57cea7e8663-31608959%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -10,7 +10,7 @@ $_smarty_tpl->decodeProperties(array (
       1 => 1507158977,
     ),
   ),
-  'nocache_hash' => '1660159d56bc32f73c9-29054468',
+  'nocache_hash' => '2290359d57cea7e8663-31608959',
   'function' => 
   array (
   ),

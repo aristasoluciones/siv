@@ -8,6 +8,7 @@
        <!-- BEGIN FORM-->
 		<form id="frmGral" action="#" class="form-horizontal form-bordered form-label-stripped">
 
+			<input type="hidden" name="encuestaId" id="encuestaId" value="{$encuestaId}" />
 			<input type="hidden" name="preguntaId" id="preguntaId" value="{$preguntaId}" />
 			<input type="hidden" name="type" value="SaveQuestions" />
 

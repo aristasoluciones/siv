@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 17:19:37
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:58:38
          compiled from "C:/wamp/www/siv/sistema/templates/age-ubication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2688359d55e790d2998-75033565%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1266859d583be1d7150-44459062%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -10,7 +10,7 @@ $_smarty_tpl->decodeProperties(array (
       1 => 1507096350,
     ),
   ),
-  'nocache_hash' => '2688359d55e790d2998-75033565',
+  'nocache_hash' => '1266859d583be1d7150-44459062',
   'function' => 
   array (
   ),

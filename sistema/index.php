@@ -78,14 +78,14 @@
     // print_r($usr);
 	// exit;
 	
-	$objRole->setRoleId($usr["role_id"]);
-	$lisPermisos = $objRole->permisoSegunRol();
+	// $objRole->setRoleId($usr["role_id"]);
+	// $lisPermisos = $objRole->permisoSegunRol();
 	// echo "<pre>"; print_r($lisPermisos);
 	// exiT;
     //obtener todos los permisos del rol del usuario activo
-    $permisos_general = $rbac->Roles->permissions($usr["role_id"],false);
+    // $permisos_general = $rbac->Roles->permissions($usr["role_id"],false);
     //convertir conjunto de permisos en un array de 1D para obtener solo la columna Title
-    $permisos_titles =  $config->getOnlyColumnArray($permisos_general,"Title");
+    // $permisos_titles =  $config->getOnlyColumnArray($permisos_general,"Title");
 // echo "<pre>"; print_r($lisPermisos);
 	// exiT;
     $typeUser =  $usr["role_id"];

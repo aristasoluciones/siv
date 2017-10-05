@@ -60,6 +60,7 @@
 				echo 'ok[#]';	
 				$smarty->assign('info',$info);				
 				$smarty->assign('preguntaId',$_POST['id']);				
+				$smarty->assign('encuestaId',$_POST['Id']);				
 				$smarty->assign('titleFrm','Agregar Pregunta');				
 				$smarty->display(DOC_ROOT.'/templates/boxes/question.tpl');
 																

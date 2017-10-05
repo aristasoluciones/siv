@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:07:02
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:40:29
          compiled from "C:/wamp/www/siv/sistema/templates/forms/question.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:291359d577a6778a54-62766209%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:468159d57f7dce26a5-10592583%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '43dd54cabdb7bc67b1be34de10376b27e17785f3' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/forms/question.tpl',
-      1 => 1507161579,
+      1 => 1507164004,
     ),
   ),
-  'nocache_hash' => '291359d577a6778a54-62766209',
+  'nocache_hash' => '468159d57f7dce26a5-10592583',
   'function' => 
   array (
   ),
@@ -26,6 +26,8 @@ $_smarty_tpl->decodeProperties(array (
        <!-- BEGIN FORM-->
 		<form id="frmGral" action="#" class="form-horizontal form-bordered form-label-stripped">
 
+			<input type="hidden" name="encuestaId" id="encuestaId" value="<?php echo $_smarty_tpl->getVariable('encuestaId')->value;?>
+" />
 			<input type="hidden" name="preguntaId" id="preguntaId" value="<?php echo $_smarty_tpl->getVariable('preguntaId')->value;?>
 " />
 			<input type="hidden" name="type" value="SaveQuestions" />

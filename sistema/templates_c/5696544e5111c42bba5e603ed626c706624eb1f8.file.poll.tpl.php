@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:08:02
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:29:25
          compiled from "C:/wamp/www/siv/sistema/templates/poll.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1938059d569d260fe28-92389569%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2831559d57ce5f32c24-03173828%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -10,7 +10,7 @@ $_smarty_tpl->decodeProperties(array (
       1 => 1507158479,
     ),
   ),
-  'nocache_hash' => '1938059d569d260fe28-92389569',
+  'nocache_hash' => '2831559d57ce5f32c24-03173828',
   'function' => 
   array (
   ),
