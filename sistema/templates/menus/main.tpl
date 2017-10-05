@@ -193,11 +193,13 @@
 		|| $page=='order-ubication'
 		|| $page=='geolocation'
 		|| $page=='pep-basic'
-		|| $page=='customer-basic'}active open{/if}">
+		|| $page=='customer-basic'
+	 	|| $page eq 'rankin-pedido'
+	    ||  $page eq 'sales-articulo'}active open{/if}">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
         <span class="title">SIV</span>
-		{if $page=='analisis-cliente' || $page =='birthday'}
+		{if $page=='analisis-cliente' || $page =='birthday' || $page=='order-ubication'|| $page =='geolocation' || $page =='pep-basic' || $page eq 'rankin-pedido' ||  $page eq 'sales-articulo'}
 		 <span class="selected"></span>
          <span class="arrow open"></span>
         {else}
@@ -222,17 +224,18 @@
 					<li class="nav-item {if $page =='customer-basic'}active open{/if}"><a href="{$WEB_ROOT}/customer-basic">Personalizado</a></li>
 				</ul>
 			</li>
-       		<li class="nav-item {if $page=='order-ubication' || $page=='order-ubication' || $page=='geolocation' || $page=='pep-basic' || $page=='rankin-pedido'}active open{/if}">
+       		<li class="nav-item {if $page=='order-ubication' || $page=='geolocation' || $page=='pep-basic' || $page=='rankin-pedido'}active open{/if}">
 				<a href="javascript:;" onClick="verSubMenu(2)">
 				Analisis de Pedidos
 				<span class="arrow"></span>
 				</a>
-				<ul class="sub-menu" style='display:none' id="mnuPrincipal_2">
+				<ul class="sub-menu" {if  $page=='order-ubication' || $page =='geolocation' || $page =='pep-basic' || $page eq 'rankin-pedido' ||  $page eq 'sales-articulo'}style='display:block'{else}style='display:none'{/if} id="mnuPrincipal_2">
 					<li class="nav-item {if $page =='order-ubication'}active open{/if}" ><a href="{$WEB_ROOT}/order-ubication">Pedidos por Colonias</a></li>
 					<!--<li><a href="{$WEB_ROOT}/pep-time">Hora por Colonias</a></li>-->
 					<li class="nav-item {if $page =='geolocation'}active open{/if}" ><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
 					<li class="nav-item {if $page =='pep-basic'}active open{/if}"><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>
 					<li class="nav-item {if $page =='rankin-pedido'}active open{/if}" ><a href="{$WEB_ROOT}/rankin-pedido">Rankin de pedidos</a></li>
+					<li class="nav-item {if $page =='sales-articulo'}active open{/if}" ><a href="{$WEB_ROOT}/sales-articulo">Ventas por articulo</a></li>
 				</ul>
 			</li>
 		</ul>
