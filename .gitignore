@@ -17,7 +17,7 @@ libs/pdf/lib/fonts/log.htm
 
 
 
-// HACER CASO OMISO ES PARTE DL PHPSTORM
+#HACER CASO OMISO ES PARTE DL PHPSTORM
 
 
 # Created by https://www.gitignore.io/api/phpstorm
@@ -93,3 +93,6 @@ fabric.properties
 
 
 
+docs/
+images/blog/
+images/slide/

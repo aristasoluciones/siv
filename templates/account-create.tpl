@@ -50,7 +50,7 @@
 			<td>
 				Apellido Materno
 				<input type="text" name="apellidom" id="apellidom" onblur="valida('contrasena',2)">
-			</td>
+			</td>			
 		</tr>
 		<tr>
 			<td>
@@ -68,9 +68,10 @@
 				
 			</td>
 			<td>
-				<!--Fecha de Nacimiento
-				<input type="text" name="fnacimiento" id="fnacimiento" onblur="valida('contrasena',2)" onClick="fnFechaNa()">-->
+				Fecha de Nacimiento
+				<input type="text" name="fnacimiento" id="fnacimiento" onblur="valida('contrasena',2)" onClick="fnFechaNa()">
 			</td>
+			
 		</tr>
 		<tr>
 			<td>

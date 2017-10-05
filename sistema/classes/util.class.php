@@ -802,10 +802,10 @@ class Util extends Error
 	function validateDateFormat($date, $field)
 	{
 		//match the format of the date
-		if (preg_match ("/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/", $date, $parts))
-		{ 
-			//check weather the date is valid of not
-					if(checkdate($parts[2],$parts[1],$parts[3]))
+		if (preg_match ("/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/", $date, $parts))
+		{
+		    //check weather the date is valid of not
+					if(checkdate($parts[2],$parts[3],$parts[1]))
 						return true;
 					else
 					 return $this->setError(10011, "error", "", $field);
@@ -813,7 +813,19 @@ class Util extends Error
 		else
 			return $this->setError(10011, "error", "", $field);
 	}
-	
+    function isValidateDate($date) {
+        if (preg_match ("/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/", $date, $parts))
+        {
+            //check weather the date is valid of not
+            if(checkdate($parts[2],$parts[3],$parts[1]))
+                return true;
+
+            else
+                return false;
+        }
+        else
+            return false;
+    }
 	function DP($variable)
 	{
 		echo "<pre>";
@@ -1084,17 +1096,17 @@ class Util extends Error
 		if($day == 29 && $month != 2)
 			return true;
 		
-		//si el dia es 29 y el mes es febrero, validar solo si es año bisiesto
+		//si el dia es 29 y el mes es febrero, validar solo si es aï¿½o bisiesto
 		if($day == 29 && $month == 2 &&
 		    ( ($year % 4 == 0) && (($year % 100 != 0) || ($year % 400 == 0)) )   )
 		{
-			//dia 29, mes Feb, año es bisiesto, fecha valida
+			//dia 29, mes Feb, aï¿½o es bisiesto, fecha valida
 			return true;
 		}
 		if($day == 29 && $month == 2 &&
 		    !( ($year % 4 == 0) && (($year % 100 != 0) || ($year % 400 == 0)) )   )
 		{
-			//dia 29, mes Feb, Año no es bisiesto, fecha no valida
+			//dia 29, mes Feb, Aï¿½o no es bisiesto, fecha no valida
 			return false;
 		}
 		// si el dia es mayor a 29 y es febrero, es fecha no valida
@@ -1422,7 +1434,7 @@ class Util extends Error
 		# Obtenemos el numero de la semana
 		$semana = date("W",mktime(0,0,0, $mes, $dia, $anio));
 		
-		# Obtenemos el día de la semana de la fecha dada
+		# Obtenemos el dï¿½a de la semana de la fecha dada
 		$diaSemana = date("w",mktime(0,0,0, $mes, $dia, $anio));
 		
 		# el 0 equivale al domingo...
@@ -1462,10 +1474,10 @@ class Util extends Error
 	}//GetDiffDays
 	
 	function OperacionesFecha($fecha, $cantidad = 0, $operacion = "suma", $type = "day"){
-		/* $fecha= date(‘Y-m-d’, strtotime(‘1 day’)) ; // suma 1 día
-		$fecha= date(‘Y-m-d’, strtotime(‘-2 week’)) ; // resta 2 semanas
-		$fecha= date(‘Y-m-d’, strtotime(‘1 month’)) ; // suma 1 mes
-		$fecha= date(‘Y-m-d’, strtotime(‘-2 year’)) ; // resta 2 años */
+		/* $fecha= date(ï¿½Y-m-dï¿½, strtotime(ï¿½1 dayï¿½)) ; // suma 1 dï¿½a
+		$fecha= date(ï¿½Y-m-dï¿½, strtotime(ï¿½-2 weekï¿½)) ; // resta 2 semanas
+		$fecha= date(ï¿½Y-m-dï¿½, strtotime(ï¿½1 monthï¿½)) ; // suma 1 mes
+		$fecha= date(ï¿½Y-m-dï¿½, strtotime(ï¿½-2 yearï¿½)) ; // resta 2 aï¿½os */
 		
 		if($operacion == "suma"){
 			$operacion = "+".$cantidad." ".$type;
@@ -1493,7 +1505,7 @@ class Util extends Error
 	    $last = strtolower($val[strlen($val)-1]);
 
 	    switch($last) {
-	        // El modificador 'G' está disponble desde PHP 5.1.0
+	        // El modificador 'G' estï¿½ disponble desde PHP 5.1.0
 	        case 'g':
 	            $val *= 1024;
 	        case 'm':

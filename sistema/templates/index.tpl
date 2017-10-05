@@ -33,8 +33,6 @@
          </div>
          <div class="modal fade bs-modal-lg" id="large" tabindex="-1" role="dialog" aria-hidden="true">
          </div>
-
-        
 		  <!-- BEGIN CONTENT BODY -->
          <div class="page-content">
 		  {include file="{$DOC_ROOT}/templates/{$page}.tpl"}

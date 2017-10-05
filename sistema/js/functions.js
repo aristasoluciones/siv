@@ -18,35 +18,25 @@ function verSubMenu(id){
 	$("#mnuPrincipal_"+id).toggle();
 }
 
-/*
+
 jQuery(function($){
-  $.datepicker.regional['es'] = {
-                renderer: $.ui.datepicker.defaultRenderer,
-                monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
-                'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
-                monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun',
-                'Jul','Ago','Sep','Oct','Nov','Dic'],
-                dayNames: ['Domingo','Lunes','Martes','Mi&eacute;rcoles','Jueves','Viernes','S&aacute;bado'],
-                dayNamesShort: ['Dom','Lun','Mar','Mi&eacute;','Juv','Vie','S&aacute;b'],
-                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S&aacute;'],
-                //dateFormat: 'dd/mm/yyyy',
-				dateFormat: 'yy-mm-dd',
-                firstDay: 1,
-                prevText: '&#x3c;Ant', prevStatus: '',
-                prevJumpText: '&#x3c;&#x3c;', prevJumpStatus: '',
-                nextText: 'Sig&#x3e;', nextStatus: '',
-                nextJumpText: '&#x3e;&#x3e;', nextJumpStatus: '',
-                currentText: 'Hoy', currentStatus: '',
-                todayText: 'Hoy', todayStatus: '',
-                clearText: '-', clearStatus: '',
-                closeText: 'Cerrar', closeStatus: '',
-                yearStatus: '', monthStatus: '',
-                weekText: 'Sm', weekStatus: '',
-                dayStatus: 'DD d MM',
-                defaultStatus: '',
-                isRTL: false
-        };
- $.datepicker.setDefaults($.datepicker.regional['es'])
+    $.fn.datepicker.dates['es'] = {
+        days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+        daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
+        daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+        months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+        monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+        today: "Hoy",
+        monthsTitle: "Meses",
+        clear: "Borrar",
+        weekStart: 1,
+        format: "yyyy-mm-dd",
+        autoclose:true
+    };
+
+    $.fn.datepicker.defaults.language="es";
+    $.fn.datepicker.defaults.autoclose=true;
+
 })
 
 function dateFormat(date,format){
@@ -63,15 +53,16 @@ function dateFormat(date,format){
 }
 
 function Calendario(input){
-	jQuery("#"+input).datepicker({
-		onSelect: function (date){
-			$( "#"+input).val(dateFormat(date,false));
-		}, 
-		changeMonth: true,
-		changeYear: true
-	});
+
+    jQuery("#"+input.id).datepicker({
+        todayBtn: true,
+        todayBtn: "linked",
+        onSelect: function (date){
+            $( "#"+input).val(dateFormat(date,false));
+        }
+    }).focus();
 }
-*/
+
 function soloNumeros(e){
    key = e.keyCode || e.which;
    tecla = String.fromCharCode(key).toLowerCase();
