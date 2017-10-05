@@ -7,8 +7,8 @@
 
 /config.php
 /images/productos_categorias/
-#/sistema/ajax/templates_c
-#/sistema/templates_c
+/sistema/ajax/templates_c
+/sistema/templates_c
 /sistema/config.php
 
 libs/pdf/lib/fonts/*.afm.php
