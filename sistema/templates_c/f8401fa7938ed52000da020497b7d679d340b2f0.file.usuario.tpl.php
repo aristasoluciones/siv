@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:04:42
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 17:10:44
          compiled from "C:/wamp/www/siv/sistema/templates/lists/usuario.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2743459d53edade7267-12473839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2940259d55c64cbb8a5-30305836%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f8401fa7938ed52000da020497b7d679d340b2f0' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/usuario.tpl',
-      1 => 1507147479,
+      1 => 1507148042,
     ),
   ),
-  'nocache_hash' => '2743459d53edade7267-12473839',
+  'nocache_hash' => '2940259d55c64cbb8a5-30305836',
   'function' => 
   array (
   ),
@@ -66,7 +66,7 @@ if (count($_from) > 0){
             </a>
             <?php }?>
             <?php if (in_array('delet_usuario',$_smarty_tpl->getVariable('privilegios')->value)||$_smarty_tpl->getVariable('Usr')->value['role_id']==1){?>
-            <a class="btn btn-xs red"href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
+            <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
 )" title="Eliminar">
                 <i class="fa fa-trash" aria-hidden="true"></i>
             </a>

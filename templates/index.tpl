@@ -105,8 +105,8 @@ content: " ";
 				<!--rgba(98, 33, 129, 0.7); width:100%; height:100%;--->
 				<div class="container" style="background-color: ">
 					<div class="twelve columns"> 
-					<h1><b><font style="color:black; font-weight: 900" >Bienvenidos.. !!</font></b></h1>
-					<h6><font style="color:black; font-weight: 900" >Con Nosotros encuentra lo que necesitas</font></h6>
+					<h1><b><font style="color:white; font-weight: 900" >Bienvenidos.. !!</font></b></h1>
+					<h6><font style="color:white; font-weight: 900" >Con Nosotros encuentra lo que necesitas</font></h6>
 					</div>
 					<a class="button" style="background:; " href="{$WEB_ROOT}/docs/online.pdf" target="_blank">obten beneficios SIEMPRE  en tu tienda en línea</a>
 				</div>

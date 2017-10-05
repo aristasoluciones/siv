@@ -14,7 +14,7 @@
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
-    <div class="container">
+    <div class="container"><div class="container"><div class="one_third column-last"><img src="images/nosotros/usuarios1.png" alt=""></div>
       <h3>Ingresa tus Datos</h3>
     </div>
 </section>

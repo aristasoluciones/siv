@@ -3,7 +3,7 @@
 	    <div class="one-third column">
 		    <br class="clear">
         <div class="partner-website">
-	        <h5 class="subtitle">SIV</h5>
+	        <font color="white"><h5 class="subtitle">SIV</h5></font>
 	        <a href=""><i class="fa-arrow-right-17"></i><center>El Sistema Integral de Ventas le permite gestionar, organizar y optimizar todos los procesos de su negocio, eliminando la duplicidad de las operaciones.</center></a>
 	        <p>
 			<a href=""><i class="fa-arrow-right-17"></i><center>El software administrativo más flexible, estable y confiable del mercado</center></a>
@@ -36,7 +36,7 @@
       </div>
       <!-- TAG & Partner end -->
 	  
-	  <div class="one-third column contact-inf">
+	  <div class="one-third column contact-inf">	  
         <h5 class="subtitle">CONTACTANOS</h5>
      	<span><i class="fa-home"></i>Oficinas Corporativas, Tuxtla Gutiérrez Chiapas, Mexico</span>     	
      	<span><i class="fa-phone"></i> +1 234 5678</span>
@@ -54,7 +54,7 @@
     <!-- end-footer-in -->
     <section class="footbot">
 	<div class="container">
-      <div class="footer-navi">© 2017 <a href="">Arista Soluciones.</a></div>
+      <div class="footer-navi" >© 2017 <a href="">Arista Soluciones.</a></div>
       <div class="socailfollow">
 		        	<a href="#" class="facebook"><i class="fa-facebook"></i></a>
 		        	<a href="#" class="twitter"><i class="fa-twitter"></i></a>
@@ -65,6 +65,8 @@
 		        	<a href="#" class="youtube"><i class="fa-youtube"></i></a>
 		        </div>
 				</div>
+				
+				
 	  <!-- footer-navigation /end -->
 	  </section>
     <!-- end-footbot -->
