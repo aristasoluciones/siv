@@ -129,7 +129,7 @@
 	#footer.litex { background: #fafafa;  border-top: 6px solid #e9e9e9; }
 	.footer-in { margin: 0 auto; padding-bottom: 50px; color: #ccc; position: relative; }
 	.footer-in .columns { margin-top: 20px; }
-	.footer-in h5.subtitle { color: #ddd; display: block; border-bottom: 1px solid #212121; padding-bottom: 6px; margin: 0; margin: 35px 0; -webkit-box-shadow: 0 1px #373737; -moz-box-shadow: 0 1px #373737; box-shadow: 0 1px #373737; position: relative; }
+	.footer-in h5.subtitle { color: white; display: block; border-bottom: 1px solid #212121; padding-bottom: 6px; margin: 0; margin: 35px 0; -webkit-box-shadow: 0 1px #373737; -moz-box-shadow: 0 1px #373737; box-shadow: 0 1px #373737; position: relative; }
 	#footer.litex .footer-in h5.subtitle { color:#414141;}
 	#footer h5.subtitle span { position: absolute; right: 0; text-align: right; }
 	#footer h5.subtitle span a { color: #787878; font-size: 10px; font-weight: 400; }
@@ -155,10 +155,10 @@
 	.social-icons.members { clear: both; text-align: center; margin-bottom: 10px; }
 	.social-icons.members a { text-align: center; float: none; }
 	.footer-in a img { float: left; }
-	.contact-inf span { display: block; color: #9b9b9b; font-family: Arial; font-size: 14px; }
-	.contact-inf i { margin-right: 5px; color: #474747; }
+	.contact-inf span { display: block; color: white; font-family: Arial; font-size: 14px; }
+	.contact-inf i { margin-right: 5px; color: white; }
 	.contact-inf form { margin-top: 20px; }
-	.footer-in .contact-inf input, .footer-in .contact-inf textarea { display: block; min-width: 97%; margin: 10px 0; background: rgba(43, 41, 40, 0.61); color: #ccc; border: none; font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 6px 0px 6px 12px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 0 3px 1px #222, 1px 1px #424242; -moz-box-shadow: inset 0 0 3px 1px #222, 1px 1px #424242; box-shadow: inset 0 0 0px 0px #222, 0px 0px #424242; }
+	.footer-in .contact-inf input, .footer-in .contact-inf textarea { display: block; min-width: 97%; margin: 10px 0; background: white; color: #ccc; border: none; font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 6px 0px 6px 12px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 0 3px 1px #222, 1px 1px #424242; -moz-box-shadow: inset 0 0 3px 1px #222, 1px 1px #424242; box-shadow: inset 0 0 0px 0px #222, 0px 0px #424242; }
 	.footer-in .contact-inf button { padding: 10px 20px; font-size: 12px; font-weight: 400; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; background: #373737; background: -moz-linear-gradient(top, #373737, #252525); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #373737), color-stop(100%, #252525)); background: -webkit-linear-gradient(top, #373737, #252525); background: -ms-linear-gradient(top, #373737, #252525); background: -o-linear-gradient(top, #373737, #252525); background: linear-gradient(top, #373737, #252525); border: none; float: right; }
 	.footer-in a:hover { color: #85b940; }
 	#footer.litex .footer-in a { color: #0093d0; }
@@ -169,11 +169,11 @@
 	.footer-in .lts-tweets h5 { color: #82878a; padding: 0 10px; font-size: 16px; font-weight: 400; font-family: "Roboto Slab"; }
 	
 	.partner-website h5 { margin: 20px 0; }
-	.partner-website a { display: block; color: #808080; font-family: Arial, Helvetica, sans-serif; font-size: 12px; -webkit-transition: all .08s ease; -moz-transition: all .08s ease; -ms-transition: all .08s ease; -o-transition: all .08s ease; transition: all .08s ease; }
+	.partner-website a { display: block; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 12px; -webkit-transition: all .08s ease; -moz-transition: all .08s ease; -ms-transition: all .08s ease; -o-transition: all .08s ease; transition: all .08s ease; }
 	.partner-website a:hover { color: #fff; }
 	.partner-website a i { margin: 0 5px; -webkit-transition: all .18s ease; -moz-transition: all .18s ease; -ms-transition: all .18s ease; -o-transition: all .18s ease; transition: all .18s ease; }
 	.partner-website a:hover i { margin-left: 10px; }
-	.footbot { margin: 0 auto; position: relative; background: #99ADAD; padding: 26px 0 18px; text-align: right; border-top-right-radius: 2px; border-top-left-radius: 1px; }
+	.footbot { margin: 0 auto; position: relative; background: #2c3333; padding: 26px 0 18px; text-align: right; border-top-right-radius: 2px; border-top-left-radius: 1px; }
 	#footer.litex .footbot { background:#e9e9e9}
 	#footer.litex .footbot, #footer.litex .footer-in h4, #footer.litex .footer-in hr { border-color: #e0e0e0; color: #5b5b5b; }
 	.footbot img { position: relative; margin: 6px 40px 0 0; opacity: 0.93; }

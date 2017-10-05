@@ -14,8 +14,9 @@
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
-    <div class="container">
-      <h3>Ingresa tus Datos</h3>
+    <div class="container"><div class="one_third column-last"><img src="images/nosotros/sesion.png" alt=""></div>
+      <h3>Inicia Sesión</h3>
+	  
     </div>
 </section>
 
@@ -54,7 +55,8 @@
 
 		</tr>
 
-	</table>
+	</table>	
+	
 	
 	</form>
 	
@@ -103,4 +105,5 @@
 	</script>
     
 </body>
+
 </html>
