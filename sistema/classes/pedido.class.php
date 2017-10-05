@@ -167,6 +167,32 @@ class Pedido extends Main
 		return true;
 		
 	}//
+    public function getRankinPedidos(){
+        $filtro = "";
+        if($_POST["finicial"]!="" && $this->Util()->isValidateDate($_POST["finicial"]))
+          $filtro .= " AND a.fecha>='".$_POST['finicial']."'";
+        if($_POST["ffinal"]!="" && $this->Util()->isValidateDate($_POST["ffinal"]))
+            $filtro .= " AND a.fecha<='".$_POST['ffinal']."'";
+        $result = array();
+        switch($_POST["tipoDetalle"])
+        {
+            case 'cliente':
+                $sql =  "SELECT COUNT(a.ventaId) as pedidosTotal,CONCAT_WS(' ',b.nombre,b.apaterno,b.amaterno) as nameField FROM ventas a LEFT JOIN clientes b ON a.clienteId=b.clienteId WHERE 1 ".$filtro." GROUP BY a.clienteId";
+                $this->Util()->DB()->setQuery($sql);
+                $result = $this->Util()->DB()->GetResult();
+            break;
+            case 'hora':
+                $sql =  "SELECT COUNT(a.ventaId) as pedidosTotal,a.hora as nameField FROM ventas a LEFT JOIN clientes b ON a.clienteId=b.clienteId WHERE 1 ".$filtro." GROUP BY a.hora";
+                $this->Util()->DB()->setQuery($sql);
+                $result = $this->Util()->DB()->GetResult();
+            break;
+            default:
+                $sql =  "SELECT COUNT(a.ventaId) as pedidosTotal,CONCAT_WS(' ',b.nombre,b.apaterno,b.amaterno) as nameField FROM ventas a LEFT JOIN clientes b ON a.clienteId=b.clienteId WHERE 1 ".$filtro." GROUP BY a.clienteId";
+                $this->Util()->DB()->setQuery($sql);
+                $result = $this->Util()->DB()->GetResult();
+        }
+        return $result;
+    }
 	
 						
 }

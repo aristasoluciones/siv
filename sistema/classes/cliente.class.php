@@ -530,7 +530,7 @@ class Cliente extends Main
 		return $data;
 		
 	}//orderUbicationReport
-	
+
 }
 
 ?>

@@ -77,7 +77,19 @@ exit;*/
              $pedido->setFolio($_POST["folio"]);
              $pedido->searchPedidos();
             break;
-
+        case 'doSearchRankin':
+           $result =  $pedido->getRankinPedidos();
+           if(!empty($result)){
+               echo "ok[#]";
+               $smarty->assign('nameField',$_POST["tipoDetalle"]);
+               $smarty->assign('result',$result);
+               $smarty->display(DOC_ROOT.'/templates/lists/list-rankin-result.tpl');
+           }
+           else{
+               echo "fail[#]";
+               echo "<div align='center'>---- No se encontraron resultados del periodo seleccionado ----</div>";
+           }
+        break;
 				
 }//switch
 

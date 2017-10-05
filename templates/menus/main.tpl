@@ -1,7 +1,4 @@
-
 <header id="header" style="background:#99ADAD; ">
-
-
 				<div  class="container" >
 				<div class="four columns logo">
 				<br>

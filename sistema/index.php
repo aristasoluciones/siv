@@ -22,7 +22,9 @@
 		'empresa',
 		'nota',
 		'colonia',
-		
+
+		#pedidos
+        'rankin-pedido',
 		
 		#catalogos
 		'cliente',
