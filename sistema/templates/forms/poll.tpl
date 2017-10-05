@@ -7,12 +7,9 @@
       <div class="portlet-body form">
        <!-- BEGIN FORM-->
 		<form id="frmGral" action="#" class="form-horizontal form-bordered form-label-stripped">
-			{if $info}
-			<input type="hidden" name="type" value="update" />
-			<input type="hidden" name="id" value="{$info.clienteId}" />
-            {else}
+			<input type="hidden" name="encuestaId" value="{$info.encuestaId}" />
 			<input type="hidden" name="type" value="save" />
-			{/if}
+
 		  <div class="form-body">
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Nombre</label>
@@ -25,14 +22,14 @@
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Inicio</label>
 					<div class="col-md-9">
-							<input type="text" class="form-control" name="inicio" value="{$info.inicio}"  />
+							<input type="text" class="form-control" name="inicio"  id="fecha_1" value="{$info.inicio}"  onClick='cargaDate(1)' />
 					</div>
 							
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Fin</label>
 					<div class="col-md-9">
-							<input type="text" class="form-control" name="fin" value="{$info.fin}"  />
+							<input type="text" class="form-control" name="fin" id="fecha_2" value="{$info.fin}"  onClick='cargaDate(2)' />
 					</div>
 							
 				</div>

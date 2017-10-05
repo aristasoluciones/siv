@@ -30,12 +30,12 @@
 			<td><div align="center">
 
 				
-				<a href="javascript:void(0)" onClick="ActiveReg({$item.clienteId})" title="Editar">
-                    <img src="{$WEB_ROOT}/images/icons/activar.png" border="0">
+				<a href="javascript:void(0)" class="btn btn-xs yellow"  onClick="EditReg({$item.preguntaId})" title="Editar">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
-
-				<a href="javascript:void(0)" onClick="RemoveReg({$item.clienteId})" title="Eliminar">
-					<img src="{$WEB_ROOT}/images/icons/desactivar.png" border="0">
+				
+				 <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteQuestion({$item.preguntaId})" title="Eliminar">
+					<i class="fa fa-trash" aria-hidden="true"></i>
 				</a>
 
             </div>

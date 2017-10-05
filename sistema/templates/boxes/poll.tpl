@@ -2,7 +2,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <a href="javascript:;" class="close" data-dismiss="modal" aria-hidden="true"></a>
-            <h4 class="modal-title">Agregar Encuesta</h4>
+            <h4 class="modal-title">{if $info} Editar {else} Agregar {/if} Encuesta</h4>
         </div>
         <div class="modal-body">
             <!-- START FORM -->

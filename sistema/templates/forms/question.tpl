@@ -9,13 +9,14 @@
 		<form id="frmGral" action="#" class="form-horizontal form-bordered form-label-stripped">
 
 			<input type="hidden" name="encuestaId" id="encuestaId" value="{$encuestaId}" />
+			<input type="hidden" name="preguntaId" id="preguntaId" value="{$preguntaId}" />
 			<input type="hidden" name="type" value="SaveQuestions" />
 
 		  <div class="form-body">
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Pregunta</label>
 					<div class="col-md-9">
-							<input type="text" class="form-control" name="nombre" value="{$info.nombre}"  />
+							<input type="text" class="form-control" name="nombre" value="{$info.pregunta}"  />
 					</div>
 							
 				</div>
@@ -25,9 +26,9 @@
 					<div class="col-md-9">
 							<select name="tipo" id="tipo" onChange="checaTipopregunta()"  class="form-control">
 								<option value=""></option>
-								<option value="punto">Puntos</option>
-								<option value="opcional">Opcional</option>
-								<option value="abierta">Abierta</option>
+								<option value="punto" {if $info.tiporespuesta eq 'punto'} selected {/if}>Puntos</option>
+								<option value="opcional" {if $info.tiporespuesta eq 'opcional'} selected {/if}>Opcional</option>
+								<option value="abierta" {if $info.tiporespuesta eq 'abierta'} selected {/if}>Abierta</option>
 							</select>
 					</div>	
 				</div>
@@ -55,7 +56,7 @@
 				<div class="form-group" id="div_car" {if $info.tiporespuesta ne "abierta"} style="display:none" {/if}>
 					<label class="control-label col-md-3"><span class="reqIcon">*</span>Num. Caracteres:</label>
 					 <div class="col-md-9">
-						<input type="text" name="caracter" class="form-control">
+						<input type="text" name="caracter" class="form-control" value="{$info.numCaracter}">
 					</div>
 				</div>
 

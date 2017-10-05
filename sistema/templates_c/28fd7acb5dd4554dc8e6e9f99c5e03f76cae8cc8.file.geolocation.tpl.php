@@ -1,3 +1,21 @@
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:48:55
+         compiled from "C:/wamp/www/siv/sistema/templates/geolocation.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1706059d58177cf6917-91915883%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '28fd7acb5dd4554dc8e6e9f99c5e03f76cae8cc8' => 
+    array (
+      0 => 'C:/wamp/www/siv/sistema/templates/geolocation.tpl',
+      1 => 1507096628,
+    ),
+  ),
+  'nocache_hash' => '1706059d58177cf6917-91915883',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
 <!-- BEGIN PAGE HEADER-->
 	<div class="page-bar">
 		<div class="span12">           
@@ -11,15 +29,15 @@
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">SmartTest</a>
+				<a href="#">Catalogos</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">Agregar Preguntas</a></li>
+			<li><a href="#">Geolocalización</a></li>
 		</ul>
 		</div>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
-		<h1 class="page-title">SmartTest
+		<h1 class="page-title">Geolocalización
 			<small></small>
 		</h1>
 	 <!-- END PAGE TITLE-->
@@ -31,14 +49,14 @@
 			<div class="portlet-title">
 				<div class="caption">
 				   <i class="icon-settings font-green"></i>
-				   <span class="caption-subject font-green sbold">Nombre de la encuesta: {$info.nombre}</span>
+				   <span class="caption-subject font-green sbold">Geolocalización</span>
 				 </div>  
 				<div class="actions">
-				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
-					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg({$encuestaId})">
+				    <!-- <div class="btn-group btn-group-devided" data-toggle="buttons"> 
+					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
 						Agregar <i class="fa fa-plus"></i>
 					</a>
-					</div>
+					</div> -->
 					<!--<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
@@ -71,7 +89,10 @@
 				</div>
 			</div>
 			<div class="portlet-body" id="tblContent">
-			 {include file="{$DOC_ROOT}/templates/lists/question.tpl"}
+			 <div id="contact-map">
+			 <div id="map_canvas" style="width:1500px; height:500px"></div>
+			 <!-- END-Google Map -->
+			</div>
 			</div>
 		</div>
 	</div>

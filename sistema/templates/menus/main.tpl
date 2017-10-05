@@ -244,7 +244,7 @@
       </li>
 	{/if}
 	
-	 <li class="nav-item {if $page =='poll'}active open{/if}">
+	 <li class="nav-item {if $page =='poll' || $page =='question'}active open{/if}">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
         <span class="title">SmartTest</span>

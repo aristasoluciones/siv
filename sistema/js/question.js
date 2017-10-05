@@ -37,7 +37,7 @@ function AddReg(Id){
 	  	data: "type=addQuestion&Id="+Id,		
 	  	success: function(response) {			
 			var splitResp = response.split("[#]");
-									
+			console.log	(response) 					
 			if(splitResp[0] == "ok")
 				$("#draggable").html(splitResp[1]);
 			else
@@ -56,7 +56,7 @@ function EditReg(id){
 	$.ajax({
 	  	type: "POST",
 	  	url: AJAX_PATH,
-	  	data: "type=edit&id="+id,		
+	  	data: "type=addQuestion&id="+id,		
 	  	success: function(response) {	
 		console.log(response)		
 			var splitResp = response.split("[#]");
@@ -188,3 +188,29 @@ function ActiveReg(id){
 }//ActiveReg
 
 
+
+
+function DeleteQuestion(id){
+	
+	var resp = confirm("Esta seguro de eliminar este registro?");
+	
+	if(!resp)
+		return;
+	
+	$.ajax({
+	  	type: "POST",
+	  	url: AJAX_PATH,
+	  	data: "type=DeleteQuestion&id="+id,		
+	  	success: function(response) {	
+		console.log(response)		
+			var splitResp = response.split("[#]");					
+			if(splitResp[0] == "ok")
+				location.reload();
+			else
+				alert(msgFail);
+		},
+		error:function(){
+			alert(msgError);
+		}
+    });	
+}//RemoveReg
