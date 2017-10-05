@@ -5,7 +5,7 @@
 {include file="{$DOC_ROOT}/templates/boxes/messages.tpl"}
 
 {foreach from=$registros.actual item=item key=key} 
-	<b>{$item.fechaNacimiento}</b><br>
+	<b>{$item.day}</b><br>
 	
 <table class="table table-striped table-bordered table-hover" 0>
     <thead>
@@ -51,7 +51,7 @@
 </h1>
 
 {foreach from=$registros.proximo item=item key=key} 
-<b>{$item.fechaNacimiento}</b><br>	
+<b>{$item.day}</b><br>	
 <table class="table table-striped table-bordered table-hover" 0>
     <thead>
         <tr>

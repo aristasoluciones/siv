@@ -29,10 +29,8 @@
 		'checkout',
 		'index_dev',
 		'account',
-	
-
 		#reportes
-		'lista'
+		'lista',
 	);
 	
 

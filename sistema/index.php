@@ -48,6 +48,8 @@
 		'customer-basic',
 		'order-ubication',
 		'geolocation',
+		'poll',
+		'question',
 		
 	);
 	

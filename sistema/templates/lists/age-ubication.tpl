@@ -5,6 +5,7 @@
         <tr>
             <th>#</th>
             <th>Colonia </th>
+            <th>Fuera de Rango  </th>
             <th>18 - 24  </th>
             <th>25 - 59 </th>
             <th>60 - adelante </th>
@@ -16,6 +17,7 @@
         <tr>
             <td>{$key+1}</td>
             <td>{$item.nombreColonia}</td>
+            <td>{$item.fuera}</td>
             <td>{$item.rango1}</td>
             <td>{$item.rango2}</td>
             <td>{$item.rango3}</td>

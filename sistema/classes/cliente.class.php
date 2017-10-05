@@ -376,34 +376,38 @@ class Cliente extends Main
 	
 	public function birthReport(){
 		
-		$mesActual = date('m');  
-		$fechaInicio = date('Y').'-'.$mesActual.'-01';
-		$fechaFinal = date('Y').'-'.$mesActual.'-31';
+		$util =  new Util;
 		
+		$mesActual = date('m');  
 		$mesProximo = $mesActual+1;  
-		$fechaIniciop = date('Y').'-'.$mesProximo.'-01';
-		$fechaFinalp = date('Y').'-'.$mesProximo.'-31';
 
-		$sql = 'SELECT * FROM clientes where fechaNacimiento >= "'.$fechaInicio.'" and fechaNacimiento <= "'.$fechaFinal.'" group  by fechaNacimiento';
+
+		$sql = 'SELECT * FROM clientes where MONTH(fechaNacimiento) = "'.$mesActual.'"  group  by fechaNacimiento ORDER BY  fechaNacimiento DESC ';
 		$this->Util()->DB()->setQuery($sql);
 		$registros = $this->Util()->DB()->GetResult();
 		
-		$sql = 'SELECT * FROM clientes where fechaNacimiento >= "'.$fechaIniciop.'" and fechaNacimiento <= "'.$fechaFinalp.'" group  by fechaNacimiento';
+		$sql = 'SELECT * FROM clientes where MONTH(fechaNacimiento) = "'.$mesProximo.'"  group  by fechaNacimiento ORDER BY  fechaNacimiento DESC';
 		$this->Util()->DB()->setQuery($sql);
 		$registrosp = $this->Util()->DB()->GetResult();
 
 		foreach($registros as $key=>$aux){
+			$r = explode('-',$aux['fechaNacimiento']);
+			$mes = $util->GetMonthByKey($r[1]);
 			$sql = 'SELECT * FROM clientes where fechaNacimiento = "'.$aux['fechaNacimiento'].'"';
 			$this->Util()->DB()->setQuery($sql);
 			$regi = $this->Util()->DB()->GetResult();
 			$registros[$key]['clientes'] = $regi;
+			$registros[$key]['day'] = $r[2].' '.$mes;
 		}
 		
 		foreach($registrosp as $key=>$aux){
+			$r = explode('-',$aux['fechaNacimiento']);
+			$mes = $util->GetMonthByKey($r[1]);
 			$sql = 'SELECT * FROM clientes where fechaNacimiento = "'.$aux['fechaNacimiento'].'"';
 			$this->Util()->DB()->setQuery($sql);
 			$regi = $this->Util()->DB()->GetResult();
 			$registrosp[$key]['clientes'] = $regi;
+			$registrosp[$key]['day'] = $r[2].' '.$mes;
 		}
 
 
@@ -442,13 +446,26 @@ class Cliente extends Main
 		
 		$filtro ="";
 		
+		
+		$anioActual = date('Y');
+		$anio18 = $anioActual - 18;
+		$anio24 = $anioActual - 24;
+		
+		$anio25 = $anioActual - 25;
+		$anio59 = $anioActual - 59;
+		
+		$anio60 = $anioActual - 60;
+		
+		// echo $anio24;
+		// exit;
+		
 
 		 $sql = 'SELECT
 					*,
 					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento = "0000-00-00") as fuera,
-					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "1999-01-01" and fechaNacimiento >= "1993-01-01") as rango1,
-					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "1992-01-01" and fechaNacimiento >= "1958-01-01") as rango2,
-					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "1957-01-01" and fechaNacimiento <> "0000-00-00") as rango3,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "'.$anio18.'-12-31" and fechaNacimiento >= "'.$anio24.'-01-01") as rango1,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "'.$anio25.'-12-31" and fechaNacimiento >= "'.$anio59.'-01-01") as rango2,
+					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId and fechaNacimiento <= "'.$anio60.'-12-31" and fechaNacimiento <> "0000-00-00") as rango3,
 					(select count(*) from clientes as c where co.coloniaId  = c.coloniaId ) as total
 				FROM 
 					clientes as c

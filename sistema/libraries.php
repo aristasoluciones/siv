@@ -54,6 +54,9 @@ $cliente = new Cliente;
 include_once(DOC_ROOT.'/classes/pedido.class.php');
 $pedido = new Pedido;
 
+include_once(DOC_ROOT.'/classes/encuesta.class.php');
+$encuesta = new Encuesta;
+
 include_once(DOC_ROOT.'/classes/class.phpmailer.php');
 include_once(DOC_ROOT.'/classes/class.smtp.php');
 include_once(DOC_ROOT.'/classes/sendmail.class.php');
