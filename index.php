@@ -31,6 +31,7 @@
 		'account',
 		#reportes
 		'lista',
+		'smarttest',
 	);
 	
 
