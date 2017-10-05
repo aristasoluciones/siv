@@ -7,12 +7,9 @@
 
 /config.php
 /images/productos_categorias/
-/webmaster/ajax/templates_c
-/webmaster/templates_c
-/webmaster/config.php
-/docs/
-/docs/catalogo.pdf
-/images/blog/
+/sistema/ajax/templates_c
+/sistema/templates_c
+/sistema/config.php
 
 libs/pdf/lib/fonts/*.afm.php
 libs/pdf/lib/fonts/*.ufm.php
