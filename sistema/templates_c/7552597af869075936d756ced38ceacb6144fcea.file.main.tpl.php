@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 23:29:07
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:29:10
          compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:409859d46393531509-52161000%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 14:47:19
-         compiled from "C:/wamp/www/siv/sistema/templates/menus/main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:607559d53ac729cb19-97909390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
+<?php /*%%SmartyHeaderCode:450159d56ec6ab3159-02490207%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7552597af869075936d756ced38ceacb6144fcea' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/menus/main.tpl',
-<<<<<<< HEAD
-      1 => 1507091343,
+      1 => 1507159748,
     ),
   ),
-  'nocache_hash' => '409859d46393531509-52161000',
-=======
-      1 => 1507146429,
-    ),
-  ),
-  'nocache_hash' => '607559d53ac729cb19-97909390',
->>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
+  'nocache_hash' => '450159d56ec6ab3159-02490207',
   'function' => 
   array (
   ),
@@ -280,7 +267,7 @@ $_smarty_tpl->decodeProperties(array (
       </li>
 	<?php }?>
 	
-	 <li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='poll'){?>active open<?php }?>">
+	 <li class="nav-item <?php if ($_smarty_tpl->getVariable('page')->value=='poll'||$_smarty_tpl->getVariable('page')->value=='question'){?>active open<?php }?>">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
         <span class="title">SmartTest</span>

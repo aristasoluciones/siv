@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 19:43:58
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:09:06
          compiled from "C:/wamp/www/siv/sistema/templates/boxes/poll.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:891359d42ece463c38-30839103%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1202459d56a12a86ad2-61054705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ff2402dd5aa68a42516a884be1447a39bfb759b3' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/boxes/poll.tpl',
-      1 => 1507077835,
+      1 => 1507158543,
     ),
   ),
-  'nocache_hash' => '891359d42ece463c38-30839103',
+  'nocache_hash' => '1202459d56a12a86ad2-61054705',
   'function' => 
   array (
   ),
@@ -20,7 +20,7 @@ $_smarty_tpl->decodeProperties(array (
     <div class="modal-content">
         <div class="modal-header">
             <a href="javascript:;" class="close" data-dismiss="modal" aria-hidden="true"></a>
-            <h4 class="modal-title">Agregar Encuesta</h4>
+            <h4 class="modal-title"><?php if ($_smarty_tpl->getVariable('info')->value){?> Editar <?php }else{ ?> Agregar <?php }?> Encuesta</h4>
         </div>
         <div class="modal-body">
             <!-- START FORM -->

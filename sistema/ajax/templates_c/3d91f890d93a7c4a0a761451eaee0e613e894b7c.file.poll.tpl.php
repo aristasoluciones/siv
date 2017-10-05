@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 20:03:18
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:11:32
          compiled from "C:/wamp/www/siv/sistema/templates/forms/poll.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1754059d433568a31f4-52490175%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1633759d56aa4f108e1-04920802%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3d91f890d93a7c4a0a761451eaee0e613e894b7c' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/forms/poll.tpl',
-      1 => 1507078994,
+      1 => 1507158654,
     ),
   ),
-  'nocache_hash' => '1754059d433568a31f4-52490175',
+  'nocache_hash' => '1633759d56aa4f108e1-04920802',
   'function' => 
   array (
   ),
@@ -25,13 +25,10 @@ $_smarty_tpl->decodeProperties(array (
       <div class="portlet-body form">
        <!-- BEGIN FORM-->
 		<form id="frmGral" action="#" class="form-horizontal form-bordered form-label-stripped">
-			<?php if ($_smarty_tpl->getVariable('info')->value){?>
-			<input type="hidden" name="type" value="update" />
-			<input type="hidden" name="id" value="<?php echo $_smarty_tpl->getVariable('info')->value['clienteId'];?>
+			<input type="hidden" name="encuestaId" value="<?php echo $_smarty_tpl->getVariable('info')->value['encuestaId'];?>
 " />
-            <?php }else{ ?>
 			<input type="hidden" name="type" value="save" />
-			<?php }?>
+
 		  <div class="form-body">
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Nombre</label>
@@ -45,16 +42,16 @@ $_smarty_tpl->decodeProperties(array (
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Inicio</label>
 					<div class="col-md-9">
-							<input type="text" class="form-control" name="inicio" value="<?php echo $_smarty_tpl->getVariable('info')->value['inicio'];?>
-"  />
+							<input type="text" class="form-control" name="inicio"  id="fecha_1" value="<?php echo $_smarty_tpl->getVariable('info')->value['inicio'];?>
+"  onClick='cargaDate(1)' />
 					</div>
 							
 				</div>
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Fin</label>
 					<div class="col-md-9">
-							<input type="text" class="form-control" name="fin" value="<?php echo $_smarty_tpl->getVariable('info')->value['fin'];?>
-"  />
+							<input type="text" class="form-control" name="fin" id="fecha_2" value="<?php echo $_smarty_tpl->getVariable('info')->value['fin'];?>
+"  onClick='cargaDate(2)' />
 					</div>
 							
 				</div>

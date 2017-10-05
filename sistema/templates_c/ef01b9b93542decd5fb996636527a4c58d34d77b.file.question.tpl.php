@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 22:27:25
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:16:19
          compiled from "C:/wamp/www/siv/sistema/templates/question.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:692559d4551dc062d9-13461838%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1660159d56bc32f73c9-29054468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ef01b9b93542decd5fb996636527a4c58d34d77b' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/question.tpl',
-      1 => 1507087642,
+      1 => 1507158977,
     ),
   ),
-  'nocache_hash' => '692559d4551dc062d9-13461838',
+  'nocache_hash' => '1660159d56bc32f73c9-29054468',
   'function' => 
   array (
   ),
@@ -29,10 +29,10 @@ $_smarty_tpl->decodeProperties(array (
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">SmartTest</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">SmartTest</a></li>
+			<li><a href="#">Agregar Preguntas</a></li>
 		</ul>
 		</div>
 	</div>
@@ -49,7 +49,8 @@ $_smarty_tpl->decodeProperties(array (
 			<div class="portlet-title">
 				<div class="caption">
 				   <i class="icon-settings font-green"></i>
-				   <span class="caption-subject font-green sbold">SmartTest</span>
+				   <span class="caption-subject font-green sbold">Nombre de la encuesta: <?php echo $_smarty_tpl->getVariable('info')->value['nombre'];?>
+</span>
 				 </div>  
 				<div class="actions">
 				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
@@ -58,7 +59,7 @@ $_smarty_tpl->decodeProperties(array (
 						Agregar <i class="fa fa-plus"></i>
 					</a>
 					</div>
-					<div class="btn-group" >
+					<!--<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
                        <span class="hidden-xs">Acciones</span>
@@ -86,7 +87,7 @@ $_smarty_tpl->decodeProperties(array (
 								<i class="icon-cloud-upload"></i> Exportar CSV</a>
 						</li>
 					 </ul>
-					</div>	
+					</div>-->	
 				</div>
 			</div>
 			<div class="portlet-body" id="tblContent">

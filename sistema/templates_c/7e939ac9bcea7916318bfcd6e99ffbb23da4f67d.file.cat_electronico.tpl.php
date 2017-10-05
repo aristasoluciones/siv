@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 03:52:18
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 17:21:45
          compiled from "C:/wamp/www/siv/sistema/templates/cat_electronico.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1386659d4a1424dc970-32937869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:303059d55ef9d111e3-21427424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7e939ac9bcea7916318bfcd6e99ffbb23da4f67d' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/cat_electronico.tpl',
-      1 => 1507107135,
+      1 => 1507153886,
     ),
   ),
-  'nocache_hash' => '1386659d4a1424dc970-32937869',
+  'nocache_hash' => '303059d55ef9d111e3-21427424',
   'function' => 
   array (
   ),

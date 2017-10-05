@@ -11,10 +11,10 @@
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">SmartTest</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">SmartTest</a></li>
+			
 		</ul>
 		</div>
 	</div>

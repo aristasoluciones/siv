@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 01:07:15
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:20:02
          compiled from "C:/wamp/www/siv/sistema/templates/lists/poll.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1868559d47a9307e7e7-29482272%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:539459d57ab2de2623-80831950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '23dd04e253be9407654e1ab93ab59dd8bd63a627' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/poll.tpl',
-      1 => 1507097231,
+      1 => 1507162801,
     ),
   ),
-  'nocache_hash' => '1868559d47a9307e7e7-29482272',
+  'nocache_hash' => '539459d57ab2de2623-80831950',
   'function' => 
   array (
   ),
@@ -49,34 +49,26 @@ if (count($_from) > 0){
  - <?php echo $_smarty_tpl->getVariable('item')->value['fin'];?>
 </td>
 			<td><div align="center">
-<a href="javascript:void(0)" class="btn btn-xs yellow"  onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['usuarioId'];?>
+				<a href="javascript:void(0)" class="btn btn-xs yellow"  onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['encuestaId'];?>
 )" title="Editar">
 					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
 				
-				<a href="javascript:void(0)" onClick="ActiveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
-)" title="Editar">
-                    <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/activar.png" border="0">
-				</a>
-
-				<a href="javascript:void(0)" onClick="RemoveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
+				 <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg(<?php echo $_smarty_tpl->getVariable('item')->value['encuestaId'];?>
 )" title="Eliminar">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/desactivar.png" border="0">
+					<i class="fa fa-trash" aria-hidden="true"></i>
 				</a>
-				
-				 <a href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+								
+				<a class="btn btn-xs blue" href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
 /question/x/<?php echo $_smarty_tpl->getVariable('item')->value['encuestaId'];?>
 "  title="AGREGAR PREGUNTAS">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/calendar_edit.png" border="0">
+					<i class="fa fa-plus" aria-hidden="true"></i>
 				</a>
 				
-				<a href="javascript:void(0)" onClick="(<?php echo $_smarty_tpl->getVariable('item')->value['encuestaId'];?>
-)" title="Ver Resultado">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs green" href="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
+/question/x/<?php echo $_smarty_tpl->getVariable('item')->value['encuestaId'];?>
+" title="Ver Resultado">
+					<i class="fa fa-bar-chart" aria-hidden="true"></i>
 				</a>
             </div>
             </td>

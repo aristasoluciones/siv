@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 15:01:50
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 17:24:14
          compiled from "C:/wamp/www/siv/sistema/templates/lists/rol.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2024059d53e2e1db7b7-76783452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1238959d55f8e0766a6-30977458%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cacaa869c27a45e67d73b121ee48179bbec8e22c' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/rol.tpl',
-      1 => 1507147306,
+      1 => 1507153886,
     ),
   ),
-  'nocache_hash' => '2024059d53e2e1db7b7-76783452',
+  'nocache_hash' => '1238959d55f8e0766a6-30977458',
   'function' => 
   array (
   ),

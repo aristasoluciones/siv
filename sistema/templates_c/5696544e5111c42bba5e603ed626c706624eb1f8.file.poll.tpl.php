@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 19:36:52
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 18:08:02
          compiled from "C:/wamp/www/siv/sistema/templates/poll.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2319159d42d24e9bab9-91012676%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1938059d569d260fe28-92389569%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5696544e5111c42bba5e603ed626c706624eb1f8' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/poll.tpl',
-      1 => 1507077410,
+      1 => 1507158479,
     ),
   ),
-  'nocache_hash' => '2319159d42d24e9bab9-91012676',
+  'nocache_hash' => '1938059d569d260fe28-92389569',
   'function' => 
   array (
   ),
@@ -29,10 +29,10 @@ $_smarty_tpl->decodeProperties(array (
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">SmartTest</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">SmartTest</a></li>
+			
 		</ul>
 		</div>
 	</div>

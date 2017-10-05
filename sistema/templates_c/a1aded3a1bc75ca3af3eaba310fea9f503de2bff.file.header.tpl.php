@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 20:09:45
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 17:18:32
          compiled from "C:/wamp/www/siv/sistema/templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:945659d434d9a0ef34-43819200%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 16:39:11
-         compiled from "C:/wamp/www/siv/sistema/templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:836959d4037f0457c3-95364339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
+<?php /*%%SmartyHeaderCode:577159d55e3898a770-13097225%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a1aded3a1bc75ca3af3eaba310fea9f503de2bff' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/header.tpl',
-<<<<<<< HEAD
       1 => 1507079382,
     ),
   ),
-  'nocache_hash' => '945659d434d9a0ef34-43819200',
-=======
-      1 => 1507066337,
-    ),
-  ),
-  'nocache_hash' => '836959d4037f0457c3-95364339',
->>>>>>> 9c4d8df0665665b7f0ae71360651e128cffa4380
+  'nocache_hash' => '577159d55e3898a770-13097225',
   'function' => 
   array (
   ),

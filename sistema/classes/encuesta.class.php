@@ -170,25 +170,39 @@ class Encuesta extends Main
 		// $usuario->setId($_SESSION['Usr']["usuarioId"]);
 		// $infoQuien = $usuario->quienIngreso();
 		
-		 $sql = 'INSERT INTO encuesta (
+		if($this->id){
+			 $sql = 'UPDATE encuesta SET 
+				nombre = "'.utf8_decode($this->nombre).'", 
+				inicio = "'.($this->inicio).'", 
+				fin = "'.($this->fin).'"
+				WHERE encuestaId = "'.$this->id.'"';
+			$this->Util()->DB()->setQuery($sql);
+			$this->Util()->DB()->UpdateData();
+			
+		} else{
+			$sql = 'INSERT INTO encuesta (
 			nombre, 
 			fechaRegistro, 
 			usuarioregistraId, 
 			inicio, 
 			fin
-		)
-		VALUES(
-			"'.$this->nombre.'",
-			"'.date("Y-m-d").'",
-			"'.$_SESSION['Usr']["usuarioId"].'",
-			"'.$this->inicio.'",
-			"'.$this->fin.'"
-		)';
+			)
+			VALUES(
+				"'.$this->nombre.'",
+				"'.date("Y-m-d").'",
+				"'.$_SESSION['Usr']["usuarioId"].'",
+				"'.$this->inicio.'",
+				"'.$this->fin.'"
+			)';
+		}
+		
+		
+		
 		// exit;
 		$this->Util()->DB()->setQuery($sql);
 		$this->id = $this->Util()->DB()->InsertData();
 			
-		$this->Util()->setError(10112, 'complete', '');
+		$this->Util()->setError(10141, 'complete', '');
 		$this->Util()->PrintErrors();
 		
 		return true;
@@ -205,25 +219,42 @@ class Encuesta extends Main
 			return false; 
 		}
 		
-		 $sql = 'INSERT INTO pregunta (
-			pregunta, 
-			tiporespuesta, 
-			encuestaId, 
-			rango, 
-			opcional, 
-			numCaracter
-		)
-		VALUES(
-			"'.$this->pregunta.'",
-			"'.$this->tipoencuesta.'",
-			"'.$this->encuestaId.'",
-			"'.$this->rango.'",
-			"'.$this->opcional.'",
-			"'.$this->numcaracter.'"
-		)';
+		if($this->id){
+			$sql = 'UPDATE pregunta SET 
+				pregunta = "'.($this->pregunta).'",
+				tiporespuesta = "'.($this->tipoencuesta).'",
+				rango = "'.($this->rango).'",
+				opcional = "'.($this->opcional).'",
+				numCaracter = "'.($this->numcaracter).'"
+				WHERE preguntaId = "'.$this->id.'"';
+				
+			$this->Util()->DB()->setQuery($sql);
+			$this->Util()->DB()->UpdateData();
+			
+		}else{
+			 $sql = 'INSERT INTO pregunta (
+				pregunta, 
+				tiporespuesta, 
+				encuestaId, 
+				rango, 
+				opcional, 
+				numCaracter
+			)
+			VALUES(
+				"'.$this->pregunta.'",
+				"'.$this->tipoencuesta.'",
+				"'.$this->encuestaId.'",
+				"'.$this->rango.'",
+				"'.$this->opcional.'",
+				"'.$this->numcaracter.'"
+			)';
+			$this->Util()->DB()->setQuery($sql);
+			$this->id = $this->Util()->DB()->InsertData();
+		}
+		
+		
 		// exit;
-		$this->Util()->DB()->setQuery($sql);
-		$this->id = $this->Util()->DB()->InsertData();
+		
 			
 		$this->Util()->setError(10112, 'complete', '');
 		$this->Util()->PrintErrors();
@@ -268,7 +299,7 @@ class Encuesta extends Main
 	
 	public function Delete(){
 		
-		$sql = 'DELETE FROM usuario WHERE usuarioId = "'.$this->id.'"';
+		$sql = 'DELETE FROM encuesta WHERE encuestaId = "'.$this->id.'"';
 		$this->Util()->DB()->setQuery($sql);
 		$this->Util()->DB()->DeleteData();
 		
@@ -279,6 +310,19 @@ class Encuesta extends Main
 		
 	}//Delete
 	
+	
+	public function DeleteQuestion(){
+		
+		$sql = 'DELETE FROM pregunta WHERE preguntaId = "'.$this->id.'"';
+		$this->Util()->DB()->setQuery($sql);
+		$this->Util()->DB()->DeleteData();
+		
+		$this->Util()->setError(10114, 'error', '');
+		$this->Util()->PrintErrors();
+		
+		return true;
+		
+	}//Delete
 	
 	
 	
@@ -425,7 +469,15 @@ class Encuesta extends Main
 		
 	}
 	
-	
+	public function InfoPregunta(){
+		
+		 $sql = 'SELECT *, preguntaId AS idReg FROM pregunta WHERE preguntaId = "'.$this->id.'"';
+		$this->Util()->DB()->setQuery($sql);
+		$info = $this->Util()->DB()->GetRow();
+		
+		return $info;
+		
+	}
 						
 }
 

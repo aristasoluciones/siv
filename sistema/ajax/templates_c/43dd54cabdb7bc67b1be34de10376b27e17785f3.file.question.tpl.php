@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 22:33:39
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:07:02
          compiled from "C:/wamp/www/siv/sistema/templates/forms/question.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:21159d45693c424d3-28033910%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:291359d577a6778a54-62766209%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '43dd54cabdb7bc67b1be34de10376b27e17785f3' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/forms/question.tpl',
-      1 => 1507088015,
+      1 => 1507161579,
     ),
   ),
-  'nocache_hash' => '21159d45693c424d3-28033910',
+  'nocache_hash' => '291359d577a6778a54-62766209',
   'function' => 
   array (
   ),
@@ -26,7 +26,7 @@ $_smarty_tpl->decodeProperties(array (
        <!-- BEGIN FORM-->
 		<form id="frmGral" action="#" class="form-horizontal form-bordered form-label-stripped">
 
-			<input type="hidden" name="encuestaId" id="encuestaId" value="<?php echo $_smarty_tpl->getVariable('encuestaId')->value;?>
+			<input type="hidden" name="preguntaId" id="preguntaId" value="<?php echo $_smarty_tpl->getVariable('preguntaId')->value;?>
 " />
 			<input type="hidden" name="type" value="SaveQuestions" />
 
@@ -34,7 +34,7 @@ $_smarty_tpl->decodeProperties(array (
 				<div class="form-group">
 					<label class="control-label col-md-3"><span class="reqIcon"> * </span>Pregunta</label>
 					<div class="col-md-9">
-							<input type="text" class="form-control" name="nombre" value="<?php echo $_smarty_tpl->getVariable('info')->value['nombre'];?>
+							<input type="text" class="form-control" name="nombre" value="<?php echo $_smarty_tpl->getVariable('info')->value['pregunta'];?>
 "  />
 					</div>
 							
@@ -45,9 +45,9 @@ $_smarty_tpl->decodeProperties(array (
 					<div class="col-md-9">
 							<select name="tipo" id="tipo" onChange="checaTipopregunta()"  class="form-control">
 								<option value=""></option>
-								<option value="punto">Puntos</option>
-								<option value="opcional">Opcional</option>
-								<option value="abierta">Abierta</option>
+								<option value="punto" <?php if ($_smarty_tpl->getVariable('info')->value['tiporespuesta']=='punto'){?> selected <?php }?>>Puntos</option>
+								<option value="opcional" <?php if ($_smarty_tpl->getVariable('info')->value['tiporespuesta']=='opcional'){?> selected <?php }?>>Opcional</option>
+								<option value="abierta" <?php if ($_smarty_tpl->getVariable('info')->value['tiporespuesta']=='abierta'){?> selected <?php }?>>Abierta</option>
 							</select>
 					</div>	
 				</div>
@@ -82,7 +82,8 @@ $_smarty_tpl->decodeProperties(array (
 				<div class="form-group" id="div_car" <?php if ($_smarty_tpl->getVariable('info')->value['tiporespuesta']!="abierta"){?> style="display:none" <?php }?>>
 					<label class="control-label col-md-3"><span class="reqIcon">*</span>Num. Caracteres:</label>
 					 <div class="col-md-9">
-						<input type="text" name="caracter" class="form-control">
+						<input type="text" name="caracter" class="form-control" value="<?php echo $_smarty_tpl->getVariable('info')->value['numCaracter'];?>
+">
 					</div>
 				</div>
 

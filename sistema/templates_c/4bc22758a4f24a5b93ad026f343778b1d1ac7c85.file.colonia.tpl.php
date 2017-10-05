@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-04 04:16:18
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 17:24:25
          compiled from "C:/wamp/www/siv/sistema/templates/colonia.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:283059d4a6e22909c9-60084258%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1737659d55f99640762-60331852%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4bc22758a4f24a5b93ad026f343778b1d1ac7c85' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/colonia.tpl',
-      1 => 1507108379,
+      1 => 1507153886,
     ),
   ),
-  'nocache_hash' => '283059d4a6e22909c9-60084258',
+  'nocache_hash' => '1737659d55f99640762-60331852',
   'function' => 
   array (
   ),

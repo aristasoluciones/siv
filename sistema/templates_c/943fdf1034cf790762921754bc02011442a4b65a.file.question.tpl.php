@@ -1,16 +1,16 @@
-<?php /* Smarty version Smarty3-b7, created on 2017-10-03 22:40:48
+<?php /* Smarty version Smarty3-b7, created on 2017-10-04 19:17:34
          compiled from "C:/wamp/www/siv/sistema/templates/lists/question.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2330559d45840816078-51707707%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:576659d57a1e5be9d3-16287508%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '943fdf1034cf790762921754bc02011442a4b65a' => 
     array (
       0 => 'C:/wamp/www/siv/sistema/templates/lists/question.tpl',
-      1 => 1507088444,
+      1 => 1507162652,
     ),
   ),
-  'nocache_hash' => '2330559d45840816078-51707707',
+  'nocache_hash' => '576659d57a1e5be9d3-16287508',
   'function' => 
   array (
   ),
@@ -63,16 +63,14 @@ if (count($_from) > 0){
 			<td><div align="center">
 
 				
-				<a href="javascript:void(0)" onClick="ActiveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
+				<a href="javascript:void(0)" class="btn btn-xs yellow"  onClick="EditReg(<?php echo $_smarty_tpl->getVariable('item')->value['preguntaId'];?>
 )" title="Editar">
-                    <img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/activar.png" border="0">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
-
-				<a href="javascript:void(0)" onClick="RemoveReg(<?php echo $_smarty_tpl->getVariable('item')->value['clienteId'];?>
+				
+				 <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteQuestion(<?php echo $_smarty_tpl->getVariable('item')->value['preguntaId'];?>
 )" title="Eliminar">
-					<img src="<?php echo $_smarty_tpl->getVariable('WEB_ROOT')->value;?>
-/images/icons/desactivar.png" border="0">
+					<i class="fa fa-trash" aria-hidden="true"></i>
 				</a>
 
             </div>
