@@ -8,8 +8,6 @@
 	session_start();
 	
 	$page = 'producto';
-	
-	
 	$smarty->assign('page',$page);
 	
 	// $_POST["type"]= $_GET["type"];

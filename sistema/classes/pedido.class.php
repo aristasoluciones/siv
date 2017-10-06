@@ -193,6 +193,27 @@ class Pedido extends Main
         }
         return $result;
     }
+    public function  getSalesArticulo(){
+        $filtro  = "";
+        $group = "";
+        if($_POST["finicial"]!="" && $this->Util()->isValidateDate($_POST["finicial"]))
+            $filtro .= " AND a.fecha>='".$_POST['finicial']."'";
+        if($_POST["ffinal"]!="" && $this->Util()->isValidateDate($_POST["ffinal"]))
+            $filtro .= " AND a.fecha<='".$_POST['ffinal']."'";
+
+        if($_POST['categoria']!="" && $_POST['nameProducto']=="")
+            $group .=" GROUP BY b.categoria_id";
+
+        if($_POST['categoria']!="" && $_POST['productoId']!="")
+            $filtro .=" AND b.producto_categoria_id=".$_POST['productoId']." ";
+
+         $sql =  "SELECT * FROM detallesventas a INNER JOIN producto_categoria b ON a.productoId = b.producto_categoria_id
+                  WHERE 1 ".$filtro." ".$group." ";
+         $this->Util()->DB()->setQuery($sql);
+         $result = $this->Util()->DB()->GetResult();
+
+         return $result;
+    }
 	
 						
 }

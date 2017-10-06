@@ -25,7 +25,7 @@
 
 		#pedidos
         'rankin-pedido',
-		
+		'sales-articulo',
 		#catalogos
 		'cliente',
 		'estado',
