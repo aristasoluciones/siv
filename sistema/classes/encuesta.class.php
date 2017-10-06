@@ -478,6 +478,34 @@ class Encuesta extends Main
 		return $info;
 		
 	}
+	
+	
+	public function resultadosPreguntas(){
+		
+		$sql = 'SELECT *, preguntaId AS idReg FROM pregunta WHERE encuestaId = "'.$this->id.'" and tiporespuesta <> "abierta"';
+		$this->Util()->DB()->setQuery($sql);
+		$info = $this->Util()->DB()->GetResult();
+		
+		foreach($info as $key=>$aux){
+			$sql = 'SELECT respuesta,count(*) as total FROM resultado WHERE preguntaId = '.$aux['preguntaId'].' group by respuesta';
+			$this->Util()->DB()->setQuery($sql);
+			$info1 = $this->Util()->DB()->GetResult();
+			$info[$key]['resultados'] = $info1;
+		}
+		return $info;
+	}
+	
+	public function resultadosAbiertas(){
+		
+		$sql = 'SELECT * FROM resultado as r
+		left join pregunta as p on p.preguntaId = r.preguntaId
+		WHERE encuestaId = "'.$this->id.'" and tiporespuesta = "abierta"';
+		$this->Util()->DB()->setQuery($sql);
+		$info = $this->Util()->DB()->GetResult();
+		
+		return $info;
+	}
+	
 						
 }
 

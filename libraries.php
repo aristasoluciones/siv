@@ -33,6 +33,8 @@ $reportePdf = new ReportePdf;
 include_once(DOC_ROOT.'/classes/proveedor.class.php');
 $proveedor = new Proveedor;
 
+include_once(DOC_ROOT.'/classes/encuesta.class.php');
+$encuesta = new Encuesta;
 
 
 include_once(DOC_ROOT.'/classes/ikey.class.php');
