@@ -90,6 +90,9 @@ exit;*/
                echo "<div align='center'>---- No se encontraron resultados del periodo seleccionado ----</div>";
            }
         break;
+        case 'doSearchRankin':
+            $result = $pedido
+        break;
 				
 }//switch
 
