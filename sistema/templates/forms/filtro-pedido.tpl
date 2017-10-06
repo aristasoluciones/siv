@@ -38,7 +38,7 @@
             </div>
 
         </div>
-        <div class="form-actions">
+        <div class="form-">
             <div class="row">
                 <div class="col-md-offset-4 col-md-9">
                     <button type="button" class="btn green"  onclick="buscarPedidos()">Buscar</button>
