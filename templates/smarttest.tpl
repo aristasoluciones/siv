@@ -7,24 +7,30 @@
 	{include file="{$DOC_ROOT}/templates/1-default-meta.tpl"}
 	{include file="{$DOC_ROOT}/templates/2-default-css.tpl"}-->
 	{include file="{$DOC_ROOT}/templates/header.tpl"}
-	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+  $( function() {
+    $( "#slider" ).slider();
+  } );
+  </script>
 </head>
 
 <body class="" >
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
-    <div class="container"><div class="container"><div class="one_third column-last"><img src="images/nosotros/usuarios1.png" alt=""></div>
-      <h3>¿Cómo nos ves?</h3>
+    <div class="container"><div class="container iniciar">
+      <h1>Por favor, Tómate unos minutos para compatir tus ideas con nosotros</h1>
     </div>
 </section>
 
 
 <section class="container page-content" >
 	
-	
-	
-	
+
     <hr class="vertical-space2">
     <section class="eleven columns">
 	<div class="shop-wrap">
@@ -32,24 +38,45 @@
 	{$InfoCategoria.info}</p>
 	<br class="clr">
 	<div class="shop-wrap">
-	
 	<br>
 	<br>
 	<div id="divRegistro">
-	<form id="frmGral">
-	
-	
-	Por favor, Tómate unos minutos para compatir tus ideas con nosotros
-	
-	</form>
-	
+
 	<div id="loader"></div>
 	<div id="txtErrMsg" style="color:red"></div>
-	<button class="button small" style="background:#008080" onclick="SaveCuenta()">Iniciar</button> 
+	<button class="button small iniciar" style="background:#008080" onclick="iniciarEncuesta()" >Iniciar</button> 
 	</div>
 	
-	
-	
+	<div id='msjEncuesta'>
+	</div>
+	<div id='div_encuesta' style="display:none">
+		
+		<form id="frmGral">
+		<input type='hidden' name='encuestaId' id='encuestaId' value='{$ultima.encuestaId}'/>
+		
+		 {foreach from=$registros item=item key=key}  
+		 <h3>{$key+1}.- {$item.pregunta}</h3><br>
+		 <center>
+			{if $item.tiporespuesta eq 'punto'}
+				{$item.rango1}
+				{$item.rango2}
+				<div id="slider"></div>
+			{else if $item.tiporespuesta eq 'opcional'}
+				{foreach from=$item.opciones item=item2 key=key}  
+					<input type='radio' name='check_{$item.preguntaId}' id='check_{$item.preguntaId}' value='{$item2}'/>{$item2}
+				 {/foreach}	
+			{else}
+				<textarea name='check_{$item.preguntaId}'  style='width:900px !important; width:200px'></textarea>
+			{/if}
+			 <br>
+			 <br>
+		 </center>
+		 {/foreach}
+		</form>
+		<div   id='msj'>
+		</div>
+		<button class="button small" style="background:#008080" onclick="SaveEncuesta()">Enviar Encuesta</button> 
+		</div>
 	</div>
 	
 		<hr class="vertical-space1">

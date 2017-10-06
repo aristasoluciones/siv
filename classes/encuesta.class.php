@@ -427,9 +427,121 @@ class Encuesta extends Main
 		
 	}
 	
+	public function ultimaEncuesta(){
+		
+		$sql = 'SELECT * 
+				from
+					encuesta 
+				order by
+					encuestaId DESC ';
+
+			
+		$this->Util()->DB()->setQuery($sql);
+		$infoEncuesta = $this->Util()->DB()->GetRow();
+		
+		return $infoEncuesta;
+	}
+	
+	public function muestraPreguntas(){
+	
+		$sql = 'SELECT * 
+				from
+					encuesta 
+				order by
+					encuestaId DESC ';
+
+			
+		$this->Util()->DB()->setQuery($sql);
+		$infoEncuesta = $this->Util()->DB()->GetRow();
+		
+		$sql = 'SELECT * 
+				from
+					pregunta 
+				where
+					encuestaId = '.$infoEncuesta['encuestaId'].'';
+		$this->Util()->DB()->setQuery($sql);
+		$lst = $this->Util()->DB()->GetResult();
+		
+		foreach($lst as $key=>$aux){
+			
+			
+			if($aux["tiporespuesta"]=="opcional"){
+				unset($opciones);
+				$op = explode("_",$aux["opcional"]);
+				for($i=0;$i<=5;$i++){
+					if($op[$i]<>""){
+						$opciones[] = $op[$i];
+					}
+				}
+				$lst[$key]["opciones"] = $opciones;
+			}
+			else if($aux["tiporespuesta"]=="punto"){
+				$r = explode("_",$aux["rango"]);
+				$lst[$key]["rango1"] = $r[0];
+				$lst[$key]["rango2"] = $r[1];
+			}
+		}
+		
+		// echo '<pre>'; print_r ($lst);
+		// exit;
+		return $lst;
+		
+	}
 	
 	
+	
+	public function SaveEncuestaCliente(){
 						
+
+		// echo '<pre>'; print_r();
+		$sql = 'SELECT * 
+				from
+					pregunta 
+				where
+					encuestaId = '.$_POST['encuestaId'].' and tiporespuesta <> "punto"';
+		$this->Util()->DB()->setQuery($sql);
+		$lst = $this->Util()->DB()->GetResult();
+		
+		foreach($lst as $key=>$aux){
+				if($_POST['check_'.$aux['preguntaId']] ==""){
+					echo 'fail[#]';
+					
+					echo '<div class="alert alert-error">
+
+					<button type="button" class="close" data-dismiss="alert">×</button>
+					La pregunta numero '.($key+1).' se encuentra sin respuesta
+					</div>';
+					exit;
+				}
+		}
+		
+		foreach($_POST as $key=>$aux){
+			
+			$r = explode("_",$key);
+		
+		
+			if($r[0]=="check"){
+
+				$this->setRespuesta($aux);
+				 $sql = 'INSERT INTO resultado (
+						preguntaId, 
+						respuesta, 
+						usuarioId
+					)
+					VALUES(
+						"'.$r[1].'",
+						"'.$this->respuesta.'",
+						"0"
+					)';
+
+					$this->Util()->DB()->setQuery($sql);
+					$this->id = $this->Util()->DB()->InsertData();
+			}
+		}
+		
+		return true;
+		
+	}//saveRespuestas
 }
 
 ?>

@@ -30,7 +30,7 @@
 					<i class="fa fa-plus" aria-hidden="true"></i>
 				</a>
 				
-				<a class="btn btn-xs green" href="{$WEB_ROOT}/question/x/{$item.encuestaId}" title="Ver Resultado">
+				<a class="btn btn-xs green" href="{$WEB_ROOT}/poll-analytics/x/{$item.encuestaId}" title="Ver Resultados">
 					<i class="fa fa-bar-chart" aria-hidden="true"></i>
 				</a>
             </div>

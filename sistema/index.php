@@ -52,6 +52,7 @@
 		'geolocation',
 		'poll',
 		'question',
+		'poll-analytics',
 		
 	);
 	
