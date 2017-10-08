@@ -1,5 +1,5 @@
 <form  enctype="multipart/form-data" id="frmFiltroSales" action="#" method="post" class="form-horizontal">
-    <input type="hidden" name="type" value="doSearchSales">
+    <input type="hidden" name="type" value="doSearchSalesArt">
      <div class="form-body">
         <div class="row" align="center">
             <div class="col-md-4">
@@ -26,14 +26,17 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="control-label"><span class="reqIcon"></span>Producto</label>
-                    <input type="text" name="nameProducto" id="nameProducto"  class="form-control" />
+                    <div align="justify">
+                        <input type="text"  name="proDescrip" id="proDescrip"  class="form-control" autocomplete="off" />
+                        <input type="hidden" name="productoId" id="productoId" value=""   />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="form-actions">
         <div class="row">
-            <div class="col-md-offset-5 col-md-9">
+            <div class="col-md-12" align="center">
                 <button type="button" class="btn green"  onclick="doSearch()">Buscar</button>
             </div>
         </div>

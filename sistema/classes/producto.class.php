@@ -436,6 +436,16 @@ class Producto extends Main
 		return true;
 		
 	}//
+    public function Suggestion(){
+	    $filtro ="";
+	    if($_POST['categoria']!="")
+	         $filtro .=" AND categoria_id=".$_POST['categoria']."";
+	    $sql =  "SELECT producto_categoria_id as id,nombre FROM productos_categorias WHERE nombre LIKE '%".$_POST['query']."%' ".$filtro ." ";
+        $this->Util()->DB()->setQuery($sql);
+        $result = $this->Util()->DB()->GetResult();
+
+        return $result;
+    }
 	
 	
 						

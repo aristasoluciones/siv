@@ -193,7 +193,7 @@ class Pedido extends Main
         }
         return $result;
     }
-    public function  getSalesArticulo(){
+    public function  searchSalesByArticulo(){
         $filtro  = "";
         $group = "";
         if($_POST["finicial"]!="" && $this->Util()->isValidateDate($_POST["finicial"]))
@@ -201,14 +201,17 @@ class Pedido extends Main
         if($_POST["ffinal"]!="" && $this->Util()->isValidateDate($_POST["ffinal"]))
             $filtro .= " AND a.fecha<='".$_POST['ffinal']."'";
 
-        if($_POST['categoria']!="" && $_POST['nameProducto']=="")
-            $group .=" GROUP BY b.categoria_id";
+        if($_POST['categoria']!="" && $_POST['productoId']==""){
+            $filtro .=" AND b.categoria_id =".$_POST['categoria']."";
 
-        if($_POST['categoria']!="" && $_POST['productoId']!="")
+        }
+
+        if($_POST['productoId']!=""){
             $filtro .=" AND b.producto_categoria_id=".$_POST['productoId']." ";
-
-         $sql =  "SELECT * FROM detallesventas a INNER JOIN producto_categoria b ON a.productoId = b.producto_categoria_id
-                  WHERE 1 ".$filtro." ".$group." ";
+        }
+         $sql =  "SELECT b.nombre as articulo,c.nombre as categoria,sum(a.cantidad) totalVenta FROM detalleventas a INNER JOIN productos_categorias b ON a.productoId = b.producto_categoria_id
+                  INNER JOIN categoria c  ON b.categoria_id=c.categoriaId
+                  WHERE 1 ".$filtro." GROUP BY b.producto_categoria_id ";
          $this->Util()->DB()->setQuery($sql);
          $result = $this->Util()->DB()->GetResult();
 

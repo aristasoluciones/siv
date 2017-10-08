@@ -90,8 +90,18 @@ exit;*/
                echo "<div align='center'>---- No se encontraron resultados del periodo seleccionado ----</div>";
            }
         break;
-        case 'doSearchRankin':
-            $result = $pedido
+        case 'doSearchSalesArt':
+            $result = $pedido->searchSalesByArticulo();
+            if(!empty($result)){
+                echo "ok[#]";
+                $smarty->assign('nameField',$_POST["tipoDetalle"]);
+                $smarty->assign('result',$result);
+                $smarty->display(DOC_ROOT.'/templates/lists/list-sales-articulo.tpl');
+            }
+            else{
+                echo "fail[#]";
+                echo "<div align='center'>---- No se encontraron resultados del periodo seleccionado ----</div>";
+            }
         break;
 				
 }//switch

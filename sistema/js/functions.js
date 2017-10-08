@@ -13,7 +13,7 @@ var LOADER3 = "<div align='center'><img src='"+WEB_ROOT+"/images/loading.gif'><b
 
 var msgFail = "Ocurrio un error al cargar los datos.";
 var msgError = "Something went wrong...";
-
+var AJAX_AUTOCOMPLETE = WEB_ROOT+"/ajax/autocomplete.php";
 function verSubMenu(id){
 	$("#mnuPrincipal_"+id).toggle();
 }
