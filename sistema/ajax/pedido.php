@@ -1,6 +1,6 @@
 <?php
-/*echo "<pre>"; print_r($_POST);
-exit;*/
+// echo "<pre>"; print_r($_POST);
+// exit;
 	include_once('../init.php');
 	include_once('../config.php');
 	include_once(DOC_ROOT.'/libraries.php');
@@ -75,7 +75,12 @@ exit;*/
                    $pedido->setSucursalId($_SESSION["Usr"]["sucursalId"]);
              }
              $pedido->setFolio($_POST["folio"]);
-             $pedido->searchPedidos();
+             // $pedido->searchPedidos();
+			 echo 'ok[#]';
+			 $pedidos = $pedido->Enumerate();
+			 $smarty->assign('registros',$pedidos);
+			  $smarty->display(DOC_ROOT.'/templates/lists/pedido.tpl');
+			
             break;
         case 'doSearchRankin':
            $result =  $pedido->getRankinPedidos();

@@ -28,7 +28,7 @@
             {include file="{$DOC_ROOT}/templates/forms/filtro-pedido.tpl"}
 		</div>
 		<div class="col-md-12" id="tbl-content-pedido">
-			<div class="portlet box blue">
+			<div class="portlet box ">
 				<div class="portlet-title">
 					<div class="caption">
 					   <i class="icon-settings font-green"></i>Lista de pedidos

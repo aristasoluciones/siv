@@ -84,7 +84,7 @@ function buscarPedidos(){
         },
         success: function(response) {
             var splitResp = response.split("[#]");
-
+			console.log(response)
             if(splitResp[0] == "ok")
             {
                 $("#tblContent").html(splitResp[1]);
