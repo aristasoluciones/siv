@@ -273,7 +273,7 @@ class Usuario extends Main
 			pais, 
 			telefono, 
 			email,
-			fecgaNacimiento, 
+			fechaNacimiento, 
 			usuario, 
 			passwd, 
 			role_id, 
@@ -306,7 +306,7 @@ class Usuario extends Main
 		$this->Util()->setError(10112, 'complete', '');
 		$this->Util()->PrintErrors();
 		
-		return $id_insert;
+		return true;
 		
 	}//Save
 	

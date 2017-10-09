@@ -59,7 +59,6 @@
 				$usuario->setEstado($_POST['estado']);
 				$usuario->setPais($_POST['pais']);
 				$usuario->setSucursalId($_POST['sucursalId']);
-
 				$success = $usuario->Save();
 				if($success){
 			      echo 'ok[#]';
