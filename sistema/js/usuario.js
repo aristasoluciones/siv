@@ -72,10 +72,9 @@ function SaveReg(){
 			var splitResp = response.split("[#]");
 
 			$("#loader").html("");
-			
 			if(splitResp[0] == "ok"){
 				$("#large").modal("hide");
-				// location.reload();
+				 location.reload();
 			}else if(splitResp[0] == "fail"){
 				$("#txtErrMsg").show();
 				$("#txtErrMsg").show();
@@ -104,16 +103,12 @@ function DeleteReg(id){
 	  	type: "POST",
 	  	url: AJAX_PATH,
 	  	data: "type=delete&id="+id,
-		beforeSend: function(){			
-			$("#tblContent").html(LOADER3);
+		beforeSend: function(){
 		},
 	  	success: function(response) {			
 			var splitResp = response.split("[#]");
-
-			$("#tblContent").html("");
-			
 			if(splitResp[0] == "ok")
-				LoadPage(p);
+				location.reload();
 			else if(splitResp[0] == "fail")
 				alert(msgFail);				
 		},

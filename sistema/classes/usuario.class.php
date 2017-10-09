@@ -23,6 +23,7 @@ class Usuario extends Main
 	private $pais;
 	private $rol_actual;
 	private $sucursalId;
+	private $fnacimento;
 	
 	
 	public function setSucursalId($value){
@@ -31,7 +32,12 @@ class Usuario extends Main
 			$this->sucursalId = $value;
 		}
 	}
-
+    public function setFechaNacimiento($value){
+        if($this->Util()->ValidateRequireField($value, 'Fecha nacimiento')) {
+            if($this->Util()->validateDateFormat($value,'Fecha nacimiento'))
+             $this->fnacimento = $value;
+        }
+    }
 	public function setId($value){
 		$this->Util()->ValidateInteger($value);
 		$this->id = $value;
@@ -164,8 +170,7 @@ class Usuario extends Main
 	
 	public function EnumerateAll(){
 		
-		$sql = 'SELECT * FROM usuario 
-				ORDER BY nombre ASC';
+		$sql = 'SELECT * FROM usuario WHERE activo="1" ORDER BY nombre ASC';
 		$this->Util()->DB()->setQuery($sql);
 		$registros = $this->Util()->DB()->GetResult();
 							
@@ -267,7 +272,8 @@ class Usuario extends Main
 			estado, 
 			pais, 
 			telefono, 
-			email, 
+			email,
+			fecgaNacimiento, 
 			usuario, 
 			passwd, 
 			role_id, 
@@ -285,7 +291,8 @@ class Usuario extends Main
 			"'.$this->estado.'",
 			"'.$this->pais.'",
 			"'.$this->telefono.'",
-			"'.$this->email.'", 
+			"'.$this->email.'",
+			"'.$this->fnacimento.'", 
 			"'.$this->usuario.'",
 			"'.md5($this->passwd).'",
 			'.$this->tipo.',
@@ -339,7 +346,8 @@ class Usuario extends Main
 				pais = "'.($this->pais).'",
 				nombre = "'.($this->nombre).'", 
 				telefono = "'.$this->telefono.'",
-				email = "'.($this->email).'", 
+				email = "'.($this->email).'",
+				fechaNacimiento = "'.($this->fnacimento).'", 
 				usuario = "'.($this->usuario).'",
 				passwd = "'.md5($this->passwd).'", 
 				role_id= '.$this->tipo.', 
@@ -360,31 +368,29 @@ class Usuario extends Main
 				nombre = "'.($this->nombre).'", 
 				telefono = "'.$this->telefono.'",
 				email = "'.($this->email).'", 
+				fechaNacimiento = "'.($this->fnacimento).'",
 				usuario = "'.($this->usuario).'",
 				role_id= '.$this->tipo.', 
 				activo = "'.$this->activo.'",
 				sucursalId = "'.$this->sucursalId.'"
-				
 				WHERE usuarioId = "'.$this->id.'"';
 	}	
 	
 		$this->Util()->DB()->setQuery($sql);
 		$id_update = $this->Util()->DB()->UpdateData();
-
-		$this->Util()->setError(10113, 'error', '');
+		$this->Util()->setError(10113, 'complete', 'El registro se actualizo correctamente ');
 		$this->Util()->PrintErrors();
-		
 		return true;
 		
 	}//Update
 	
 	public function Delete(){
 		
-		$sql = 'DELETE FROM usuario WHERE usuarioId = "'.$this->id.'"';
+		$sql = 'UPDATE usuario SET activo="0" WHERE usuarioId = "'.$this->id.'"';
 		$this->Util()->DB()->setQuery($sql);
-		$this->Util()->DB()->DeleteData();
+		$this->Util()->DB()->UpdateData();
 		
-		$this->Util()->setError(10114, 'error', '');
+		$this->Util()->setError(10114, 'complete', 'El usuario se elimino correctamente');
 		$this->Util()->PrintErrors();
 		
 		return true;

@@ -8,7 +8,7 @@
             <th>Email </th>
             <th>Usuario </th>
             <th>Tipo </th>
-            <th>Status</th>
+            <th>Activo</th>
             <th>Acci&oacute;n </th>
         </tr>
     </thead>

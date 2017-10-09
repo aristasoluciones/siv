@@ -8,7 +8,6 @@
                 {if $info}
                     <input type="hidden" name="type" value="update" />
                     <input type="hidden" name="id" value="{$info.usuarioId}" />
-                    <input type="hidden" name="rol_actual" value="{$info.role_id}" />
                 {else} 
                    <input type="hidden" name="type" value="save" />
                 {/if}
@@ -56,11 +55,7 @@
                                <div class="form-group">
                                     <label class="control-label col-md-3"><span class="reqIcon">*</span> Fecha Nacimiento</label>
                                     <div class="col-md-9">
-                                        {if !$info}
-                                            <input type="text" class="form-control" name="fechanacimiento" />
-                                        {else}
-                                             <input type="text" class="form-control" name="fechanacimiento" value="{$info.fechanacimiento}" />
-                                        {/if}
+                                             <input type="text" class="form-control" name="fechanacimiento" id="fechanacimiento" value="{$info.fechaNacimiento}" onclick="Calendario(this)"  />
                                     </div>
                                 </div> 
                             </div>
@@ -106,13 +101,9 @@
                            </div>
                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label col-md-3"><span class="reqIcon">*</span> Contrase&ntilde;a</label>
+                                    <label class="control-label col-md-3"><span class="reqIcon">{if !$info}*{/if}</span> Contrase&ntilde;a</label>
                                     <div class="col-md-9">
-                                        {if !$info}
-                                            <input type="password" class="form-control" name="passwd" maxlength="13"  />
-                                        {else}
-                                             <input type="password" class="form-control" name="passwd" value="{$info.passwd}" maxlength="13" />
-                                        {/if}
+                                        <input type="password" class="form-control" name="passwd" value="{$info.passwd}" maxlength="13" />
                                     </div>
                                 </div>  
                            </div>
@@ -195,40 +186,48 @@
                                 </div>
                            </div>
                        </div>
-                        <div class="row">
+                       <div class="row">
                             <div class="col-md-6">
-                                <label class="control-label col-md-3"><span class="reqIcon">*</span> Tipo / Rol</label>
-                                <div class="col-md-9">
-                                    <select class="form-control" name="tipo" id="tipo">
-                                    <option value=""></option>
-                                    {foreach from=$registros_roles item=item key=key}
-                                       <option value="{$item.ID}" {if $info.role_id == $item.ID}selected{/if}>{$item.Description}</option>}
-                                    {/foreach}  
-                                    </select>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3"><span class="reqIcon">*</span> Tipo / Rol</label>
+                                    <div class="col-md-9">
+                                        <select class="form-control" name="tipo" id="tipo">
+                                        <option value=""></option>
+                                        {foreach from=$registros_roles item=item key=key}
+                                           <option value="{$item.ID}" {if $info.role_id == $item.ID}selected{/if}>{$item.Description}</option>}
+                                        {/foreach}
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                              <label class="control-label col-md-3"><span class="reqIcon">*</span> Estatus</label>
-                                <div class="col-md-9">
-                                   {if !$info}
-                                    <input type="checkbox" name="activo" />
-                                     {else}
-                                       <input type="checkbox" name="activo" {if $info.activo ==1}checked{/if} />
-                                    {/if}
-                                </div>  
+                              <div class="form-group">
+                                  <label class="control-label col-md-3"><span class="reqIcon">*</span> Sucursal</label>
+                                  <div class="col-md-9">
+                                      <select name="sucursalId" class="form-control">
+                                          <option value="">Selecciona una sucursal......</option>
+                                          {foreach from=$lsts item=item key=key}
+                                              <option value="{$item.sucursalid}" {if $info.sucursalId == $item.sucursalid}selected{/if}>{$item.nombre}</option>
+                                          {/foreach}
+                                      </select>
+                                  </div>
+                              </div>
                             </div>
                         </div>
-						<br>
-						<br>
-						Sucursal:
-						<select name="sucursalId" class="form-control">
-							<option></option>
-							{foreach from=$lsts item=item key=key}
-							   <option value="{$item.sucursalid}" {if $info.sucursalId == $item.sucursalid}selected{/if}>{$item.nombre}</option>
-							{/foreach}  
-                          </select>
-
-                        		
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3"><span class="reqIcon">*</span> Estatus</label>
+                                    <div class="col-md-9">
+                                        {if !$info}
+                                            <input type="checkbox" name="activo" />
+                                        {else}
+                                            <input type="checkbox" name="activo" {if $info.activo ==1}checked{/if} />
+                                        {/if}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 				    </div><!-- END FORM-BODY -->					
                 </form><!-- END FORM-->                  
             </div>

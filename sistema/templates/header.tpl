@@ -4,7 +4,7 @@
 	  <!-- BEGIN LOGO -->
 		<div class="page-logo">
 		  <a href="{$WEB_ROOT}">
-			<img src="{$WEB_ROOT}/images/logo.png?dd" alt="logo" class="logo-default" width="90"  height="30px"/> 
+			<img src="{$WEB_ROOT}/images/logo.png?dd" alt="logo" class="logo-default" width="90"  height="30px"/>
 		  </a>
 		  <div class="menu-toggler sidebar-toggler">
 				<span></span>
@@ -22,7 +22,7 @@
                 <!-- BEGIN USER LOGIN DROPDOWN -->
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                    <img alt="" src="{$WEB_ROOT}/images/escudo.png" class="img-circle" />
+                    <img alt="" src="{$WEB_ROOT}/assets/layouts/layout/img/avatar.png" class="img-circle" />
                     <span class="username username-hide-on-mobile">{$Usr.usuario}</span>
                     <i class="fa fa-angle-down"></i>
                     </a>

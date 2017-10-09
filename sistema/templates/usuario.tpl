@@ -1,9 +1,5 @@
 <!-- BEGIN PAGE HEADER-->
 	<div class="page-bar">
-		<div class="span12">           
-			<h3 class="page-title">
-				<!--Dependencia-->
-			</h3>
 		 <ul class="page-breadcrumb">
 			<li>
 				<i class="icon-home"></i>
@@ -16,7 +12,6 @@
 			</li>
 			<li><a href="{$WEB_ROOT}/usuario">Usuarios</a></li>
 		</ul>
-		</div>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
 		<h1 class="page-title"> Usuarios

@@ -23,7 +23,6 @@
 			break;
 		
 		case 'edit':
-				
 				$usuario->setId($_POST['id']);
 				$info = $usuario->Info();
 				 $lsts =  $sucursal->EnumerateAll();
@@ -36,7 +35,6 @@
 																
 			break;		
 		case 'save':
-		
 				if(isset($_POST["activo"]))
 					 $activo = 1;
 				   else
@@ -53,6 +51,7 @@
 				$usuario->setActivo($activo);
 				$usuario->setApaterno($_POST['apaterno']);
 				$usuario->setAmaterno($_POST['amaterno']);
+                $usuario->setFechaNacimiento($_POST['fechanacimiento']);
 				$usuario->setCalle($_POST['calle']);
 				$usuario->setNoExterior($_POST['nexterior']);
 				$usuario->setColonia($_POST['colonia']);
@@ -63,9 +62,6 @@
 
 				$success = $usuario->Save();
 				if($success){
-                 //assignar el rol seleccionado al usuario creado. 
-		         //$id_role = $rbac->Roles->returnId($_POST["tipo"]);
-			      $rbac->Users->assign($_POST['tipo'],$success);
 			      echo 'ok[#]';
 				}else{
 					echo "fail[#]";					
@@ -74,9 +70,6 @@
 				
 			break;
 			case 'update':
-		  /* echo "<pre>";
-		   print_r($_POST);
-		   exit;*/
 				if(isset($_POST["activo"]))
 					 $activo = 1;
 				   else
@@ -93,6 +86,7 @@
 				$usuario->setActivo($activo);
 				$usuario->setApaterno($_POST['apaterno']);
 				$usuario->setAmaterno($_POST['amaterno']);
+                $usuario->setFechaNacimiento($_POST['fechanacimiento']);
 				$usuario->setCalle($_POST['calle']);
 				$usuario->setNoExterior($_POST['nexterior']);
 				$usuario->setColonia($_POST['colonia']);
@@ -102,35 +96,16 @@
 				$usuario->setSucursalId($_POST['sucursalId']);
 				$success = $usuario->Update();
 				if($success){
-		        if($_POST["rol_actual"]!=$_POST["tipo"]){
-		        	
-					//$id_role_actual = $rbac->Roles->returnId($_POST["rol_actual"]);
-					if($_POST["rol_actual"]){
-					//comprobar si tiene el rol agregado
-						if($rbac->Users->hasRole($_POST["rol_actual"], $idReg))
-						{
-						 //desasignar el rol actual al usuario por que sufrio cambios
-						  $rbac->Users->unassign($_POST["rol_actual"], $idReg);
-						}
-				    }
-					
-					//asignar nuevo rol para el usuario
-					$rbac->Users->assign($_POST["tipo"],$idReg);
-				}
-
 				 echo 'ok[#]';
 
 				}else{
 					echo "fail[#]";					
 					$util->ShowErrors();					
 				}
-				
 			break;
 								
 		case 'delete':
-				
 				$usuario->setId($_POST['id']);
-				
 				if($usuario->Delete()){					
 					echo 'ok[#]';				
 				}
