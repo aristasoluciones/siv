@@ -243,7 +243,7 @@
 
       </li>
 	{/if}
-	
+    {if in_array(4000,$privilegios) or $Usr.role_id eq 1}
 	 <li class="nav-item {if $page =='poll' || $page =='question'}active open{/if}">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-list"></i> 
@@ -256,8 +256,7 @@
 		{/if}
         </a>
         <ul class="sub-menu">
-       		{if in_array('13',$privilegios) or $Usr.role_id eq 1} 
-
+       		{if in_array('4001',$privilegios) or $Usr.role_id eq 1}
         	<li class="nav-item {if $page=='poll'}active open{/if}">
 				<a class="nav-link " href="{$WEB_ROOT}/poll">
 					<i class="icon-list"></i>
@@ -267,7 +266,7 @@
 			{/if}
 		</ul>
       </li>
-
+    {/if}
 
 </ul>
 </div>

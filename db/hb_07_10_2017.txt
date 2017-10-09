@@ -1,2 +1,4 @@
 ALTER TABLE `usuario`
 	ADD COLUMN `fechaNacimiento` DATE NOT NULL AFTER `email`;
+ALTER TABLE `roles`
+	ADD COLUMN `status` ENUM('activo','eliminado') NOT NULL DEFAULT 'activo' AFTER `Description`;

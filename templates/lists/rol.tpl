@@ -13,15 +13,15 @@
         <tr>
             <td>{$item.Title}</td>
              <td>{$item.Description}</td>     
-            <td><div align="center">
-				<a href="javascript:void(0)" onClick="EditReg({$item.ID})" title="Editar tramite">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_150_edit.png" border="0">
-				</a>
-				<a href="{$WEB_ROOT}/config_role/id/{$item.ID}" title="Configurar rol" data-toggle="modal" class="btn">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_136_cogwheel.png">
-				</a>
-				
-            </div>
+            <td>
+                <div align="center">
+                    <a class="btn btn-xs orange" href="javascript:void(0)" onClick="EditReg({$item.ID})" title="Editar rol">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-xs orange" href="{$WEB_ROOT}/config_role/id/{$item.ID}" title="Configurar rol">
+                        <i class="fa fa-plus-square" aria-hidden="true"></i>
+                    </a>
+               </div>
             </td>
         </tr>
         {foreachelse}

@@ -65,14 +65,11 @@ class Role extends Main
 	public function Enumerate(){
 		$sql = 'SELECT 
 				*
-				FROM roles  where ID>1
+				FROM roles  where ID>1 AND status="activo"
 				ORDER BY Title DESC
 				';
 		$this->Util()->DB()->setQuery($sql);
 		$data = $this->Util()->DB()->GetResult();
-		
-	
-					
 		return $data;
 		
 	}//Enumerate
@@ -194,7 +191,18 @@ class Role extends Main
 		$this->Util()->PrintErrors();
 		return true;	
 	}//Save
-	
+    public function Delete(){
+
+        if($this->Util()->PrintErrors()){
+            return false;
+        }
+        $sql = 'UPDATE roles SET status="eliminado"  WHERE ID = "'.$this->id.'"';
+        $this->Util()->DB()->setQuery($sql);
+        $this->Util()->DB()->UpdateData();
+        $this->Util()->setError(10129, 'complete', 'El rol se elimino correctamente');
+        $this->Util()->PrintErrors();
+        return true;
+    }//Save
 
 
 }

@@ -13,15 +13,18 @@
         <tr>
             <td>{$item.Title}</td>
              <td>{$item.Description}</td>     
-            <td><div align="center">
-				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.ID})" title="Editar Rol">					
-					<i class="fa fa-pencil-square-o" ></i> 
-				</a>
-				<a class="btn btn-xs red" href="{$WEB_ROOT}/config_role/id/{$item.ID}" title="Configurar rol" data-toggle="modal" class="btn">
-					<i class="fa fa-file-code-o" aria-hidden="true"></i>
-				</a>
-				
-            </div>
+            <td>
+                <div align="center">
+                    <a class="btn btn-xs yellow-gold" href="javascript:void(0)" onClick="EditReg({$item.ID})" title="Editar rol">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-xs blue-dark" href="{$WEB_ROOT}/config_role/id/{$item.ID}" title="Configurar rol">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-xs red" href="javascript:void(0)" onClick="DeleteReg({$item.ID})" title="Eliminar rol">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
             </td>
         </tr>
         {foreachelse}

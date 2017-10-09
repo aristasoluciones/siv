@@ -45,32 +45,27 @@ function EditReg(id){
 	$("#draggable").modal("show");
 	
 }//EditReg
-function addRequisito(id,fila){
-	$.ajax({
-		type:"POST",
-		 url:AJAX_PATH,
-		data:"type=addRequisito&id="+id,
-		success:function(response){
+function DeleteReg(id){
+	bootbox.confirm("¿ Esta seguro de eliminar este rol ?",function(res){
+	  if(!res)
+	  	 return;
 
-			var splitResp = response.split("[#]");
-				console.log(fila);
-			if(splitResp[0] == "ok")
-			{
-
-				$("#draggable").html(splitResp[1]);
-			    $("#draggable").modal('show');
-			}
-			else
-				alert(msgFail);
-		},
-		error:function(){
-			console.log("error");
-		}
-
+        $.ajax({
+            type:"POST",
+            url:AJAX_PATH,
+            data:"type=deleteRol&id="+id,
+            success:function(response){
+                var splitResp = response.split("[#]");
+                if(splitResp[0] == "ok")
+               	 location.reload();
+                else
+                 alert(msgFail);
+            },
+            error:function(){
+                alert(msgError)
+            }
+        });
 	});
-
-	
-
 }
 function SaveReg(){		  
 	$.ajax({
