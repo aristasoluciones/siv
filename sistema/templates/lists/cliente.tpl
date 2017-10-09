@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-    	{foreach from=$registros item=item key=key}        	
+    	{foreach from=$registros.result item=item key=key}
         <tr>
             <td>{$key+1}</td>
             <td>{$item.nombre}</td>
@@ -22,19 +22,19 @@
             <td>{$item.email}</td>
             <td>{$item.activo}</td>
 			<td><div align="center">
-               {if in_array('edit_cliente',$privilegios) or $Usr.role_id eq 1}
+                {* if in_array('edit_cliente',$privilegios) or $Usr.role_id eq 1}
 				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.clienteId})" title="Editar cliente">
 					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
-                {/if}
+                {/if *}
 				{if in_array('active_cliente',$privilegios) or $Usr.role_id eq 1}
                     {if $item.activo=="no"}
                         <a class="btn btn-xs green" href="javascript:void(0)" onClick="ActiveReg({$item.clienteId})" title="Activar cliente">
-                            <i class="fa fa-upload" aria-hidden="true"></i>
+                            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
                         </a>
                     {else}
                     <a class="btn btn-xs red" href="javascript:void(0)" onClick="RemoveReg({$item.clienteId})" title="Dar de baja cliente">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                     </a>
                     {/if}
                 {/if}

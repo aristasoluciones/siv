@@ -177,9 +177,7 @@ class Cliente extends Main
 	}//Info
 	
 	public function Enumerate(){
-		
-		$filtro =  '';
-		
+
 		if($this->nombre){
 			$filtro .= ' and nombre like "%'.$this->nombre.'%"';
 		}

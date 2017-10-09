@@ -234,7 +234,7 @@
 					<!--<li><a href="{$WEB_ROOT}/pep-time">Hora por Colonias</a></li>-->
 					<li class="nav-item {if $page =='geolocation'}active open{/if}" ><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
 					<li class="nav-item {if $page =='pep-basic'}active open{/if}"><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>
-					<li class="nav-item {if $page =='rankin-pedido'}active open{/if}" ><a href="{$WEB_ROOT}/rankin-pedido">Rankin de pedidos</a></li>
+					<li class="nav-item {if $page =='rankin-pedido'}active open{/if}" ><a href="{$WEB_ROOT}/rankin-pedido">Ranking de pedidos</a></li>
 					<li class="nav-item {if $page =='sales-articulo'}active open{/if}" ><a href="{$WEB_ROOT}/sales-articulo">Ventas por articulo</a></li>
 				</ul>
 			</li>

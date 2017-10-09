@@ -14,7 +14,7 @@
 		</ul>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
-	<h1 class="page-title">Rankin de pedidos
+	<h1 class="page-title">Ranking de pedidos
 		<small></small>
 	</h1>
 	 <!-- END PAGE TITLE-->

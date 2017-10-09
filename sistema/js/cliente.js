@@ -81,42 +81,51 @@ function SaveReg(){
 		
 }//SaveReg
 function RemoveReg(id){
-	
-	$.ajax({
-	  	type: "POST",
-	  	url: AJAX_PATH,
-	  	data: "type=remove&id="+id,		
-	  	success: function(response) {	
-		console.log(response)		
-			var splitResp = response.split("[#]");					
-			if(splitResp[0] == "ok")
-				location.reload();
-			else
-				alert(msgFail);
-		},
-		error:function(){
-			alert(msgError);
-		}
-    });	
+	bootbox.confirm("Esta seguro de eliminar este cliente",function(res){
+		if(!res)
+			return;
+        $.ajax({
+            type: "POST",
+            url: AJAX_PATH,
+            data: "type=remove&id="+id,
+            success: function(response) {
+                console.log(response)
+                var splitResp = response.split("[#]");
+                if(splitResp[0] == "ok")
+                    location.reload();
+                else
+                    alert(msgFail);
+            },
+            error:function(){
+                alert(msgError);
+            }
+        });
+    });
+
 }//RemoveReg
 function ActiveReg(id){
-	
-	$.ajax({
-	  	type: "POST",
-	  	url: AJAX_PATH,
-	  	data: "type=activar&id="+id,		
-	  	success: function(response) {	
-		console.log(response)		
-			var splitResp = response.split("[#]");					
-			if(splitResp[0] == "ok")
-				location.reload();
-			else
-				alert(msgFail);
-		},
-		error:function(){
-			alert(msgError);
-		}
-    });	
+	bootbox.confirm("Esta seguro de activar este cliente",function(res){
+	 if(!res)
+	 	 return;
+
+        $.ajax({
+            type: "POST",
+            url: AJAX_PATH,
+            data: "type=activar&id="+id,
+            success: function(response) {
+                console.log(response)
+                var splitResp = response.split("[#]");
+                if(splitResp[0] == "ok")
+                    location.reload();
+                else
+                    alert(msgFail);
+            },
+            error:function(){
+                alert(msgError);
+            }
+        });
+    });
+
 }//ActiveReg
 
 
