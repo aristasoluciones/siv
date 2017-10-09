@@ -129,7 +129,8 @@ class User extends Main
 			$card['usuarioId'] = $row['usuarioId'];	
 			$card['role_id'] = $row['role_id'];
             $card['sucursalId'] = $row['sucursalId'];
-	        $card['usuario'] = $row['usuario'];			
+	        $card['usuario'] = $row['usuario'];
+            $card['email'] = $row['email'];
 			$card['isLogged'] = true;;			
 			
 			// $card['roleId'] = ($card['tipo'] == 'admin') ? 1 : 2;

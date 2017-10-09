@@ -60,7 +60,7 @@ class Municipio extends Main
 	}
 	
 	public function EnumerateAll(){
-		$sql = 'SELECT * FROM municipios';
+		$sql = 'SELECT * FROM municipio';
 		$this->Util()->DB()->setQuery($sql);
 		$results = $this->Util()->DB()->GetResult();
 		return $results;

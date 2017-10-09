@@ -51,6 +51,12 @@ $imagen = new Imagen;
 include_once(DOC_ROOT.'/classes/cliente.class.php');
 $cliente = new Cliente;
 
+include_once(DOC_ROOT.'/classes/municipio.class.php');
+$municipio = new Municipio;
+
+include_once(DOC_ROOT.'/classes/colonia.class.php');
+$colonia = new Colonia;
+
 include_once(DOC_ROOT.'/classes/pedido.class.php');
 $pedido = new Pedido;
 

@@ -20,11 +20,11 @@
        <h3 class="uppercase">Menu de opciones</h3>
     </li>
     {if in_array("1",$privilegios) or $Usr.role_id eq 1} 
-    <li class="nav-item {if $page=='config' || $page=='usuario' || $page=='rol' || $page=='config_role' || $page=='perm_accion'|| $page=='empresa'}active open{/if}">
+    <li class="nav-item {if $page=='config' || $page=='usuario' || $page=='rol' || $page=='config_role' || $page=='perm_accion'|| $page=='empresa' || $page=='colonia'}active open{/if}">
         <a href="javascript:;" class="nav-link nav-toggle">
         <i class="icon-settings"></i> 
         <span class="title">Configuraciones</span>
-       {if $page =='rol' ||$page=='config_role'|| $page=='perm_accion'|| $page=='usuario' || $page=='empresa'}
+       {if $page =='rol' ||$page=='config_role'|| $page=='perm_accion'|| $page=='usuario' || $page=='empresa' || $page=='colonia'}
 		 <span class="selected"></span>
          <span class="arrow open"></span>
          {else}
@@ -64,11 +64,11 @@
 					</a>
 				</li>
 			{/if}
-			{if in_array('8',$privilegios) or $Usr.role_id eq 1} 
+			{if in_array('16',$privilegios) or $usr.role_id eq 1}
 				<li class="nav-item {if $page=='usuario'}active open{/if}">
 					<a class="nav-link " href="{$WEB_ROOT}/colonia">
 						<i class="icon-settings"></i>
-						<span class="title">Colonia</span>
+						<span class="title">Colonias</span>
 					</a>
 				</li>
 			{/if}

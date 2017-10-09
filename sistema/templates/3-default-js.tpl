@@ -35,9 +35,7 @@
 <script src="{$WEB_ROOT}/assets/pages/scripts/table-datatables-buttons.min.js" type="text/javascript"></script>
 <script src="{$WEB_ROOT}/assets/pages/scripts/ui-modals.min.js" type="text/javascript"></script>
 <script src="{$WEB_ROOT}/assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script>
-
 <!-- END PAGE LEVEL SCRIPTS -->
-
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
 <script src="{$WEB_ROOT}/assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
 <script src="{$WEB_ROOT}/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>

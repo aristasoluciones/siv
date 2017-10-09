@@ -1,9 +1,5 @@
 <!-- BEGIN PAGE HEADER-->
 	<div class="page-bar">
-		<div class="span12">           
-			<h3 class="page-title">
-				
-			</h3>
 		 <ul class="page-breadcrumb">
 			<li>
 				<i class="icon-home"></i>
@@ -16,19 +12,17 @@
 			</li>
 			<li><a href="{$WEB_ROOT}/colonia">Colonias</a></li>
 		</ul>
-		</div>
 	</div>
-	 <!-- BEGIN PAGE TITLE-->
+	<!-- BEGIN PAGE TITLE-->
 		<h1 class="page-title">
-		   
+
 			<small></small>
 		</h1>
-	 <!-- END PAGE TITLE-->
+     <!-- END PAGE TITLE-->
 <!-- END PAGE HEADER-->
-
 <!-- BEGIN PAGE CONTENT-->
 	<div class="row">
-		<div class="portlet light portlet-fit portlet-datatable bordered">
+		<div class="portlet light portlet-fit bordered">
 			<div class="portlet-title">
 				<div class="caption">
 				   <i class="icon-settings font-green"></i>
@@ -36,9 +30,9 @@
 				 </div>  
 				<div class="actions">
 				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
-					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
-						Agregar <i class="fa fa-plus"></i>
-					</a>
+						<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
+							Agregar <i class="fa fa-plus"></i>
+						</a>
 					</div>
 					<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
@@ -71,14 +65,6 @@
 					</div>	
 				</div>
 			</div>
-			<form id='frmFiltro'>
-			Colonia
-			<input type='text' name='colonia' style='width:200px' class="form-control" >
-			</form>
-			<center><button class="btnIniciar" onclick="buscarSol()" style="width:150px; background:#7f9597">Buscar</button>
-			<div id='loader'>
-			</div>
-			</center>
 			<div class="portlet-body" id="tblContent">
 			 {include file="{$DOC_ROOT}/templates/lists/{$page}.tpl"}
 			</div>

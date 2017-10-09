@@ -1,4 +1,4 @@
-<div class="modal-dialog modal-lg">
+<div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
             <a href="javascript:;" class="close" data-dismiss="modal" aria-hidden="true"></a>
@@ -6,7 +6,7 @@
         </div>
         <div class="modal-body">
             <!-- START FORM -->
-            {include file="{$DOC_ROOT}/templates/forms/{$page}.tpl"}
+            {include file="{$DOC_ROOT}/templates/forms/{$page}.tpl" municipios=$municipios}
             <!-- END FORM -->
         </div>
         <div class="modal-footer">

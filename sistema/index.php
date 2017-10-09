@@ -76,18 +76,11 @@
 	$smarty->assign('lang', $lang);
 	
 	$usr = $_SESSION['Usr'];
-	
-    // echo "<pre>";
-    // print_r($usr);
-	// exit;
-	
-
-    $typeUser =  $usr["role_id"];
-    //asignar a una variable smarty el array de permisos para utilizarlo y mostrar ciertos accesos al menu
-    $smarty->assign('privilegios',$lisPermisos);
-    // $smarty->assign('privilegios',$permisos_titles);
+    $objRole->setRoleId($_SESSION['Usr']["role_id"]);
+    $lstAccesos = $objRole->permisoSegunRol();
+    $smarty->assign('privilegios',$lstAccesos);
 	$smarty->assign('usr',$usr);
-	$smarty->assign('typeUser',$typeUser);
+
 	$smarty->assign('miColor',$miColor);
 	$smarty->assign('FOOTER', FOOTER);
 

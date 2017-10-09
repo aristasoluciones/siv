@@ -13,74 +13,105 @@
 	switch($_POST['type']){
 	
 		case 'add':	
-			$lstMus = $municipio->EnumerateAll();
+			    $lstMus = $municipio->EnumerateAll();
 				echo 'ok[#]';
-				
-				$smarty->assign('lstMus',$lstMus);
-				
+
+                $smarty->assign('titleFrm',"Agregar colonia");
+				$smarty->assign('municipios',$lstMus);
 				$smarty->display(DOC_ROOT.'/templates/boxes/'.$page.'.tpl');											
 			break;
 		
 		case 'edit':
-				
-				$municipio->setId($_POST['id']);
-				$info = $municipio->InfoColonia();
+		        $colonia->setId($_POST["id"]);
+				$info = $colonia->Info();
 				$lstMus = $municipio->EnumerateAll();
-				echo 'ok[#]';	
-				
-				$smarty->assign('lstMus',$lstMus);				
+				echo 'ok[#]';
+				$smarty->assign('municipios',$lstMus);
 				$smarty->assign('info',$info);				
 				$smarty->display(DOC_ROOT.'/templates/boxes/'.$page.'.tpl');
 																
 			break;		
 		case 'save':
-
-			$idReg = $_POST['id'];
-
-			$municipio->setColId($idReg);
-			$municipio->setNombre($_POST['colonia']);
-			$municipio->setId($_POST['municipioId']);
-			$municipio->setX($_POST['x']);
-			$municipio->setY($_POST['y']);
-
-			$success = $municipio->SaveColonia();
+			$colonia->setNombre($_POST["colonia"]);
+			$colonia->setMunicipioId($_POST['municipioId']);
+			$colonia->setCoordenadaX($_POST['cordenadax']);
+            $colonia->setCoordenadaY($_POST['cordenaday']);
+			$success = $colonia->Save();
 			if($success){
-			  echo 'ok[#]';
+                $usr = $_SESSION['Usr'];
+                $objRole->setRoleId($_SESSION['Usr']["role_id"]);
+                $lisPermisos = $objRole->permisoSegunRol();
+			    $colonia->setPage($_POST['page']);
+			    $registros = $colonia->EnumerateAll();
+                echo 'ok[#]';
+                $smarty->assign('privilegios',$lisPermisos);
+                $smarty->assign('usr',$usr);
+                $smarty->assign('registros',$registros);
+                $smarty->display(DOC_ROOT.'/templates/lists/'.$page.'.tpl');
+
 			}else{
 				echo "fail[#]";					
 				$util->ShowErrors();					
 			}
 				
 		break;
+        case 'update':
+            $colonia->setId($_POST['id']);
+            $colonia->setNombre($_POST["colonia"]);
+            $colonia->setMunicipioId($_POST['municipioId']);
+            $colonia->setCoordenadaX($_POST['cordenadax']);
+            $colonia->setCoordenadaY($_POST['cordenaday']);
+            $success = $colonia->Update();
+            if($success){
+                $usr = $_SESSION['Usr'];
+                $objRole->setRoleId($_SESSION['Usr']["role_id"]);
+                $lisPermisos = $objRole->permisoSegunRol();
+                $colonia->setPage($_POST['page']);
+                $registros = $colonia->EnumerateAll();
+                echo 'ok[#]';
+                $smarty->assign('privilegios',$lisPermisos);
+                $smarty->assign('usr',$usr);
+                $smarty->assign('registros',$registros);
+                $smarty->display(DOC_ROOT.'/templates/lists/'.$page.'.tpl');
+
+            }else{
+                echo "fail[#]";
+                $util->ShowErrors();
+            }
+
+            break;
 							
 		case 'delete':
-				
-				$municipio->setId($_POST['id']);
-				
-				if($municipio->DeleteColonia()){					
-					echo 'ok[#]';				
-				}
+            $colonia->setId($_POST['id']);
+            if($colonia->Delete()){
+                $usr = $_SESSION['Usr'];
+                $objRole->setRoleId($_SESSION['Usr']["role_id"]);
+                $lisPermisos = $objRole->permisoSegunRol();
+                $colonia->setPage($_POST['page']);
+                $registros = $colonia->EnumerateAll();
+                echo 'ok[#]';
+                $smarty->assign('privilegios',$lisPermisos);
+                $smarty->assign('usr',$usr);
+                $smarty->assign('registros',$registros);
+                $smarty->display(DOC_ROOT.'/templates/lists/'.$page.'.tpl');
+            }else{
+                echo "fail[#]";
+            }
 				
 			break;
 		
 		case 'loadPage':
-				
-				
+            $objRole->setRoleId($_SESSION['Usr']["role_id"]);
+            $lisPermisos = $objRole->permisoSegunRol();
+            $smarty->assign('privilegios',$lisPermisos);
+            $smarty->assign('usr',$usr);
 
-				$municipio->setPage($_POST['p']);								
-				$registros = $municipio->EnumerateColonia();
-				// $registros['result'] = $util->EncodeResult($registros['result']);	
-				
-				$util->PrintErrors2();
-				
-				echo 'ok[#]';			
-			
-				
-					$smarty->assign('registros',$registros);
-					$smarty->display(DOC_ROOT.'/templates/lists/'.$page.'.tpl');
-				
-			
-			break;
+            $colonia->setPage($_POST['p']);
+            $registros = $colonia->EnumerateAll();
+            echo 'ok[#]';
+            $smarty->assign('registros',$registros);
+            $smarty->display(DOC_ROOT.'/templates/lists/'.$page.'.tpl');
+		break;
 			
 			case 'buscarSol':
 			

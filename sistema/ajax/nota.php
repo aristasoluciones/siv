@@ -88,13 +88,7 @@
 				
 			break;
 		case 'saveCatalogo': 
-               /* echo "<pre>";
-                print_r($_POST);
-                print_r($_FILES);
-
-                echo $util->return_bytes(ini_get('post_max_size'));
-                exit;*/
-                $urldestino=DOC_ROOT_IMG1."docs/"; 
+                $urldestino=DOC_ROOT_IMG1."docs/";
                 $nombreCat = "catalogo";
                 $config->setFile($_FILES["doc_file"],true,'application/pdf');
                 $success = $config->ComprobarCat();

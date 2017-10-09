@@ -19,7 +19,6 @@
 		</h1>
 	 <!-- END PAGE TITLE-->
 <!-- END PAGE HEADER-->
-
 <!-- BEGIN PAGE CONTENT-->
 	<div class="row">
 		<div class="portlet light portlet-fit portlet-datatable bordered">

@@ -4,7 +4,7 @@
 
 #excluir los archivos de configuracion raiz para que funcione
 #todo local en los puestos de trabajo
-
+/docs
 /config.php
 /images/productos_categorias/
 /sistema/ajax/templates_c
