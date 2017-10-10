@@ -23,9 +23,7 @@
 	   <h3><font color="BLACK">{$InfoCategoria.infoP.nombre}</font></h3>	
     </div>
 </section>
-
-
-<section class="container page-content" >
+		<section class="container page-content" >
 	
 
 	<form id="fltProducto" onsubmit="return false">

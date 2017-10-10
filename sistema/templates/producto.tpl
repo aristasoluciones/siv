@@ -7,32 +7,31 @@
 				<i class="fa fa-circle"></i>
 			</li>
 			<li>
-				<a href="#">Catalogos</a>
+				<a href="#">Pagigna web</a>
 				<i class="fa fa-circle"></i>
 			</li>
-			<li><a href="#">Productos / Articulos</a></li>
+			<li><a href="#">Categorias de productos</a></li>
 		</ul>
 		<div class="page-toolbar">
 		</div>
 	</div>
 	 <!-- BEGIN PAGE TITLE-->
-		<h1 class="page-title"> Productos / Articulos
+		<h1 class="page-title">Categorias de productos
 			<small></small>
 		</h1>
 	 <!-- END PAGE TITLE-->
 <!-- END PAGE HEADER-->
-
 <!-- BEGIN PAGE CONTENT-->
 	<div class="row">
 		<div class="portlet light portlet-fit portlet-datatable bordered">
 			<div class="portlet-title">
 				<div class="caption">
 				   <i class="icon-settings font-green"></i>
-				   <span class="caption-subject font-green sbold">Lista Productos Articulos</span>
+				   <span class="caption-subject font-green sbold">Lista de categorias de productos</span>
 				 </div>  
 				<div class="actions">
 				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
-				    {if in_array('add_producto',$privilegios) or $typeUser==1}
+				    {if in_array('add_producto',$privilegios) or $usr.role_id==1}
 				    <a href="javascript:;" class="btn btn-circle sbold green"  title="Importar desde archivo CSV" onClick="openImportarCsv()">
 						Importar <i class="fa fa-plus"></i>
 					</a>

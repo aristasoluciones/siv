@@ -6,9 +6,10 @@ include_once(DOC_ROOT.'/properties/errors.es.php');
 require(DOC_ROOT.'/libs/Smarty.class.php');
 require(DOC_ROOT.'/libs/nusoap.php');
 include_once(DOC_ROOT."/libs/qr/qrlib.php");
+include_once(DOC_ROOT."/libs/PHPExcel/Classes/PHPExcel.php");
 include_once(DOC_ROOT."/libs/PhpRbac/src/PhpRbac/Rbac.php");
-$rbac =  new Rbac;
 
+$rbac =  new Rbac;
 
 include_once(DOC_ROOT.'/classes/db.class.php');
 $db = new DB;

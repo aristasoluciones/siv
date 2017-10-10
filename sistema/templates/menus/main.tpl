@@ -126,7 +126,7 @@
 			<li class="nav-item {if $page=='producto' || $page=='producto_cat'}active open{/if}">
 				<a class="nav-link " href="{$WEB_ROOT}/producto">
 					<i class="icon-briefcase"></i>
-					<span class="title">Productos</span>
+					<span class="title">Categoria de productos</span>
 				</a>
 			</li>
 			{/if}
