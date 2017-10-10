@@ -23,6 +23,7 @@
 <script src="{$WEB_ROOT}/assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
 <script src="{$WEB_ROOT}/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
 {/if}
+<script src="{$WEB_ROOT}/assets/global/scripts/jquery-redirect.js?{$time}" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->

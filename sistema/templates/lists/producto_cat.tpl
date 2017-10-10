@@ -1,6 +1,5 @@
-<div class="table-container">
 {include file="{$DOC_ROOT}/templates/boxes/messages.tpl"}
-<table class="table table-striped table-bordered table-hover" id="sample_3">
+<table class="table table-striped table-bordered table-hover">
    <thead>
        <th>Nombre del producto</th>
        <th>Categoria</th>
@@ -33,20 +32,20 @@
 
             </td>
             <td><div align="center">
-                {if in_array('edit_pcat',$privilegios) or $typeUser==1}
-            				<a href="javascript:void(0)" onClick="EditReg({$item.producto_categoria_id})" title="Editar producto">
-            					<img src="{$WEB_ROOT}/images/icons/pencil-16.png" border="0">
-            				</a>
+                {if in_array('edit_pcat',$privilegios) or $usr.role_id==1}
+                    <a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.producto_categoria_id})" title="Editar producto">
+                        <i class="fa fa-pencil-square-o" ></i>
+                    </a>
                 {/if}
-                {if in_array('active_pcat',$privilegios) or $typeUser==1}
+                {if in_array('active_pcat',$privilegios) or $usr.role_id==1}
                     {if $item.status=="Baja"}
-                        <a href="javascript:void(0)" onClick="ActiveReg({$item.producto_categoria_id})" title="Activar producto">
-                            <img src="{$WEB_ROOT}/images/icons/activar.png" border="0">
+                        <a class="btn btn-xs green-jungle" href="javascript:void(0)" onClick="ActiveReg({$item.producto_categoria_id})" title="Activar producto">
+                            <i class="fa fa-arrow-circle-up"></i>
                         </a>
                     {else}
-                    <a href="javascript:void(0)" onClick="RemoveReg({$item.producto_categoria_id})" title="Desactivar producto">
-                        <img src="{$WEB_ROOT}/images/icons/desactivar.png" border="0">
-                    </a>
+                        <a class="btn btn-xs red" href="javascript:void(0)" onClick="RemoveReg({$item.producto_categoria_id})" title="Desactivar producto">
+                            <i class="fa fa-arrow-circle-down"></i>
+                        </a>
                     {/if}
                 {/if}
                 				
@@ -55,10 +54,9 @@
         </tr>
         {foreachelse}
         <tr>
-        	<td colspan="7"><div align="center">Ning&uacute;n registro encontrado.</div></td>
+        	<td colspan="10"><div align="center">Ning&uacute;n registro encontrado.</div></td>
         </tr>
         {/foreach}
     </tbody>
 </table>
-</div>
 <!-- {include file="{$DOC_ROOT}/templates/lists/pages.tpl" pages=$registros.pages info=$registros.info} -->

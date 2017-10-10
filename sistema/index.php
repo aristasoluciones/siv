@@ -35,6 +35,7 @@
 		'producto',
 		'producto_cat',
 		'imagen',
+        'download-formato',
 
 		'pedido',
 		'detalle-pedido',

@@ -388,14 +388,12 @@
 			break;
             case 'openImportarCsv':
                 echo 'ok[#]';
-				$smarty->assign('titleFrm','Importar desde csv');		
+				$smarty->assign('titleFrm','Importar desde csv');
+                $smarty->assign('post',$_POST);
 				$smarty->display(DOC_ROOT.'/templates/boxes/importar-csv.tpl');
             break;
 			case 'importar-csv':
-                 /* echo "<pre>";
-                  print_r($_FILES);
-                  exit;*/
-				  switch ($_POST["tipo"]) {
+                 switch ($_POST["table"]) {
 				  	case 'producto':
                         if(is_uploaded_file($_FILES["fileCsv"]["tmp_name"]))
                         {
@@ -413,10 +411,6 @@
 
                           while(($data = fgetcsv($fp,1000,","))!==false)
                           {
-                          	 
-                             /*echo $data[0]." ".$data[1]." ".$data[2]." ".$data[3]." ".$data[4]." ".$data[5]." ".$data[6]." ".$data[7];
-                             echo "<br />"*/
-                          	 
                           	 $producto->setId($data[0]);
                           	 $producto->setNombre($data[1]);
 							 $producto->setDescripcion($data[2]);
@@ -439,8 +433,84 @@
 				  	break;
                         
 				  	case 'categoria':
-				  		 
-				  		break;
+                        if(is_uploaded_file($_FILES["fileCsv"]["tmp_name"]))
+                        {
+                            $extension =  end(explode(".",$_FILES['fileCsv']['name']));
+                            $valid =  false;
+                            $filesValid = array('Excel2007', 'Excel5');
+                            if($extension=="csv" || $extension=="CSV"){
+                                array_push($filesValid,'CSV');
+                            }
+                            $archivo = $_FILES["fileCsv"]["tmp_name"];
+                            $typeFile =  PHPExcel_IOFactory::identify($archivo);
+                            foreach ($filesValid as $type) {
+                                $objReader = PHPExcel_IOFactory::createReader($type);
+                                if ($objReader->canRead($archivo)) {
+                                    $valid = true;
+                                }
+                            }
+                            if(!$valid)
+                            {
+                                echo "fail[#]";
+                                echo "No se puede leer archivo: extension no valida";
+                                exit;
+                            }
+                            $objPHPExcel = $objReader->load($archivo);
+                            $sheet = $objPHPExcel->getSheet(0);
+                            $totalFilas = $sheet->getHighestRow();
+                            $totalColumns = $sheet->getHighestColumn();
+                            $maxCell = $sheet->getHighestRowAndColumn();
+                            for ($row = 2; $row <= $totalFilas; $row++) {
+                                $rowData = $sheet->rangeToArray('A' . $row . ':' . $totalColumns . $row);
+                                if (in_array('', $rowData[0])) {
+                                    echo "fail[#]";
+                                    echo "Verificar archivo, formato incorrecto, fila:" . $row;
+                                    exit;
+                                }
+                            }
+                            $ignorados =0;
+                            $insertados =0;
+                            for ($row = 2; $row <= $totalFilas; $row++) {
+
+                                $sql ="SELECT * FROM categoria WHERE nombre='".trim($sheet->getCell("A".$row)->getValue())."' ";
+                                $util->DB()->setQuery($sql);
+                                $find = $util->DB()->GetRow();
+                                if(!empty($find))
+                                {
+                                    $ignorados ++;
+                                    continue;
+                                }
+
+                                $sql = "INSERT INTO  categoria (
+                                            `nombre`, 
+                                            `descripcion`,
+                                            `aquien`,
+                                            `ventajas`                                              
+                                            )
+                                            VALUES (
+                                            '".trim($sheet->getCell("A".$row)->getValue())."',
+                                            '".trim($sheet->getCell("B".$row)->getValue())."',
+                                            '".trim($sheet->getCell("C".$row)->getValue())."',
+                                            '".trim($sheet->getCell("D".$row)->getValue())."'                                
+                                            );
+                                    ";
+                                $util->DB()->setQuery($sql);
+                                $util->DB()->InsertData();
+                                $insertados++;
+
+
+                            }
+                          unset($objReader);
+                          unset($objPHPExcel);
+                          echo "ok[#]";
+                          echo $insertados." registros nuevos insertados, ".$ignorados." registros ignorados por encontrarse registrado en el sistema";
+
+                        }else{
+                            echo "fail[#]";
+                            echo "No se ha cargado ningun archivo..";
+                        }
+
+				  	break;
 				  	
 				  	default:
 				  	     echo "fail[#]";

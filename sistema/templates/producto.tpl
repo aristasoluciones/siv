@@ -30,16 +30,33 @@
 				   <span class="caption-subject font-green sbold">Lista de categorias de productos</span>
 				 </div>  
 				<div class="actions">
-				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
-				    {if in_array('add_producto',$privilegios) or $usr.role_id==1}
-				    <a href="javascript:;" class="btn btn-circle sbold green"  title="Importar desde archivo CSV" onClick="openImportarCsv()">
-						Importar <i class="fa fa-plus"></i>
-					</a>
-					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
-						Agregar <i class="fa fa-plus"></i>
-					</a>
-					{/if}
+					<div class="btn-group btn-group-devided">
+						<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
+							Agregar <i class="fa fa-plus"></i>
+						</a>
 					</div>
+                    {if in_array('add_producto',$privilegios) or $usr.role_id==1}
+				    <div class="btn-group btn-group-devided" data-toggle="buttons">
+
+						<a class="btn green-jungle btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
+							<i class="fa fa-files-o"></i>
+							<span class="hidden-xs">Importar</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu pull-right">
+							<li>
+								<a href="javascript:;" data-action="0"  class="tool-action"  title="Importar desde excel(XLS,XLSX,CSV)" onClick="openImportarCsv('categoria')">
+									 <i class="fa green fa-file-excel-o"></i>Importar
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" data-action="false" class="tool-action" onclick="downloadFormat(1)" target="_blank"  title="Formato de importacion">
+									 <i class="fa fa-file-o"></i>Descargar formato
+								</a>
+							</li>
+						</ul>
+					</div>
+                    {/if}
 					<div class="btn-group" >
 					 <a class="btn red btn-outline btn-circle" href="javascript:;" data-toggle="dropdown">
                        <i class="fa fa-share"></i>
