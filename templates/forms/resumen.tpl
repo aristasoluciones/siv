@@ -5,11 +5,11 @@
 <table class="table table-striped table-bordered table-hover" id="sample_3">
     <thead>
         <tr>
-            <th width="200"><div align="center">Imagen</div></th>
-            <th width="200"><div align="center">Producto</div></th>
-            <th class="hidden-480" width="150"><div align="center">Precio</div></th>
-            <th class="hidden-480" width="200"><div align="center">Cantidad</div></th>
-            <th class="hidden-480"><div align="center">Total</div></th><!--
+            <th width="200"><div align="center"><font color="white">Imagen</font></div></th>
+            <th width="200"><div align="center"><font color="white">Producto</font></div></th>
+            <th class="hidden-480" width="150"><div align="center"><font color="white">Precio</font></div></th>
+            <th class="hidden-480" width="200"><div align="center"><font color="white">Cantidad</font></div></th>
+            <th class="hidden-480"><div align="center"><font color="white">Total</font></div></th><!--
             <th class="hidden-480" width="100"><div align="center"></div></th>-->
         </tr>
     </thead>
@@ -17,16 +17,16 @@
 
     	{foreach from=$lstCar.carrito item=item key=key}        	
         <tr class="odd gradeX">
-			<td>
-				<img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}{$item.extension}" alt="">
-			</td>
+		    <td>
+				<img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt="">
+			</td>			
             <td>
-				{$item.nombre}<br>
+				<font color="black">{$item.nombre}</font><br>
 				{$item.descripcion}
 			</td>
-			<td><div align="center">${$item.precioActual|number_format:2:'.':','}</div></td>
+			<td><div align="center"><font color="black">${$item.precioActual|number_format:2:'.':','}</font></div></td>
             <td><div align="center"><!--<input type="" name="cantidad_{$key}" id="cantidad_{$key}" value="{$item.cantidad}" style="width:50px">-->{$item.cantidad}</div></td>
-            <td><div align="center">${$item.total|number_format:2:'.':','}</div></td>
+            <td><div align="center"><font color="black">${$item.total|number_format:2:'.':','}</font></div></td>
             <!--<td><div align="center">
 				<a href="javascript:void(0)" onClick="deleteCar('{$item.key}')" title="Eliminar">
 					<img src="{$WEB_ROOT}/images/delete.png" border="0">
@@ -45,17 +45,17 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td><b>Subtotal:</b></td>
-			<td>${$lstCar.total|number_format:2:'.':','}</td>
-			<td></td>
+			<td><b><font color="black">Subtotal:</font></b></td>
+			<td><font color="black">${$lstCar.total|number_format:2:'.':','}</font></td>
+			
 		</tr>
 		<tr>
 			<td></td>
 			<td></td>
 			<td></td>
-			<td><b>Total:</b></td>
-			<td>${$lstCar.total|number_format:2:'.':','}</td>
-			<td></td>
+			<td><b><font color="black">Total:</font></b></td>
+			<td><font color="black">${$lstCar.total|number_format:2:'.':','}</font></td>
+			
 		</tr>
 
     </tbody>
@@ -64,24 +64,24 @@
 
 <table>
 		<tr>
-			<td>Calle:<input type="text" name="calle" id="calle" disabled value="{$infoVta.calle}"></td>
-			<td>Numero Interior:<input type="text" name="numInterior"  disabled id="numInterior" value="{$infoVta.numeroInterior}"></td>
-			<td>Numero Exterior:<input type="text" name="numExterior" disabled id="numExterior" value="{$infoVta.numeroExterior}"></td>
+			<td><font color="black">Calle:</font><input type="text" name="calle" id="calle" disabled value="{$infoVta.calle}"></td>
+			<td><font color="black">Numero Interior:</font><input type="text" name="numInterior"  disabled id="numInterior" value="{$infoVta.numeroInterior}"></td>
+			<td><font color="black">Numero Exterior:</font><input type="text" name="numExterior" disabled id="numExterior" value="{$infoVta.numeroExterior}"></td>
 		</tr>
 		<tr>
-			<td>Entre Calle 1:<input type="text" name="entre1" disabled id="entre1" value="{$infoVta.entreCalle1}"></td>
-			<td>Entre Calle 2:<input type="text" name="entre2"  disabled id="entre2" value="{$infoVta.entreCalle2}"></td>
-			<td>Referencias de tu domicilio:<input type="text"  disabled name="referencia" id="referencia" value="{$infoVta.referencias}"></td>
+			<td><font color="black">Entre Calle 1:</font><input type="text" name="entre1" disabled id="entre1" value="{$infoVta.entreCalle1}"></td>
+			<td><font color="black">Entre Calle 2:</font><input type="text" name="entre2"  disabled id="entre2" value="{$infoVta.entreCalle2}"></td>
+			<td><font color="black">Referencias de tu domicilio:</font><input type="text"  disabled name="referencia" id="referencia" value="{$infoVta.referencias}"></td>
 		</tr>
 		<tr>
-			<td>Codigo Postal:<input type="text" name="cp"  disabled id="cp" value="{$infoVta.cp}"></td>
-			<td>Colonia:<input type="text" name="colonia" disabled id="colonia" value="{$infoVta.colonia}"></td>
-			<td>Delegación o Municipio:
+			<td><font color="black">Codigo Postal:</font><input type="text" name="cp"  disabled id="cp" value="{$infoVta.cp}"></td>
+			<td><font color="black">Colonia:</font><input type="text" name="colonia" disabled id="colonia" value="{$infoVta.colonia}"></td>
+			<td><font color="black">Delegación o Municipio:</font>
 				<select name="municipio" id="municipio">
 				<option></option>
 				{foreach from=$lstM item=item key=key}
 					
-					<option value="{$item.municipioId}" {if $infoVta.municipio eq $item.municipioId} selected {/if}>{$item.nombre}</option>
+					<option value="{$item.municipioId}" {if $infoVta.municipio eq $item.municipioId} selected {/if}><font color="black">{$item.nombre}</font></option>
 				{/foreach}
 			</select>
 			</td>

@@ -42,7 +42,7 @@
 			  </li>
 			{if $page eq "index"}
 			<li>
-				<a data-description="meet florida" class="drp-aro" href="javascript:void(0)" onClick="openNewN()">Nosotros </a>
+				<a data-description="meet florida" class="drp-aro" href="javascript:void(0)" onClick="openNewN()">SIV </a>
 			</li>
 			{else}
 			<li>

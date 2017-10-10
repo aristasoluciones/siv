@@ -10,7 +10,7 @@
       <hr>
       <div class="aligncenter">
 	  <hr class="vertical-space1">
-        <h1 class="mex-title">SISTEMA INTEGRAL DE VENTAS</h1>
+        <h1 class="mex-title">SISTEMA INTEGRAL DE VENTAS (SIV)</h1>
       </div>
       <div id="left-tab">
         <div class="tabbable tabs-left">
@@ -74,7 +74,7 @@
     <!-- /end-Who We Are -->
 </section>	
       
-	  <a class="button blue" href="nosotros">Ver Más</a>
+	  <a class="button RED" href="nosotros">NOSOTROS</a>
 	  
 	  </div>
 	  	<div class="eight columns">

@@ -2,9 +2,9 @@
 <hr class="vertical-space1">
 <ul id="myTab" class="nav nav-tabs"><!--
 <li><a href="#Service1" data-toggle="tab">Web </a></li>-->
-<li {if $infoVta.paso eq 1} class="active" {/if}><a href="#Service2" data-toggle="tab">Dirección de Envio</a></li>
-<li {if $infoVta.paso eq 2} class="active" {/if}><a href="#Service3" data-toggle="tab">Información de Facturación</a></li>
-<li {if $infoVta.paso eq 3} class="active" {/if}><a href="#Service4" data-toggle="tab">Resumen</a></li>
+<li {if $infoVta.paso eq 1} class="active" {/if}><a href="#Service2" data-toggle="tab"><font color="white">Dirección de Envio</font></a></li>
+<li {if $infoVta.paso eq 2} class="active" {/if}><a href="#Service3" data-toggle="tab"><font color="white">Información de Facturación</font></a></li>
+<li {if $infoVta.paso eq 3} class="active" {/if}><a href="#Service4" data-toggle="tab"><font color="white">Resumen</font></a></li>
 </ul>
 <div id="myTabContent" class="tab-content">
 <!--
@@ -42,7 +42,7 @@
 <div class="txtErrMsg" style="color:red"></div>
 <div class="loader" ></div>
 {include file="{$DOC_ROOT}/templates/forms/resumen.tpl"}
-<button class="button small" style="background:#622181" onclick="enviarPedido()">Enviar Pedido</button>
+<button class="button small" style="background:#990000" onclick="enviarPedido()">Enviar Pedido</button>
 </article>
 </div>
 

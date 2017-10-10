@@ -1,12 +1,12 @@
-<h3>Instrucciones:</h3>
+<font color="black"><h3>Instrucciones:</h3></font>
 
-1. Selecciona el RFC dentro de la lista de rfc´s.<br>
-2. Si eres nuevo usuario selecciona nueva rfc y complementa el formulario.<br>
-3. Presiona Guardar y Continuar.<br>
+<font color="black">1. Selecciona el RFC dentro de la lista de rfc´s.<br></font>
+<font color="black">2. Si eres nuevo usuario selecciona nueva rfc y complementa el formulario.<br></font>
+<font color="black">3. Presiona Guardar y Continuar.<br></font>
 <br>
 <br>
 <br>
-<b>Lista de RFC</b>
+<font color="black"><b>Lista de RFC</b></font>
 <select name="rfcId" id="rfcId" onChange="addRFC()">
 	<option value="">Nuevo RFC</option>
 	{foreach from=$lstRFC item=item key=key}   
@@ -20,6 +20,6 @@
 
 <div class="txtErrMsg" style="color:red"></div>
 <div class="loader" ></div>
-<button class="button small" style="background:#622181" onclick="Next(2)">Guardar y Continuar</button>
+<button class="button small" style="background:#990000" onclick="Next(2)">Guardar y Continuar</button>
 
 

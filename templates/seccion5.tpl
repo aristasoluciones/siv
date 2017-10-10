@@ -2,7 +2,6 @@
 <article class="blox dark">
 <div class="container">
 
-
  {foreach from=$lstProducto item=item key=key}
 	
 	  <div style="overflow:hidden; float:left; !important; " id="onglet_sociaux" >

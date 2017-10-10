@@ -1,10 +1,10 @@
 <section class="container" >
-				<!--<hr class="vertical-space3">
-<!-- Latest-from-Blog-start -->
-    	<!--<div class="latest-f-blog clearfix">
+				<hr class="vertical-space3">
+ 
+    	<div class="latest-f-blog clearfix">
     		<div class="sixteen columns">
     			<div class="sub-content">
-					<h1 class="h-sub-content">TE RECOMENDAMOS</h1>
+					<h1 class="h-sub-content">PRECIOS BAJOS GARANTIZADOS</h1>
 				</div>
     		</div>
       		<div class="nine columns">
@@ -29,11 +29,11 @@
 				</p>
 	            <a href=""  class="readmore">Ver</a> </div>
 				
-        </article>-->
+        </article>
 		
-      <!--</div>
-	  <!-- latest-f-blog-line-start -->
-	  <!--<div class="seven columns omega">
+      </div>
+	  latest-f-blog-line-start 
+	  <div class="seven columns omega">
 	  <h2>Promociones</h2>
 		{foreach from=$lstPromoinde item=item key=key}  
       	<article class="blog-line clearfix">
@@ -46,7 +46,7 @@
         </article>
 		{/foreach}
       </div>
-    </div>	-->
+    </div>	
 	
 	<section class="latest-works">   	
 <hr class="vertical-space1">

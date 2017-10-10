@@ -2,6 +2,7 @@
 	<div id="layerslider-container-fw">
 	  <div id="layerslider" style="width: 100%; height: 425px; margin: 0px auto; ">
 	  {foreach from=$lstSlider item=item key=key} 
+	  
 		<div class="ls-layer" style="slidedirection: right; slideoutdirection : top; slidedelay: 5000; durationin: 1500; durationout: 1500; delayout: 500;"> 
 			
 			<img src="{$WEB_ROOT}/sistema/images/slider/{$item.ruta}?{$rand}" class="ls-bg" alt="">
