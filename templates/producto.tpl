@@ -48,6 +48,7 @@
 		</tr>
 		<tr>
 			<td>
+				<div id="loader"></div>
 				<button class="button small" onclick="buscar()">Buscar</button> 
 			</td>
 		</tr>

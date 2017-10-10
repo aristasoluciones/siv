@@ -252,6 +252,7 @@ class Imagen extends Main
 				$ikey->setCampo($aux["producto_categoria_id"]);
 				$IdCifrado =  $ikey->Cifrar();
 				$data['result'][$key]["productoId"] = $IdCifrado;
+				$data['result'][$key]["descripcion55"] = substr($aux['descripcion'],0,70);
 			}
 			
 			

@@ -358,7 +358,7 @@ class Producto extends Main
 		}
 		
 		$data["carrito"] = $carrito;
-		$data["total"] = $total;
+		$data["total"] = number_format($total,2);
 		
 		// echo "<pre>"; print_r($data);
 		// exit;

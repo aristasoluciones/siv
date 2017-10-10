@@ -26,17 +26,33 @@
     <section class="eleven columns">
 		<div class="shop-wrap">
       <figure class="shop-item one_half">
+	   {if $infoPo.promocion eq "si"}
 	  <span class="onsale">Oferta!</span>
+	   {/if}
          <img src="{$WEB_ROOT}/images/productos_categorias/{$infoPo.nombre_archivo}.{$infoPo.extension}" alt="">		 </figure>
       <!-- end-product-item-->
 	  <div class="one_half column-last">
 		  <h1>{$infoPo.nombre}</h1>
 		  <h2 class="price"><small>{$infoPo.precioAnterior}</small><span class="amount">$ {$infoPo.precioActual}</span></h2>
+		  {if $infoPo.promocion eq "si"}
+			<font style="color:#797979; font-size: 19px">Ahorra $ {$infoPo.precioActual-$infoPo.precioAnterior}</font>
+		 {/if}
+		 <br>
+		 <br>
 		  <p>{$infoPo.descripcion}</p>
 		  <hr class="vertical-space">
 		  <div class="quantity buttons_added">
 		  <input class="minus" type="button" value="-"><input type="text" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text"><input class="plus" type="button" value="+">
-		<!-- <a href="#" class="addtocart">Agregar al Carrito</a>-->
+		 <!--<a href="#" class="addtocart">Agregar al Carrito</a>-->
+		 &nbsp;
+		 &nbsp;
+		 &nbsp;
+		 &nbsp;
+		 &nbsp;
+		 &nbsp;
+		 &nbsp;
+		 &nbsp;
+		 <button  href="javascript:void(0)" class="button small" style="background:#990000" onclick="addCar('{$q}')">Agregar A Carrito</button>
 		  </div>
 		  <!--<div class="quantity buttons_added">
 		  <input class="minus" type="button" value="-"></input><input type="text" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text"><input class="plus" type="button" value="+"></input>
@@ -84,11 +100,13 @@
 	
     <aside class="four columns offset-by-one sidebar">
       <div class="side-cart">
+		  <div id="divCar">
 
-        {include file="{$DOC_ROOT}/templates/carrito.tpl"}
+			{include file="{$DOC_ROOT}/templates/carrito.tpl"}
+		  </div>
       </div>
 	  <br class="clear">
-      <h4 class="subtitle">Promociones</h4>
+     <!-- <h4 class="subtitle">Promociones</h4>-->
       <div class="side-list">
 
       </div>
