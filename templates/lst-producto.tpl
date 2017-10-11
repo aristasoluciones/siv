@@ -11,7 +11,7 @@
 				<span class="onsale">Oferta!</span>
 			{/if}
 				
-			 <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"><img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt=""></a>
+			 <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"><img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt=""></a>			 
 			<figcaption>
 				<h4><a href="{$WEB_ROOT}/dt/q/{$item.productoId}" style="color:#FFA500">{$item.nombre}</a> </h4>
 				<font style="font-size:12px">{$item.descripcion55}...</font> <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"> Ver Mas</a>
@@ -27,7 +27,7 @@
 			</figcaption>
 			<div class="product-shop ">
 			<!--<a  style="background:#990000" onclick="" class="addtocart">Agregar Al Carrito</a>-->
-			<button  href="javascript:void(0)" class="button small" style="background:#990000" onclick="addCar('{$item.productoId}')">Agregar A Carrito</button>
+			<button  href="javascript:void(0)" class="button small" style="background:#990000" onclick="addCar('{$item.productoId}')">Agregar A Carrito </button>
 			</div>
 		  </figure>
 		  
@@ -37,20 +37,7 @@
 		  </div>
 		 
 		{if $key % 3  eq 0}
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-
+		
 
 
 		{/if}
