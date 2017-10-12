@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!--> 
-<html lang="en" class="no-js"> <!--<![endif]-->
-<head><!--
-	{include file="{$DOC_ROOT}/templates/1-default-meta.tpl"}
-	{include file="{$DOC_ROOT}/templates/2-default-css.tpl"}-->
-	{include file="{$DOC_ROOT}/templates/header.tpl"}
-</head>
-
-<body  onload="initialize()">
 <h4 class="subtitle"></h4>
 <hr class="vertical-space1">
 <ul id="myTab" class="nav nav-tabs"><!--
@@ -36,6 +24,10 @@
 <article class="icon-box">
 <h5 class="helvetic5"></h5>
 	{include file="{$DOC_ROOT}/templates/forms/direccion.tpl"}
+	<div id="contact-map">
+	 <div id="map_canvas" style="width:600px; height:500px"></div>
+	 <!-- END-Google Map -->
+	</div>
 </article>
 </div>
 <div class="tab-pane {if $infoVta.paso eq 2} active{/if}" id="Service3">
@@ -60,15 +52,3 @@
 
 
 </div><!-- end -->
-
-
-	{include file="{$DOC_ROOT}/templates/3-default-js.tpl"}
-	<script type="text/javascript">
-		jQuery(document).ready(function() {    
-		   App.init(); // initlayout and core plugins		   
-		});
-	</script>
-
-    
-</body>
-</html>

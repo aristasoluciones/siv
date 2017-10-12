@@ -10,7 +10,7 @@
 	
 </head>
 
-<body class="" >
+<body class="" onload="initialize()">
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
@@ -31,6 +31,7 @@
 	<br class="clr">
 	<div class="shop-wrap">
 		<div id="divCar">
+		
 		{include file="{$DOC_ROOT}/templates/lists/checkout.tpl"}
 		</div>
 	</div>

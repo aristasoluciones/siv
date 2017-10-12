@@ -3,11 +3,7 @@ var AJAX_PATH = WEB_ROOT+"/ajax/checkout.php";
 
 function initialize() {
       var marcadores = [
-        ['La Especial', 16.7472113, -93.1187726],
-        ['2a Oriente', 16.749802, -93.115205],
-        ['La Chiapaneca', 16.748474, -93.115898],
-        ['El Amigo', 16.751135, -93.119278],
-        ['San Roque', 16.750017, -93.113493],
+
         ['San Roque', 16.744996, -93.091516]
       ];
       var map = new google.maps.Map(document.getElementById('map_canvas'), {
