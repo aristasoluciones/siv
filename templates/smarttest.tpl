@@ -63,7 +63,7 @@
 				<div id="slider"></div>
 			{else if $item.tiporespuesta eq 'opcional'}
 				{foreach from=$item.opciones item=item2 key=key}  
-					<input type='radio' name='check_{$item.preguntaId}' id='check_{$item.preguntaId}' value='{$item2}'/>{$item2}
+					<input type='radio' name='check_{$item.preguntaId}' id='check_{$item.preguntaId}' value='{$item2}'/><font style='font-size:33px'>{$item2}</font>
 				 {/foreach}	
 			{else}
 				<textarea name='check_{$item.preguntaId}'  style='width:900px !important; width:200px'></textarea>

@@ -989,7 +989,21 @@ class Producto extends Main
 		
 	}
 	
-	
+	public function verVta($Id){
+		
+		
+		$sql = "SELECT 
+					*
+				FROM 
+					detalleventas as dv
+				left join productos_categorias as p on dv.productoId = p.producto_categoria_id
+				WHERE ventaId =  ".$Id."";
+			$this->Util()->DB()->setQuery($sql);
+		$infoClt = $this->Util()->DB()->GetResult();
+		
+		return $infoClt;
+		
+	}
 	
 }
 

@@ -26,6 +26,7 @@
 			$clientes->setAmaterno($_POST['apellidom']);
 			$clientes->setEmail($_POST['email'],true);
 			$clientes->setPasswd($_POST['pass']);
+			$clientes->setSexo($_POST['sexo']);
 			$clientes->setActivo('no');
 
 			

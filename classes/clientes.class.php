@@ -30,6 +30,7 @@ class Clientes extends Main
 	private $comentario;
 	private $tipoval;
 	private $cadena;
+	private $sexo;
 	
 	public function setLLaveMd5($value){	
 		$this->llavemd5 = $value;	
@@ -38,6 +39,12 @@ class Clientes extends Main
 	public function setCadena($value){	
 			$this->Util()->ValidateString($value);
 			$this->cadena = $value;	
+	}
+	
+	
+	public function setSexo($value){	
+			$this->Util()->ValidateString($value);
+			$this->sexo = $value;	
 	}
 	
 	
@@ -364,8 +371,9 @@ class Clientes extends Main
 
 
 	if($countMail >= 1){
-		// echo "fail[#]";
-		$this->Util()->setError(10135, '', '');
+		echo "fail[#]";
+		echo 'El correo ya existe';
+		exit;
 	}
 					
 						
@@ -379,7 +387,8 @@ class Clientes extends Main
 			amaterno, 
 			email, 
 			passwd, 
-			activo
+			activo,
+			sexo
 		)
 		VALUES(
 			"'.$this->nombre.'",
@@ -387,7 +396,8 @@ class Clientes extends Main
 			"'.$this->amaterno.'",
 			"'.$this->email.'", 
 			"'.md5($this->passwd).'",
-			"'.$this->activo.'"
+			"'.$this->activo.'",
+			"'.$this->sexo.'"
 		)';
 		// exit;
 		$this->Util()->DB()->setQuery($sql);

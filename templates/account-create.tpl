@@ -57,8 +57,8 @@
 				Sexo
 				<select name="sexo" onblur="valida('contrasena',2)">
 					<option></option>
-					<option>Femenimo</option>
-					<option>Masculino</option>
+					<option>femenino</option>
+					<option>masculino</option>
 				</select>
 			</td>
 			
@@ -68,8 +68,8 @@
 				
 			</td>
 			<td>
-				Fecha de Nacimiento
-				<input type="text" name="fnacimiento" id="fnacimiento" onblur="valida('contrasena',2)" onClick="fnFechaNa()">
+				<!--Fecha de Nacimiento
+				<input type="text" name="fnacimiento" id="fnacimiento" onblur="valida('contrasena',2)" onClick="fnFechaNa()">-->
 			</td>
 			
 		</tr>
