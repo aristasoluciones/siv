@@ -108,7 +108,7 @@ content: " ";
 			<button class="button small" style="background:#e91e63" onclick="edit(1)">Editar Slider Principal</button>
 			{include file="{$DOC_ROOT}/templates/slider.tpl"}
 			<button class="button small" style="background:#e91e63" onclick="edit({{$infoImg.0.imagenId}})">Edita Descarga nuestro Catálogo</button>
-			<section class="blox dark blackbox promoblox" style="background: url({$WEB_ROOT}/images/ari/{$img1}?{$time}) no-repeat center center; border-top: 3px solid #622181; border-bottom: 2px solid #622181">
+			<section class="blox dark blackbox promoblox" style="background: url({$WEB_ROOT}/images/ari/{$img1}?{$time}) no-repeat center center; border-top: 3px solid #990000; border-bottom: 2px solid #990000">
 				<!--rgba(98, 33, 129, 0.7); width:100%; height:100%;--->
 				<div class="container" style="background-color: ">
 					<div class="twelve columns"> 

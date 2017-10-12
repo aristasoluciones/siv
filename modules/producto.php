@@ -6,7 +6,7 @@
 	
 	$lstCar = $producto->detalleCarrito();
 	
-	// echo "<pre>"; print_r($InfoCategoria );
+	// echo "<pre>"; print_r($lstCar );
 	// exit;
 
 	$smarty->assign('q',$_GET["q"]);

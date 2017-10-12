@@ -55,7 +55,7 @@ function deleteCar(Id){
 	
 }//deleteCar
 
-// 
+
 
 function buscar(Id){
 	
@@ -63,13 +63,9 @@ function buscar(Id){
 	  	type: "POST",
 	  	url: AJAX_PATH,
 	  	// data: "type=buscar&Id="+Id,
-		data: $("#fltProducto").serialize(true)+'&type=buscar',	
-		beforeSend: function(){			
-			$("#loader").html(LOADER);
-			// $("#txtErrMsgInfo").hide(0);
-		},		
+		data: $("#fltProducto").serialize(true)+'&type=buscar',		
 	  	success: function(response) {		
-			$("#loader").html('');
+
 			console.log(response)
 			var splitResp = response.split("[#]");
 									

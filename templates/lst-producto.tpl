@@ -11,18 +11,24 @@
 				<span class="onsale">Oferta!</span>
 			{/if}
 				
-			 <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"><img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt=""></a>
+			 <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"><img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt=""></a>			 
 			<figcaption>
 				<h4><a href="{$WEB_ROOT}/dt/q/{$item.productoId}" style="color:#FFA500">{$item.nombre}</a> </h4>
-				<font style="font-size:12px">{$item.sustancia}</font>
+				<font style="font-size:12px">{$item.descripcion55}...</font> <a href="{$WEB_ROOT}/dt/q/{$item.productoId}"> Ver Mas</a>
 				  <p class="price">
 					{if $item.promocion eq "si"}
 					<small>$ {$item.precioAnterior}</small>
 					{/if}
 					<span class="amount">$ {$item.precioActual}</span>
+					{if $item.promocion eq "si"}
+					<font style="color:#797979; font-size: 15px">Ahorra $ {$item.precioActual-$item.precioAnterior}</font>
+					{/if}
 				</p>
 			</figcaption>
-			<div class="product-shop "><a href="javascript:void(0)" onclick="addCar('{$item.productoId}')" class="addtocart">Agregar Al Carrito</a></div>
+			<div class="product-shop ">
+			<!--<a  style="background:#990000" onclick="" class="addtocart">Agregar Al Carrito</a>-->
+			<button  href="javascript:void(0)" class="button small" style="background:#990000" onclick="addCar('{$item.productoId}')">Agregar A Carrito </button>
+			</div>
 		  </figure>
 		  
 		  <div style="width:50px; overflow:hidden; float:left; !important">
@@ -31,20 +37,7 @@
 		  </div>
 		 
 		{if $key % 3  eq 0}
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-
+		
 
 
 		{/if}
