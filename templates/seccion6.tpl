@@ -50,7 +50,7 @@
                 <div class="one_half column-last">
                   <ul class="check magic">
                     <li>PROMOCIONES</li>
-                    <li>EXCLUSIVIDAD Y ESCASEZ</li>
+                    <li>EXCLUSIVIDAD</li>
                     <li>ATENCIÓN</li>
                   </ul>
                 </div>
@@ -90,8 +90,8 @@
             </article>
 			<article class="tab-pane" id="lP">
               <div class="two_third"> <br>
-                <h5><strong>PÁGINA AUTOADMINITRABLE</strong></h5>
-                <p align="justify">Permite la gestión de contenidos, la creación y edición de contenidos para el sitio sin la necesidad de tener conocimientos en diseño y desarrollo web y sin la necesidad de pagar una suma de dinero cada vez que se decide cambiar el texto de una página.
+                <h5><strong>PÁGINA AUTOADMINISTRABLE</strong></h5>
+                <p align="justify">Permite la gestión de contenidos, la creación y edición de contenidos para el sitio sin la necesidad de tener conocimientos en diseño y desarrollo web y sin la necesidad de pagar una suma de dinero cada vez que se decidas cambiar el texto de una página.
                  <br>
                   </p>
 				<p>
@@ -137,10 +137,10 @@
 					    Sucursales
 					</li>
 					<li>
-					    Ubicanos
+					    Ubícanos
 					</li>
 					<li>
-					    Encuentas autoadministrables
+
 					</li>
 					<li>
 					    Contacto
@@ -156,7 +156,7 @@
 				    Comparten intereses o actividades, como ser amistad, parentesco, trabajo, hobbies, y que permiten intercambio de información.
 				</p>
 				<P>
-				    <font color="red"><s>Comunicación eficiente para el cliente.</s></font>
+				    <font color="red">Comunicación eficiente para el cliente.</font>
 				</P>
               </div>
               <div class="one_third column-last"><img src="images/nosotros/Business_Man_Nodes_Connection_Social_Links-512.png" alt=""></div>
@@ -211,7 +211,7 @@
               <div class="two_third"> <br>
                 <h5><strong>MÓDULO PÁGINA WEB</strong></h5>
                  <p>
-				   <font color="black"> ¿Que sepuede hacer?</font>
+				   <font color="black"> ¿Que se puede hacer?</font>
 				 </p>
 				 <p>
 				    <li>
@@ -243,7 +243,7 @@
 				<font color ="black">¿Que puedes hacer?</font>
                  </p>
 				 <p align="justify">
-                  Visualizar y controlar los pedidos realizados por el cliente a través de las sucursales dadas de alta. 
+                  Visualizar y controlar los pedidos realizados por el cliente a través de las sucursales. 
 				 </p>
 				 <p>
 				<font color ="black">¿Que Contiene?</font>
@@ -285,14 +285,14 @@
 				Análisis e identificación de clientes y productos potenciales a través de reportes para la toma de decisiones. 
                  </p>				 
 				 <div class="one_half">
-                  <ul class="arrow magic"><font color="#990000"><s>Analisis de Cleintes</s></font>
+                  <ul class="arrow magic"><font color="#990000">Analisis de Clientes</font>
                     <li>Cumpleaños</li>
                     <li>Edades por colonias</li>
                     <li>Genero por colonias</li>
                     <li>Personalizado</li>
                   </ul>
                 </div>
-                <div class="one_half column-last"><font color="#990000"><s>Analisis de Pedidos</s></font>
+                <div class="one_half column-last"><font color="#990000">Analisis de Pedidos</font>
                   <ul class="check magic">
                     <li>Pedidos por colonias</li>
                     <li>Geo-información</li>
