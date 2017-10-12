@@ -35,7 +35,8 @@
 	  latest-f-blog-line-start 
 	  <div class="seven columns omega">
 	  <h2>Promociones</h2>
-		{foreach from=$lstPromoinde item=item key=key}  
+		{foreach from=$lstPromoinde item=item key=key} 
+		{if $key < 4}
       	<article class="blog-line clearfix">
           	<a href="#" class="img-hover"><img src="{$WEB_ROOT}/images/productos_categorias/{$item.nombre_archivo}.{$item.extension}" alt=""></a>
 			<a href="#" style="color:#622181; font-size:22px">{$item.nombre}</a>
@@ -44,6 +45,7 @@
 
 			  <p class="price"><small>$ {$item.precioAnterior}</small><span class="amount">$ {$item.precioActual}</span></p>
         </article>
+		{/if}
 		{/foreach}
       </div>
     </div>	

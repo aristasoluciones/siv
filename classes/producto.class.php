@@ -839,7 +839,7 @@ class Producto extends Main
 		$infoSc = $this->Util()->DB()->GetRow();
 		
 		
-	
+		$infoSc["sucursalid"] = 1;
 		foreach($_SESSION["carrito"] as $key=>$aux){
 			
 			$ikey->setValor($aux["Id"]);
@@ -892,6 +892,7 @@ class Producto extends Main
 		
 		$sql = 'UPDATE ventas SET 
 				estatus = "enviado",
+				hora = "'.date("H:i:s").'",
 				subtotal = "'.$total.'",
 				folio = "'.$infoFoli["folioSiguiente"].'",
 				montoTotal = "'.$total.'",

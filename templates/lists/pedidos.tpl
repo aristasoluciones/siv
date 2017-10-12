@@ -22,8 +22,7 @@
 			</td>
 			<td><div align="center">{$item.fecha}</div></td>
             <td>
-				{$item.nombre}<br>
-				{$item.descripcion}
+				{$item.countVta}
 			</td>
 			<td><div align="center">${$item.subtotal|number_format:2:'.':','}</div></td>
             <td><div align="center">$</div></td>
