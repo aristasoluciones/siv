@@ -17,9 +17,9 @@
           <ul class="nav nav-tabs left-navi">
             <li class="active"><a href="#lA" data-toggle="tab">DESCRIPCIÓN</a></li>
             <li><a href="#lB" data-toggle="tab">VENTAJAS</a></li>
-            <li><a href="#lP" data-toggle="tab">PÁGINA AUTOADMINITRABLE</a></li>
+            <li><a href="#lP" data-toggle="tab">PÁGINA AUTOADMINSTRABLE</a></li>
             <li><a href="#lW" data-toggle="tab">SECCIONES</a></li>
-            <li><a href="#lQ" data-toggle="tab">REDES SOCLIALES</a></li>
+            <li><a href="#lQ" data-toggle="tab">REDES SOCIALES</a></li>
             <li><a href="#lx" data-toggle="tab">PLATAFORMA</a></li>
             <li><a href="#2x" data-toggle="tab">MÓDULO CONFIGURACIÓN</a></li>
             <li><a href="#3x" data-toggle="tab">MÓDULO PÁGINA WEB</a></li>
@@ -140,7 +140,7 @@
 					    Ubicanos
 					</li>
 					<li>
-					    Encuentas Autoadminitrables
+					    Encuentas autoadministrables
 					</li>
 					<li>
 					    Contacto
@@ -151,7 +151,7 @@
             </article>
             <article class="tab-pane" id="lQ">
               <div class="two_third"> <br>
-                <h5><strong>REDES SOCLIALES</strong></h5>
+                <h5><strong>REDES SOCIALES</strong></h5>
                 <p align="justify">
 				    Comparten intereses o actividades, como ser amistad, parentesco, trabajo, hobbies, y que permiten intercambio de información.
 				</p>
