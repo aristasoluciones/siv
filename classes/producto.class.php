@@ -947,6 +947,15 @@ class Producto extends Main
 		$this->Util()->DB()->setQuery($sql);
 		$data['result'] = $this->Util()->DB()->GetResult();
 		
+		foreach($data['result'] as $key=>$aux){
+			
+			$sql = "SELECT count(*) FROM detalleventas  
+				WHERE ventaId = '".$aux["ventaId"]."'";
+			$this->Util()->DB()->setQuery($sql);
+			$counts = $this->Util()->DB()->GetSingle();
+			$data['result'][$key]['countVta'] = $counts ;
+		}
+		
 		$data['pages'] = $resPage['pages'];
 		$data['info'] = $resPage['info'];
 					
