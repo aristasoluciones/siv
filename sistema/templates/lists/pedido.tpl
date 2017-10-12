@@ -6,6 +6,7 @@
             <th>Folio</th>
             <th>Nombre cliente</th>
             <th>Fecha </th>
+            <th>Hora </th>
 			<th>Total </th>
 			<th>Estado de pedido </th>
             <th>Acci&oacute;n </th>
@@ -17,6 +18,7 @@
             <td>{$item.folio}</td>
             <td>{$item.cliente}</td>
             <td>{$item.fecha}</td>
+            <td>{$item.hora}</td>
             <td>{$item.montoTotal}</td>
 			<td>{$item.estatus}</td>
             <td><div align="center">

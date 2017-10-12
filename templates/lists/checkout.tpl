@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> 
+<html lang="en" class="no-js"> <!--<![endif]-->
+<head><!--
+	{include file="{$DOC_ROOT}/templates/1-default-meta.tpl"}
+	{include file="{$DOC_ROOT}/templates/2-default-css.tpl"}-->
+	{include file="{$DOC_ROOT}/templates/header.tpl"}
+</head>
+
+<body  onload="initialize()">
 <h4 class="subtitle"></h4>
 <hr class="vertical-space1">
 <ul id="myTab" class="nav nav-tabs"><!--
@@ -48,3 +60,15 @@
 
 
 </div><!-- end -->
+
+
+	{include file="{$DOC_ROOT}/templates/3-default-js.tpl"}
+	<script type="text/javascript">
+		jQuery(document).ready(function() {    
+		   App.init(); // initlayout and core plugins		   
+		});
+	</script>
+
+    
+</body>
+</html>

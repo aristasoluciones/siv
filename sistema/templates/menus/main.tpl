@@ -257,7 +257,7 @@
         </a>
         <ul class="sub-menu">
        		{if in_array('4001',$privilegios) or $Usr.role_id eq 1}
-        	<li class="nav-item {if $page=='poll'}active open{/if}">
+        	<li class="nav-item {if $page=='poll' || $page=='poll-analytics'}active open{/if}">
 				<a class="nav-link " href="{$WEB_ROOT}/poll">
 					<i class="icon-list"></i>
 					<span class="title">Encuesta</span>

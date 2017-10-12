@@ -26,10 +26,15 @@
 		</tr>
 		<tr>
 			
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Coordenada X<input type="text" name="coordenadax" id="coordenadax"></td>
+			<td>Coordenada Y<input type="text" name="coordenaday" id="coordenaday"></td>
+			<td><br><br></td>
 		</tr>
 	</table>
 	
 </form>
+Por favor Ubica tu dirección en el mapa.
+<div id="contact-map">
+ <div id="map_canvas" style="width:1500px; height:500px"></div>
+ <!-- END-Google Map -->
+</div>
