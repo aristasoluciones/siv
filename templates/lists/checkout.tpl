@@ -2,9 +2,9 @@
 <hr class="vertical-space1">
 <ul id="myTab" class="nav nav-tabs"><!--
 <li><a href="#Service1" data-toggle="tab">Web </a></li>-->
-<li {if $infoVta.paso eq 1} class="active" {/if}><a href="#Service2" data-toggle="tab"><font color="white">Dirección de Envio</font></a></li>
-<li {if $infoVta.paso eq 2} class="active" {/if}><a href="#Service3" data-toggle="tab"><font color="white">Información de Facturación</font></a></li>
-<li {if $infoVta.paso eq 3} class="active" {/if}><a href="#Service4" data-toggle="tab"><font color="white">Resumen</font></a></li>
+<li {if $infoVta.paso eq 1} class="active" {/if}><a href="#Service2"  data-toggle="tab"><font color="white">Dirección de Envio</font></a></li>
+<li {if $infoVta.paso eq 2} class="active" {/if}><a href="#Service3"  data-toggle="tab"><font color="white">Información de Facturación</font></a></li>
+<li {if $infoVta.paso eq 3} class="active" {/if}><a href="#Service4"  data-toggle="tab"><font color="white">Resumen</font></a></li>
 </ul>
 <div id="myTabContent" class="tab-content">
 <!--
@@ -24,10 +24,7 @@
 <article class="icon-box">
 <h5 class="helvetic5"></h5>
 	{include file="{$DOC_ROOT}/templates/forms/direccion.tpl"}
-	<div id="contact-map">
-	 <div id="map_canvas" style="width:600px; height:500px"></div>
-	 <!-- END-Google Map -->
-	</div>
+	
 </article>
 </div>
 <div class="tab-pane {if $infoVta.paso eq 2} active{/if}" id="Service3">

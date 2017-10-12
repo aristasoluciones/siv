@@ -31,8 +31,13 @@
 	<br class="clr">
 	<div class="shop-wrap">
 		<div id="divCar">
-		
 		{include file="{$DOC_ROOT}/templates/lists/checkout.tpl"}
+		
+			<div id="contact-map"  >
+			 <div id="map_canvas" style="width:600px; height:500px;"></div>
+			 <!-- END-Google Map -->
+			</div>
+		
 		</div>
 	</div>
 	

@@ -8,7 +8,7 @@ function initialize() {
       ];
       var map = new google.maps.Map(document.getElementById('map_canvas'), {
         zoom: 15,
-        center: new google.maps.LatLng(16.748211,  -93.105762),
+        center: new google.maps.LatLng(16.744996,  -93.091516),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
       var infowindow = new google.maps.InfoWindow();
@@ -171,4 +171,6 @@ function addRFC(Id){
     });
 
 }//addRFC
+
+
 
