@@ -65,7 +65,7 @@
 				</li>
 			{/if}
 			{if in_array('16',$privilegios) or $usr.role_id eq 1}
-				<li class="nav-item {if $page=='usuario'}active open{/if}">
+				<li class="nav-item {if $page=='colonia'}active open{/if}">
 					<a class="nav-link " href="{$WEB_ROOT}/colonia">
 						<i class="icon-settings"></i>
 						<span class="title">Colonias</span>
@@ -216,7 +216,7 @@
 				Analisis de Clientes
 				<span class="arrow"></span>
 				</a>
-				<ul class="sub-menu" style='display:none' id="mnuPrincipal_1"  >
+				<ul class="sub-menu" {if  $page=='birthday' || $page =='age-ubication' || $page =='sex-ubication' ||  $page =='customer-basic'}   {else} style='display:none' {/if} id="mnuPrincipal_1"  >
 					<li  class="nav-item {if $page =='birthday'}active open{/if}"><a href="{$WEB_ROOT}/birthday">Cumpleaños</a></li>
 					<li  class="nav-item {if $page =='age-ubication'}active open{/if}"><a href="{$WEB_ROOT}/age-ubication">Edad por Colonias</a></li>
 					<li class="nav-item {if $page =='sex-ubication'}active open{/if}"><a href="{$WEB_ROOT}/sex-ubication">Genero por Colonias</a></li>
@@ -233,7 +233,7 @@
 					<li class="nav-item {if $page =='order-ubication'}active open{/if}" ><a href="{$WEB_ROOT}/order-ubication">Pedidos por Colonias</a></li>
 					<!--<li><a href="{$WEB_ROOT}/pep-time">Hora por Colonias</a></li>-->
 					<li class="nav-item {if $page =='geolocation'}active open{/if}" ><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
-					<li class="nav-item {if $page =='pep-basic'}active open{/if}"><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>
+					<!--<li class="nav-item {if $page =='pep-basic'}active open{/if}"><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>-->
 					<li class="nav-item {if $page =='rankin-pedido'}active open{/if}" ><a href="{$WEB_ROOT}/rankin-pedido">Ranking de pedidos</a></li>
 					<li class="nav-item {if $page =='sales-articulo'}active open{/if}" ><a href="{$WEB_ROOT}/sales-articulo">Ventas por articulo</a></li>
 				</ul>

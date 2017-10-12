@@ -17,7 +17,7 @@
             <td>{$item.folio}</td>
             <td>{$item.cliente}</td>
             <td>{$item.fecha}</td>
-            <td>{$item.total}</td>
+            <td>{$item.montoTotal}</td>
 			<td>{$item.estatus}</td>
             <td><div align="center">
                 
