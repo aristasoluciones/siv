@@ -59,7 +59,7 @@
 		<div class="content">
 		<p>a) Trabajo en equipo y compromiso
 			<br>
-			Aportamos nuestro talento y mejor actitud para generar mejores soluciones y resultados que beneficien a neustros clientes, proveedores
+			Aportamos nuestro talento y mejor actitud para generar mejores soluciones y resultados que beneficien a nuestros clientes, proveedores
 			y colaboradores
 		</p>
 		<p>
