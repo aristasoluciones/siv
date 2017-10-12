@@ -218,7 +218,44 @@ class Pedido extends Main
          return $result;
     }
 	
+	
+	
+	public function  getRankinProducto(){
+        $filtro  = "";
+        
+
+       
+          $sql =  "SELECT * FROM detalleventas as dv
+		 left join productos_categorias as pc on producto_categoria_id = dv.productoId 
+		 left join categoria as c on c.categoriaId = pc.categoria_id where 1 group by pc.categoria_id
+		 ";
+         $this->Util()->DB()->setQuery($sql);
+         $result = $this->Util()->DB()->GetResult();
+		 
+		 foreach($result as $key=>$aux){
+			 
+			    $sql =  "SELECT count(*) FROM detalleventas as dv
+			left join productos_categorias as pc on producto_categoria_id = dv.productoId 
+			left join categoria as c on c.categoriaId = pc.categoria_id where pc.categoria_id = ".$aux['categoria_id']." ";
+			$this->Util()->DB()->setQuery($sql);
+			$result8 = $this->Util()->DB()->GetSingle();
+			
+			 $sql =  "SELECT sum(precio*cantidad) FROM detalleventas as dv
+			left join productos_categorias as pc on producto_categoria_id = dv.productoId 
+			left join categoria as c on c.categoriaId = pc.categoria_id where pc.categoria_id = ".$aux['categoria_id']." ";
+			$this->Util()->DB()->setQuery($sql);
+			$sm = $this->Util()->DB()->GetSingle();
+			
+			$result[$key]['countProductos'] =  $result8;
+			$result[$key]['suma'] =  $sm;
+		 }
+		
+		 // echo '<pre>'; print_r($result);
+		 // exit;
+
+         return $result;
+    }
 						
 }
 
-?>
+// ?>

@@ -28,7 +28,7 @@
 			
 			<td>Coordenada X<input type="text" name="coordenadax" id="coordenadax"></td>
 			<td>Coordenada Y<input type="text" name="coordenaday" id="coordenaday"></td>
-			<td><br><br>Abrir Mapa</td>
+			<td><br><br></td>
 		</tr>
 	</table>
 	

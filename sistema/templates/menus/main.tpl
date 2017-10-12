@@ -229,12 +229,13 @@
 				Analisis de Pedidos
 				<span class="arrow"></span>
 				</a>
-				<ul class="sub-menu" {if  $page=='order-ubication' || $page =='geolocation' || $page =='pep-basic' || $page eq 'rankin-pedido' ||  $page eq 'sales-articulo'}style='display:block'{else}style='display:none'{/if} id="mnuPrincipal_2">
+				<ul class="sub-menu" {if  $page=='order-ubication' || $page =='geolocation' || $page =='pep-basic' || $page eq 'rankin-pedido' ||  $page eq 'sales-articulo' ||  $page eq 'ranking-product'}style='display:block'{else}style='display:none'{/if} id="mnuPrincipal_2">
 					<li class="nav-item {if $page =='order-ubication'}active open{/if}" ><a href="{$WEB_ROOT}/order-ubication">Pedidos por Colonias</a></li>
 					<!--<li><a href="{$WEB_ROOT}/pep-time">Hora por Colonias</a></li>-->
 					<li class="nav-item {if $page =='geolocation'}active open{/if}" ><a href="{$WEB_ROOT}/geolocation">GeoInformacion</a></li>
 					<!--<li class="nav-item {if $page =='pep-basic'}active open{/if}"><a href="{$WEB_ROOT}/pep-basic">Personalizado</a></li>-->
 					<li class="nav-item {if $page =='rankin-pedido'}active open{/if}" ><a href="{$WEB_ROOT}/rankin-pedido">Ranking de pedidos</a></li>
+					<li class="nav-item {if $page =='rankin-pedido'}active open{/if}" ><a href="{$WEB_ROOT}/ranking-product">Ranking de Categorias</a></li>
 					<li class="nav-item {if $page =='sales-articulo'}active open{/if}" ><a href="{$WEB_ROOT}/sales-articulo">Ventas por articulo</a></li>
 				</ul>
 			</li>

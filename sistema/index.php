@@ -54,6 +54,7 @@
 		'poll',
 		'question',
 		'poll-analytics',
+		'ranking-product',
 		
 	);
 	
