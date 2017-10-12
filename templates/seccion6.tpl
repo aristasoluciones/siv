@@ -17,7 +17,7 @@
           <ul class="nav nav-tabs left-navi">
             <li class="active"><a href="#lA" data-toggle="tab">DESCRIPCIÓN</a></li>
             <li><a href="#lB" data-toggle="tab">VENTAJAS</a></li>
-            <li><a href="#lP" data-toggle="tab">PÁGINA AUTOADMINISTRABLE</a></li>
+            <li><a href="#lP" data-toggle="tab">PÁGINA AUTOADMINSTRABLE</a></li>
             <li><a href="#lW" data-toggle="tab">SECCIONES</a></li>
             <li><a href="#lQ" data-toggle="tab">REDES SOCIALES</a></li>
             <li><a href="#lx" data-toggle="tab">PLATAFORMA</a></li>
@@ -140,7 +140,7 @@
 					    Ubícanos
 					</li>
 					<li>
-					    Encuentas Autoadministrables
+
 					</li>
 					<li>
 					    Contacto
