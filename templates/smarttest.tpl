@@ -23,7 +23,7 @@
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
 <section id="headline">
     <div class="container"><div class="container iniciar">
-      <h1>Por favor, Tómate unos minutos para compatir tus ideas con nosotros</h1>
+      <p align="right"> <Center><h1>Por favor, Tómate unos minutos para compatir tus ideas con nosotros</h1></center></p>
     </div>
 </section>
 
@@ -48,13 +48,13 @@
 	</div>
 	
 	<div id='msjEncuesta'>
-	</div>
-	<div id='div_encuesta' style="display:none">
-		
+	</div>	
+	<div id='div_encuesta' style="display:none">	
 		<form id="frmGral">
 		<input type='hidden' name='encuestaId' id='encuestaId' value='{$ultima.encuestaId}'/>
 		
-		 {foreach from=$registros item=item key=key}  
+	
+		{foreach from=$registros item=item key=key}  
 		 <h3>{$key+1}.- {$item.pregunta}</h3><br>
 		 <center>
 			{if $item.tiporespuesta eq 'punto'}
@@ -63,10 +63,10 @@
 				<div id="slider"></div>
 			{else if $item.tiporespuesta eq 'opcional'}
 				{foreach from=$item.opciones item=item2 key=key}  
-					<input type='radio' name='check_{$item.preguntaId}' id='check_{$item.preguntaId}' value='{$item2}'/><font style='font-size:33px'>{$item2}</font>
+					<input type='radio' name='check_{$item.preguntaId}' id='check_{$item.preguntaId}' value='{$item2}'/><font style='font-size:18px'>{$item2}</font>
 				 {/foreach}	
 			{else}
-				<textarea name='check_{$item.preguntaId}'  style='width:900px !important; width:200px'></textarea>
+				<textarea name='check_{$item.preguntaId}'  style='width:100px !important; width:150px'></textarea>
 			{/if}
 			 <br>
 			 <br>

@@ -77,6 +77,22 @@ switch($_POST['type']){
 		$smarty->display(DOC_ROOT.'/templates/lst-producto.tpl');
 		
 	break;
+	case "buscarCategoria":
+	
+		echo "ok[#]";
+
+		
+			// echo "<pre>"; print_r($_POST);
+			// exit;
+		$imagen->setValor($_POST["q"]);
+		$imagen->setNombre($_POST["producto"]);
+		$imagen->setSustancia($_POST["sustancia"]);
+		$imagen->setOrder($_POST["order"]);
+		$InfoCategoria = $imagen->InfoCategoria();
+		$smarty->assign('InfoCategoria',$InfoCategoria);
+		$smarty->display(DOC_ROOT.'/templates/producto.tpl');
+		
+	break;
 	
 }//switch
 	

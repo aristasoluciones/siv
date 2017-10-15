@@ -41,6 +41,14 @@
   <br>
   <a class="button jade">Purchase Now</a>	 
   </div>-->
+ 
   </div>
+  
 </article>
 </section>
+<table> 
+		<tr>Nombre del Producto:<input type="text" name="producto" id="producto">			
+				<div id="loader"></div>
+				<button class="button small" onclick="buscarCategoria()">Buscar</button> 			
+		</tr>		
+	</table>
