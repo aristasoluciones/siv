@@ -75,3 +75,11 @@ function soloDigito(e){
     return false;
    }
 }
+
+
+// JavaScript Document
+function cambiar(cambiar_foto)
+{
+    document.getElementById('cambiar').src=cambiar_foto
+}
+</script>

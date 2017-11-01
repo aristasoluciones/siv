@@ -20,8 +20,8 @@
     
             <td><div align="center">
                 {if in_array('edit_tramite',$privilegios)}
-				<a href="javascript:void(0)" onClick="EditReg({$item.catalogo_tramite_id})" title="Editar tramite">
-					<img src="{$WEB_ROOT}/images/png-icon/big/glyphicons_150_edit.png" border="0">
+				<a class="btn btn-xs yellow" href="javascript:void(0)" onClick="EditReg({$item.catalogo_tramite_id})" title="Editar tramite">
+					<i class="fa fa-pencil-square-o" ></i> 
 				</a>
                 {/if}
                 {if in_array('config_tramite',$privilegios)}
