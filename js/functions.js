@@ -82,4 +82,3 @@ function cambiar(cambiar_foto)
 {
     document.getElementById('cambiar').src=cambiar_foto
 }
-</script>
