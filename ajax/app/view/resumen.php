@@ -1,6 +1,44 @@
-{**include file="{$DOC_ROOT}/templates/boxes/messages.tpl"**}
+<?php
+	header('Access-Control-Allow-Origin: *'); 
+?>
+<html>
+<head>
+<style type="text/css">
+.speech-bubble {
+  background: #276e36; /* el color de fondo */
+  color: #FFF; /* el color del texto */
+  font-family: Arial, Sans-serif;
+  font-size: 12px;
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  width: 270px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.speech-bubble:after {
+  border: solid 10px transparent;
+  border-top-color: #276e36;  /* igual al color de fondo */
+  border-bottom: 0;
+  bottom: -20px;  /* igual al borde + el padding-bottom de la definición anterior */
+  content: "";
+  display: block;
+  height: 0;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+}
+.contentCheck {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
 <h3>Productos</h3>
-<form id="frmGralPedido" onsubmit="return false;">
+<form id="frmGral" onsubmit="return false;">
 <input type="hidden" name="type" id="type" value="enviarPedido">
 <table class="table table-striped table-bordered table-hover" id="sample_3">
     <thead>
@@ -124,5 +162,6 @@
 
 
 </form>
-
-{include file="{$DOC_ROOT}/templates/lists/pages.tpl" pages=$registros.pages info=$registros.info}
+<button class="button small" style="background:#990000" onclick="enviarPedido()">Enviar Pedido</button>
+</body>
+</html>

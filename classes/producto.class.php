@@ -15,9 +15,22 @@ class Producto extends Main
 	private $telefono;
 	private $razon;
 	private $municipio;
+	private $cantidad;
+	private $clienteId;
 	
+	public function setCantidad($value){	
+		if($this->Util()->ValidateRequireField($value, 'Cantidad')){
+			$this->Util()->ValidateString($value);
+			$this->cantidad = $value;	
+		}		
+	}
 	
-	
+	public function setClienteId($value){	
+		if($this->Util()->ValidateRequireField($value, 'Cliente')){
+			$this->Util()->ValidateInteger($value);
+			$this->clienteId = $value;	
+		}		
+	}
 	
 	public function setEmail($value, $validate = true){	
 		if($this->Util()->ValidateRequireField($value, 'Correo Electr&oacute;nico')){
@@ -326,6 +339,31 @@ class Producto extends Main
 		
 	}//Delete
 	
+	public function appdetalleCarrito($clienteId){
+		
+		 $sql = "SELECT * FROM detalleventas as d
+				left join productos_categorias as pc on pc.producto_categoria_id = d.productoId
+				WHERE d.clienteId	= ".$clienteId." and estatus  = 'captura'";
+			$this->Util()->DB()->setQuery($sql);
+		$lts = $this->Util()->DB()->GetResult();
+		
+		$total = 0;
+		foreach($lts as $key=>$aux){
+			
+			$lts[$key]["total"] = $aux["cantidad"]*$aux["precio"];
+			$total += $aux["cantidad"]*$aux["precio"];
+		}
+		
+		$data["carrito"] = $lts;
+		$data["total"] = number_format($total,2);
+		
+		// echo "<pre>"; print_r($data);
+		// exit;
+		
+		return $data;
+		
+	}
+	
 	public function detalleCarrito(){
 		
 		$ikey =  New Ikey;
@@ -391,6 +429,240 @@ class Producto extends Main
 		}
 
 		return $carrito;
+		
+	}
+	
+	
+	public function appNextPedido($clienteId){
+		
+		
+		
+		
+
+		
+		// echo "<pre>"; print_r($_POST);
+		// exit;
+		switch($_POST['Id']){
+	
+			case "1":
+		
+				
+				$this->setCalle($_POST["calle"]);
+				$this->setnumeroInterior($_POST["numInterior"]);
+				$this->setnumeroExterior($_POST["numExterior"]);
+				$this->setentreCalle1($_POST["entre1"]);
+				$this->setentreCalle2($_POST["entre2"]);
+				$this->setReferencias($_POST["referencia"]);
+				$this->setCp($_POST["cp"]);
+				$this->setColonia($_POST["colonia"]);
+				// $this->setEstadoId($_POST["estadoId"]);
+				$this->setMunicipio($_POST["municipio"]);
+				// $this->setTelefono($_POST["telefono"]);
+				
+				if($this->Util()->PrintErrors()){ 
+						return false; 
+					}
+					
+					if($_POST["direccionId"]==null){
+								$sql = '
+							INSERT INTO direcciones 
+							(
+								calle, 
+								numeroInterior,
+								numeroExterior, 
+								entreCalle1,
+								entreCalle2,
+								referencias,
+								cp,
+								colonia,
+								estadoId,
+								municipio,
+								clienteId
+							)
+							VALUES(
+								"'.$this->calle.'", 
+								"'.$this->numeroInterior.'",
+								"'.$this->numeroExterior.'", 
+								"'.$this->entreCalle1.'",
+								"'.$this->entreCalle2.'",
+								"'.$this->referencias.'",
+								"'.$this->cp.'",
+								"'.$this->colonia.'",
+								"'.$this->estadoId.'",
+								"'.$this->municipio.'",
+								"'.$clienteId.'"
+							)
+						';
+						$this->Util()->DB()->setQuery($sql);
+						$Id = $this->Util()->DB()->InsertData();
+						
+					}else{
+						
+						 $sql = '
+						UPDATE 
+							direcciones 
+						SET 
+								calle = "'.$this->calle.'", 
+								numeroInterior = "'.$this->numeroInterior.'",
+								numeroExterior = "'.$this->numeroExterior.'", 
+								entreCalle1 = "'.$this->entreCalle1.'",
+								entreCalle2 = "'.$this->entreCalle2.'",
+								referencias = "'.$this->referencias.'",
+								cp = "'.$this->cp.'",
+								colonia = "'.$this->colonia.'",
+								estadoId = "'.$this->estadoId.'",
+								municipio = "'.$this->municipio.'"			
+						WHERE direccionId = "'.$direccioId.'"';
+						$this->Util()->DB()->setQuery($sql);
+						$this->Util()->DB()->UpdateData();
+						
+						$Id = $direccioId;
+						$municipioId = $this->municipio;
+					}
+					
+				
+			$sql = "SELECT * FROM ventas 
+				WHERE estatus = 'captura' and clienteId = ".$clienteId."";
+			$this->Util()->DB()->setQuery($sql);
+			$infovta = $this->Util()->DB()->GetRow();	
+
+			if($infovta["ventaId"]==null){
+				 $sql = '
+					INSERT INTO ventas 
+					(
+						fecha, 
+						subtotal,
+						iva, 
+						montoTotal,
+						clienteId,
+						direccionId,
+						municipioId,
+						facturacionId,
+						paso
+					)
+					VALUES(
+						"'.date("Y-m-d").'", 
+						"'.$subtotal.'",
+						"'.$iva.'", 
+						"'.$montoTotal.'",
+						"'.$clienteId.'",
+						"'.$Id.'",
+						"'.$municipioId.'",
+						"0",
+						"2"
+						
+					)
+				';
+				$this->Util()->DB()->setQuery($sql);
+				$this->Util()->DB()->InsertData();
+			}else{
+				if($infoDir["direccionId"]==null){
+					$Id = $Id;
+					$municipioId = $municipioId;
+				}else{
+					$Id = $infoDir["direccionId"];
+					$municipioId = $infoDir["municipio"];
+				}
+				
+				
+				
+				 $sql = '
+						UPDATE 
+							ventas 
+						SET 
+								direccionId = "'.$Id.'",	
+								municipioId = "'.$municipioId.'"		
+						WHERE ventaId = "'.$infovta["ventaId"].'"';
+						$this->Util()->DB()->setQuery($sql);
+						$this->Util()->DB()->UpdateData();
+						
+						
+			}
+				
+				 
+
+				return true;
+			
+			break;
+			
+			case 2:
+			
+			if($_POST["rfcId"]==null){
+				$this->setRazon($_POST["nombreFac"]);
+				$this->setCalle($_POST["calleFac"]);
+				$this->setRFC($_POST["rfcFac"]);
+				$this->setnumeroInterior($_POST["numInteriorFac"]);
+				$this->setnumeroExterior($_POST["numExteriorFac"]);
+				$this->setCp($_POST["cpFac"]);
+				$this->setColonia($_POST["coloniaFac"]);
+				$this->setEstadoId($_POST["estadoIdFac"]);
+				$this->setMunicipio($_POST["municipioFac"]);
+				$this->setTelefono($_POST["telefonoFac"]);
+				$this->setEmail($_POST["correoFac"]);
+				
+				if($this->Util()->PrintErrors()){ 
+						return false; 
+					}
+					
+			
+				 $sql = '
+					INSERT INTO rfc 
+					(
+						razonSocial, 
+						rfc, 
+						calle, 
+						numeroInterior,
+						numeroExterior, 
+						colonia,
+						municipio,
+						estadoId,
+						cp,
+						telefono,
+						correo,
+						clienteId
+					)
+					VALUES(
+						"'.$this->razon.'", 
+						"'.$this->rfc.'", 
+						"'.$this->calle.'", 
+						"'.$this->numeroInterior.'",
+						"'.$this->numeroExterior.'",
+						"'.$this->colonia.'",		
+						"'.$this->municipio.'",		
+						"'.$this->estadoId.'",		
+						"'.$this->cp.'",
+						"'.$this->telefono.'",
+						"'.$this->email.'",
+						"'.$clienteId.'"
+					)
+				';
+				
+				// exit;
+				$this->Util()->DB()->setQuery($sql);
+				$rfcId = $this->Util()->DB()->InsertData();
+				
+					$infoRfc["rfcId"] = $rfcId;
+				}
+				
+				$sql = 'UPDATE ventas SET 
+				rfcId = '.$infoRfc["rfcId"].'				
+				WHERE estatus = "captura" and clienteId = '.$clienteId.'';
+				$this->Util()->DB()->setQuery($sql);
+				$this->Util()->DB()->UpdateData();
+				
+			
+				$sql = 'UPDATE ventas SET 
+				paso = 3				
+				WHERE estatus = "captura" and clienteId = '.$clienteId.'';
+				$this->Util()->DB()->setQuery($sql);
+				$this->Util()->DB()->UpdateData();
+				
+				return true;
+			
+			break;
+		
+		}
+		
 		
 	}
 	
@@ -716,6 +988,50 @@ class Producto extends Main
 	}
 	
 	
+	public function appinfoVenta($clienteId){
+
+	
+	// exit;
+		 $sql = '
+			SELECT 
+				v.*,
+				d.*, 
+				r.razonSocial as rs ,
+				r.calle as cf, 
+				r.rfc as rfc, 
+				r.numeroInterior as ni, 
+				r.numeroExterior as ne, 
+				r.cp as cpf, 
+				r.colonia as cf, 
+				r.estadoId as ef, 
+				r.municipio as mf,
+				r.telefono as tf,
+				r.correo as cf
+			FROM ventas as v
+			left join 	direcciones as d on d.direccionId = v.direccionId 
+			left join 	rfc as r on r.rfcId = v.rfcId 
+			WHERE estatus =  "captura" and v.clienteId = '.$clienteId.'';
+// exit;
+		$this->Util()->DB()->setQuery($sql);
+		$info = $this->Util()->DB()->GetRow();
+		
+		// if ($info["direccionId"]<>null){
+		// $ikey->setCampo($info["direccionId"]);
+		// $direccionId =  $ikey->Cifrar();
+		// }
+		// if ($info["rfcId"]<>null){
+		// $ikey->setCampo($info["rfcId"]);
+		// $rfcId =  $ikey->Cifrar();
+		// }
+		$info["direccionCId"] = $info["direccionId"];
+		$info["rfcCId"] = $info["rfcId"];
+		
+		// echo "<pre>"; print_r($info);
+		// exit;
+						
+		return $info; 
+	}
+	
 	
 	public function misDirecciones(){
 		
@@ -740,6 +1056,44 @@ class Producto extends Main
 		return $infoClt;
 	}
 	
+	public function appmisDirecciones($clienteId){
+		
+		
+		
+		
+		$sql = "SELECT * FROM direcciones 
+				WHERE clienteId =  ".$clienteId."";
+			$this->Util()->DB()->setQuery($sql);
+		$infoClt = $this->Util()->DB()->GetResult();
+		
+		// foreach($infoClt as $key=>$aux){
+			// $ikey->setCampo($aux["direccionId"]);
+			// $IdCifrado =  $ikey->Cifrar();
+			// $infoClt[$key]["direccionCId"] = $IdCifrado ;
+		// }
+		
+		return $infoClt;
+	}
+	
+	// appmisRFC
+	public function appmisRFC($clienteId){
+		
+		
+		
+		
+		$sql = "SELECT * FROM rfc 
+				WHERE clienteId =  ".$clienteId."";
+			$this->Util()->DB()->setQuery($sql);
+		$infoClt = $this->Util()->DB()->GetResult();
+		
+		// foreach($infoClt as $key=>$aux){
+			// $ikey->setCampo($aux["rfcId"]);
+			// $IdCifrado =  $ikey->Cifrar();
+			// $infoClt[$key]["rfcCId"] = $IdCifrado ;
+		// }
+		
+		return $infoClt;
+	}
 	
 	public function misRFC(){
 		
@@ -917,6 +1271,61 @@ class Producto extends Main
 		
 	}
 	
+	public function appenviarPedido($clienteId){
+		
+		$infoSc["sucursalid"] = 1;
+		
+		$sql = "SELECT * FROM ventas 
+				WHERE clienteId = '".$clienteId."' and estatus = 'captura'";
+			$this->Util()->DB()->setQuery($sql);
+		$infoVta = $this->Util()->DB()->GetRow();
+		
+		$sql = 'UPDATE detalleventas SET 
+				estatus = "vendido",
+				ventaId = '.$infoVta['ventaId'].'
+				WHERE clienteId = "'.$clienteId.'" and estatus = "captura"';
+		$this->Util()->DB()->setQuery($sql);
+		$this->Util()->DB()->UpdateData();
+		
+		$sql = "SELECT * FROM detalleventas 
+				WHERE ventaId = '".$infoVta['ventaId']."'";
+			$this->Util()->DB()->setQuery($sql);
+		$lstProductos = $this->Util()->DB()->GetRow();
+		
+		
+		foreach($lstProductos as $key=>$aux){
+			$total += $aux["cantidad"]*$info["precio"];
+		}
+
+		//asignamos folio
+		$sql = 'SELECT * FROM folios where sucursalId =  '.$infoSc["sucursalid"].' and anio = "'.date("Y").'"';
+		$this->Util()->DB()->setQuery($sql);
+		$infoFoli = $this->Util()->DB()->GetRow();
+		
+		$sql = 'UPDATE ventas SET 
+				estatus = "enviado",
+				hora = "'.date("H:i:s").'",
+				subtotal = "'.$total.'",
+				folio = "'.$infoFoli["folioSiguiente"].'",
+				montoTotal = "'.$total.'",
+				sucursalId = "'.$infoSc["sucursalid"].'"
+				WHERE clienteId = "'.$clienteId.'" and estatus = "captura"';
+			// exit;	
+		$this->Util()->DB()->setQuery($sql);
+		$this->Util()->DB()->UpdateData();
+		
+		 $sql = 'UPDATE folios SET 
+				folioActual = "'.($infoFoli["folioActual"]+1).'",
+				folioSiguiente =  "'.($infoFoli["folioSiguiente"]+1).'"
+				WHERE sucursalId = "'.$infoSc["sucursalid"].'" and anio = "'.date("Y").'"';
+				
+		$this->Util()->DB()->setQuery($sql);
+		$this->Util()->DB()->UpdateData();
+
+		return true;
+		
+	}
+	
 	public function detalleVta(){
 		
 		$ikey = New Ikey;
@@ -1005,6 +1414,52 @@ class Producto extends Main
 		
 	}
 	
+	
+	public function InfoProducto(){
+		
+		
+		$sql = "SELECT 
+					*
+				FROM 
+					productos_categorias 
+				WHERE producto_categoria_id =  ".$this->id."";
+			$this->Util()->DB()->setQuery($sql);
+		$infoClt = $this->Util()->DB()->GetRow();
+		
+		return $infoClt;
+		
+	}
+	
+	
+	public function appAddCar(){
+						
+		
+		
+		 $sql = '
+			INSERT INTO detalleventas 
+			(
+				productoId, 
+				cantidad,
+				precio, 
+				clienteId,
+				estatus
+			)
+			VALUES(
+				"'.$this->id.'", 
+				"'.$this->cantidad.'",
+				"'.$this->costo.'", 
+				"'.$this->clienteId.'",
+				"captura"
+			)
+		';
+		$this->Util()->DB()->setQuery($sql);
+		$this->Util()->DB()->InsertData();
+			
+		
+		
+		return true;
+		
+	}//Save
 }
 
 ?>

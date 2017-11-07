@@ -84,3 +84,4 @@ function cambiar(cambiar_foto)
 }
 
 //</script> esta linea era el error aqui no lleva script porque es un archivo .js
+
