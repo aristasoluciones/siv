@@ -27,13 +27,11 @@
 	            <p class="blog-detail" style="text-align:justify">
 				{$infoNota.texto}
 				</p>
-	            <a href=""  class="readmore">Ver</a> </div>
-				
-        </article>
+	            <a href="{$WEB_ROOT}/promo"  class="readmore">ver mas promociones</a> </div>
+		</article>
 		
-      </div>
-	  latest-f-blog-line-start 
-	  <div class="seven columns omega">
+      </div>	   
+	 <!-- <div class="seven columns omega">
 	  <h2>Promociones</h2>
 		{foreach from=$lstPromoinde item=item key=key} 
 		{if $key < 4}
@@ -47,10 +45,55 @@
         </article>
 		{/if}
 		{/foreach}
-      </div>
+      </div>-->
+	  <div class="seven columns omega">
+	  <article class="blog-line clearfix">
+	       <div class="sixteen columns">				
+					<h6 class="h-sub-content">Conoce nuestros Productos</h6>					
+				</div>				
+			</div>
+			
+	  </article>
+	  <div class="one_third">
+      <figure class="our-team"> <img src="images/tips/c05487351.jpg" alt="">
+        <figcaption><font color="orange"><h4><strong><b>Remate..!!<b><br></font>
+          <small><font color="orange">Laptop HP 15-bs011la</font></small></strong></h4>
+        <p align="justify">HP presenta modernidad y diseño atractivo en esta laptop equipada con los mejores elementos para garantizarte productividad y rapidez. Recibirás el mejor almacenamiento de archivos con 1TB de DD y 8GB de RAM, combinación perfecta para darte rendimiento y velocidad. Asimismo, podrás desempeñar multitareas en este equipo de cómputo sin dificultad gracias a las características del procesador Intel Core i3.</p>
+      </figure>
+      <!-- end Our Team -->
+    </div>
+	 <div class="one_third">
+      <figure class="our-team"> <img src="images/tips/Casa Madero Merlot-500x500.png" alt="">
+        <figcaption><font color="orange"><h4><strong><b>Remate..!!<b><br></font>
+          <small><font color="orange">Casa Madero Merlot</font></small></strong></h4>
+        <p align="justify">Fermentación a temperatura controlada en tanques de auto-fermentación
+De 12 a 15 meses en barricas de roble francés y americano
+Grado alcohólico: 13,5% Vol. Alc.</p>
+	    </figure>
+      <!-- end Our Team -->
+    </div>
+	 <div class="one_third">
+      <figure class="our-team"> <img src="images/tips/domecq xa-500x500.png" alt="">
+        <figcaption><font color="orange"><h4><strong><b>Remate..!!<b><br></font>
+          <small><font color="orange">Sangre de Cristo</font></small></strong></h4>
+        <p>Este vino mexicano, es un vino tinto rojo de sabor afrutado y dulce. Para aquellas personas que no tienen la costumbre de beber vino, este sería el indicado para iniciar pues es muy amable al paladar.</p>
+        </figure>
+      <!-- end Our Team -->
+    </div>
+	 <div class="one_third">
+      <figure class="our-team"> <img src="images/tips/SANGRE D E CRISTO-500x500.png" alt="">
+        <figcaption><font color="orange"><h4><strong><b>Remate..!!<b><br></font>
+          <small><font color="orange">Sauvignon XA Domecq</font></small></strong></h4>
+        <p align="justify">Nariz delicada y armónica con frutos rojos como moras, creza y ciruelas pasas, mezclados con vainilla y chocolate amargo que le otorgan su gran complejidad. Roble Profundo e intenso con matiz rojo carmín y muy brillante.</p>
+        </figure>
+      <!-- end Our Team -->
+    </div>	
+      <!-- end Our Team -->
+    </div>
     </div>	
 	
-	<section class="latest-works">   	
+	
+	<!--<section class="latest-works">   	
 <hr class="vertical-space1">
 <div class="icon-top-title aligncenter">
 <i class="li_diamond"></i>
@@ -64,7 +107,7 @@
 	<script src="isotope/isotope.js"></script>
     <script src="isotope/isotope-custom.js"></script>
     <script src="js/jquery.prettyPhoto.js" ></script>
-</section>
+</section>-->
 	
 <hr class="vertical-space3">
 </section>

@@ -2,14 +2,14 @@
     <article class="blox" >
 	<div class="container" >	
 	<div class="eight columns alignleft" >
-	<hr class="vertical-space5">	
+		
 	<section class="container" >
 <hr class="vertical-space3">
 	<!-- Start Page Content -->	
 	<div class="sixteen columns">
       <hr>
-      <div class="aligncenter">
-	  <hr class="vertical-space1">
+      <!--<div class="aligncenter">-->
+	 <!-- <hr class="vertical-space1">-->
         <h1 class="mex-title">SISTEMA INTEGRAL DE VENTAS (SIV)</h1>
       </div>
       <div id="left-tab">

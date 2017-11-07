@@ -13,16 +13,10 @@
 <body class="" onload="initialize()">
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
-<section id="headline">
     <div class="container">
-      <h3>Realizar Pedido</h3>
+      <h1>Realizar Pedido</h1>
     </div>
-</section>
-
-
-<section class="container page-content" >
-	
-	
+<section class="container page-content" >	
     <hr class="vertical-space2">
     <section class="eleven columns">
 	<div class="shop-wrap">

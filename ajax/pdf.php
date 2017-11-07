@@ -1,7 +1,7 @@
 <?php
 // echo "<pre>"; print_r($_GET); 
-// exit;
-	include_once('../initPdf.php');
+//exit;
+	//include_once('../initPdf.php');
 	include_once('../config.php');
 	include_once(DOC_ROOT.'/libraries.php');
 
@@ -9,8 +9,8 @@
 
 	
 	$lstpro = $producto->verVta($_GET['id']);  
-	// echo '<pre>'; print_r($lstpro);
-	// exit;
+	//echo '<pre>'; print_r($lstpro);
+	//exit;
 	$html .= "
 	<html>
 	<head>

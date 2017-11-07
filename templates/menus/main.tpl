@@ -77,6 +77,8 @@
 			  </li>
 			  <li><a data-description="We have done" class="drp-aro" href="{$WEB_ROOT}/smarttest">Encuestas</a>
 			  </li>
+			  <li><a data-description="We have done" class="drp-aro" href="{$WEB_ROOT}/tipsCompras">Tips de Compras</a>
+			  </li>
 			<li><a data-description="Mega Menu" href="{$WEB_ROOT}/contacto">Contacto</a>
 				</li>
 			</ul>

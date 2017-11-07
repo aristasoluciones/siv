@@ -18,6 +18,7 @@
 <body class="" >
 	<div id="wrap" class="colorskin-0">
 				{include file="{$DOC_ROOT}/templates/menus/main.tpl"}
+				
 <section id="headline">
     <div class="container">
 	   <h3><font color="BLACK">{$InfoCategoria.infoP.nombre}</font></h3>	
@@ -29,6 +30,7 @@
 	<form id="fltProducto" onsubmit="return false">
 	<input type="hidden" name="type" id="type" value="">
 	<input type="hidden" name="q" id="q" value="{$q}">
+
 	<table>
 		<tr>
 			<td>

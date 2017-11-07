@@ -82,4 +82,5 @@ function cambiar(cambiar_foto)
 {
     document.getElementById('cambiar').src=cambiar_foto
 }
-</script>
+
+//</script> esta linea era el error aqui no lleva script porque es un archivo .js

@@ -4,7 +4,7 @@ include_once(DOC_ROOT.'/properties/errors.es.php');
 
 require(DOC_ROOT.'/libs/Smarty.class.php');
 require(DOC_ROOT.'/libs/nusoap.php');
-// include_once(DOC_ROOT."/libs/qr/qrlib.php");
+ include_once(DOC_ROOT."/libs/qr/qrlib.php");
 include_once(DOC_ROOT.'/libs/pdf/dompdf_config.inc.php');
 include_once(DOC_ROOT.'/classes/db.class.php');
 $db = new DB;
