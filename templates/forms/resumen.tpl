@@ -1,6 +1,6 @@
 {**include file="{$DOC_ROOT}/templates/boxes/messages.tpl"**}
 <h3>Productos</h3>
-<form id="frmGral" onsubmit="return false;">
+<form id="frmGralPedido" onsubmit="return false;">
 <input type="hidden" name="type" id="type" value="enviarPedido">
 <table class="table table-striped table-bordered table-hover" id="sample_3">
     <thead>

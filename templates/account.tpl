@@ -16,7 +16,7 @@
 <section id="headline">
     <div class="container">
 
-	   <h3><font color="#622181">Mi Cuenta</font></h3>	
+	   <h3><font color="black">Mis Pedidos</font></h3>	
     </div>
 </section>
 
@@ -33,8 +33,11 @@
         <ul><!--
           <li><a href="#">Información de tu Cuenta </a></li>-->
           <li><a href="#">Pedidos</a></li>
+		  <li><a href="{$WEB_ROOT}/car">Carrito de Compras</a></li>
+          <li><a href="{$WEB_ROOT}/enviomoto">Tiempoestidado de entrega (Motocicleta)</a></li>
+          <li><a href="{$WEB_ROOT}/fechaentrega">Tiempo estimado de entrega (Paquetería)</a></li>          
         </ul>
-      </div>
+      </div>	  
       <!-- end-listbox1 -->
       <br class="clear">
     

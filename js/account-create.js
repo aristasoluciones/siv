@@ -80,7 +80,7 @@ function valida(tipo,field){
 function fnFechaNa(Id)
 	{
 		// alert("hola")
-		$.datepicker.setDefaults( $.datepicker.regional['es'] );
+		// $.datepicker.setDefaults( $.datepicker.regional['es'] );
 		$('#fnacimiento').datepicker({
 		 dateFormat: 'yy-mm-dd',
 		}).focus();

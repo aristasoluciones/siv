@@ -4,13 +4,16 @@
 <table class="table table-striped table-bordered table-hover" id="sample_3">
     <thead>
         <tr>
-            <th width="200"><div align="center">#</div></th>
-            <th width="200"><div align="center">Fecha de Solicitud</div></th>
-            <th width="200"><div align="center">Num Productos</div></th>
-            <th class="hidden-480" width="150"><div align="center">Subtotal</div></th>
-            <th class="hidden-480" width="200"><div align="center">I.V.A.</div></th>
-            <th class="hidden-480"><div align="center">Total</div></th>
-            <th class="hidden-480"><div align="center">Estatus</div></th>
+            <th width="200"><div align="center"><font color="white">#</div></th>
+            <th width="200"><div align="center"><font color="white">Folio</div></th>
+            <th width="200"><div align="center"><font color="white">Fecha de Solicitud</div></th>
+            <th width="200"><div align="center"><font color="white">Hora de Solicitud</div></th>
+            <th width="200"><div align="center"><font color="white">Num Productos</div></th>
+            <th class="hidden-480" width="150"><div align="center"><font color="white">Subtotal</div></th>
+            <th class="hidden-480" width="200"><div align="center"><font color="white">I.V.A.</div></th>
+            <th class="hidden-480"><div align="center"><font color="white">Total</div></th>
+            <th class="hidden-480"><div align="center"><font color="white">Estatus</div></th>
+            <th class="hidden-480"><div align="center"><font color="white">Acciones</div></th>
         </tr>
     </thead>
     <tbody>
@@ -20,15 +23,23 @@
 			<td>
 			{$key+1}
 			</td>
-			<td><div align="center">{$item.fecha}</div></td>
+			<td><div align="center"><font color="black"><b>{$item.folio}</b></div></td>
+			<td><div align="center"><font color="black"><b>{$item.fecha}</b></div></td>
+			<td><div align="center"><font color="black"><b>{$item.hora}</b></div></td>
             <td>
-				{$item.nombre}<br>
-				{$item.descripcion}
+				{$item.countVta}
 			</td>
-			<td><div align="center">${$item.subtotal|number_format:2:'.':','}</div></td>
+			<td><div align="center"><font color="black"><b>${$item.subtotal|number_format:2:'.':','}</b></div></td>
             <td><div align="center">$</div></td>
-            <td><div align="center">${$item.montoTotal|number_format:2:'.':','}</div></td>
-            <td><div align="center">{$item.estatus}</div></td>
+            <td><div align="center"><font color="black"><b>${$item.montoTotal|number_format:2:'.':','}</b></div></td>
+            <td><div align="center"><font color="black"><b>{$item.estatus}</b>	</div></td>
+            <td>
+				<div align="center">
+					<a href="{$WEB_ROOT}/ajax/pdf.php?id={$item.ventaId}" target='_blank'>
+						<img src="{$WEB_ROOT}/images/ped.png">
+					</a>
+				</div>
+			</td>
 
         </tr>
 		

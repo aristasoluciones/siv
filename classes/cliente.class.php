@@ -317,7 +317,7 @@ class Cliente extends Main
 			return false; 
 		}
 		
-		 $sql = 'INSERT INTO cliente (
+	echo	 $sql = 'INSERT INTO cliente (
 			nombre, 
 			direccion,
 			telefono

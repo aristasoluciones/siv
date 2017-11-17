@@ -31,7 +31,7 @@ console.log(response)
 			$("#loader").html("");
 			
 			if(splitResp[0] == "ok"){				
-				window.location.href = WEB_ROOT;
+				window.location.href = WEB_ROOT+'/car';
 			}else if(splitResp[0] == "fail"){
 				console.log(splitResp[1]);
 				$("#txtErrMsg").show();

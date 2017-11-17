@@ -41,6 +41,9 @@
   <br>
   <a class="button jade">Purchase Now</a>	 
   </div>-->
+ 
   </div>
+  
 </article>
 </section>
+

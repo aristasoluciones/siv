@@ -2,14 +2,14 @@
     <article class="blox" >
 	<div class="container" >	
 	<div class="eight columns alignleft" >
-	<hr class="vertical-space5">	
+		
 	<section class="container" >
 <hr class="vertical-space3">
 	<!-- Start Page Content -->	
 	<div class="sixteen columns">
       <hr>
-      <div class="aligncenter">
-	  <hr class="vertical-space1">
+      <!--<div class="aligncenter">-->
+	 <!-- <hr class="vertical-space1">-->
         <h1 class="mex-title">SISTEMA INTEGRAL DE VENTAS (SIV)</h1>
       </div>
       <div id="left-tab">
@@ -17,7 +17,7 @@
           <ul class="nav nav-tabs left-navi">
             <li class="active"><a href="#lA" data-toggle="tab">DESCRIPCIÓN</a></li>
             <li><a href="#lB" data-toggle="tab">VENTAJAS</a></li>
-            <li><a href="#lP" data-toggle="tab">PÁGINA AUTOADMINSTRABLE</a></li>
+            <li><a href="#lP" data-toggle="tab">PÁGINA AUTOADMINISTRABLE</a></li>
             <li><a href="#lW" data-toggle="tab">SECCIONES</a></li>
             <li><a href="#lQ" data-toggle="tab">REDES SOCIALES</a></li>
             <li><a href="#lx" data-toggle="tab">PLATAFORMA</a></li>

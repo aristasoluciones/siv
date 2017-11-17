@@ -75,3 +75,13 @@ function soloDigito(e){
     return false;
    }
 }
+
+
+// JavaScript Document
+function cambiar(cambiar_foto)
+{
+    document.getElementById('cambiar').src=cambiar_foto
+}
+
+//</script> esta linea era el error aqui no lleva script porque es un archivo .js
+
