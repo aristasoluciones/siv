@@ -35,7 +35,7 @@
 				 </div>  
 				<div class="actions">
 				    <div class="btn-group btn-group-devided" data-toggle="buttons"> 
-				    {if in_array('add_imagen',$privilegios) or $typeUser==1}
+				    {if in_array('add_imagen',$privilegios) or $usr.role_id eq 1}
 					<a href="javascript:;" class="btn btn-circle sbold green" onClick="AddReg()">
 						Agregar <i class="fa fa-plus"></i>
 					</a>
