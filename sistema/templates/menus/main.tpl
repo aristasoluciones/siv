@@ -147,11 +147,11 @@
 				</a>
 			</li>-->
 			{/if}
-			{if in_array('imagen',$privilegios) or $user.role_id eq 1}
+			{if in_array('imagen',$privilegios) or $usr.role_id eq 1}
 			<li class="nav-item {if $page=='imagen'}active open{/if}">
 				<a class="nav-link " href="{$WEB_ROOT}/imagen">
 					<i class="icon-briefcase"></i>
-					<span class="title">Imagenes/span>
+					<span class="title">Imagenes</span>
 				</a>
 			</li>
 			{/if}
