@@ -2,10 +2,10 @@ var urlLoc = document.location.hostname;
 console.log("lalal"+urlLoc);
 if(urlLoc == "localhost")
 	var WEB_ROOT = "http://" + urlLoc + "/siv/sistema";
-else if(urlLoc == "desarrollot.no-ip.biz" || urlLoc == "192.168.1.200")
+else if(urlLoc == "192.168.1.200")
 	var WEB_ROOT = "http://" + urlLoc + "/siv/sistema";
 else
-	var WEB_ROOT = "http://" + urlLoc + "/sistema";
+	var WEB_ROOT = "http://" + urlLoc + "/siv/sistema";
 
 var LOADER = "<img src='"+WEB_ROOT+"/images/loading.gif'><br>Cargando...";
 var LOADER2 = "<img src='"+WEB_ROOT+"/images/loader.gif'>";
@@ -14,6 +14,7 @@ var LOADER3 = "<div align='center'><img src='"+WEB_ROOT+"/images/loading.gif'><b
 var msgFail = "Ocurrio un error al cargar los datos.";
 var msgError = "Something went wrong...";
 var AJAX_AUTOCOMPLETE = WEB_ROOT+"/ajax/autocomplete.php";
+
 function verSubMenu(id){
 	$("#mnuPrincipal_"+id).toggle();
 }

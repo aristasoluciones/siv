@@ -1,6 +1,7 @@
 {**include file="{$DOC_ROOT}/templates/boxes/messages.tpl"**}
 <form id="frmGral" onsubmit="return false;">
 <input type="hidden" name="type" id="type" value="updateCar">
+
 <table class="table table-striped table-bordered table-hover" id="sample_3">
     <thead>
         <tr>
@@ -12,6 +13,7 @@
             <th class="hidden-480" width="100"><div align="center"></div></th>
         </tr>
     </thead>
+	
     <tbody>
 
     	{foreach from=$lstCar.carrito item=item key=key}        	
@@ -27,11 +29,13 @@
             <td><div align="center"><input type="" name="cantidad_{$key}" id="cantidad_{$key}" value="{$item.cantidad}" style="width:50px"></div></td>
             <td><div align="center">${$item.total|number_format:2:'.':','}</div></td>
             <td><div align="center">
-				<a href="javascript:void(0)" onClick="deleteCar('{$item.key}')" title="Eliminar">
-					<img src="{$WEB_ROOT}/images/delete.png" border="0">
+				<a class="btn btn-xs red" button type="button" class="close" data-dismiss="alert" onClick="deleteCar('{$item.key}')">&times;</button>
+					<i class="fa fa-trash-o"></i>
 				</a>
 				</div>
             </td>
+			
+			 
         </tr>
 		
         {foreachelse}
@@ -70,6 +74,73 @@
 		</tr>
     </tbody>
 </table>
+
 </form>
+<section class="container page-content" >
+		
+    <hr class="vertical-space2">
+    <section class="eleven columns">
+	<div class="shop-wrap">
+	<p class="result-count">
+	{$InfoCategoria.info}</p>
+	<br class="clr">
+	<div class="shop-wrap">
+	
+	<br>
+	<br>
+	<div id="divRegistro">
+	<form id="frmLogin">
+	<input type="hidden" name="type" id="type" value="doLogin">
+	<table>
+		<tr>
+			<td>
+				Dirección de Correo Electrónico
+				<input type="text" name="username" id="username" >
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				Contraseña
+				<input type="password" name="password" id="password" >
+			</td>
+
+		</tr>
+
+	</table>	
+	
+	
+	</form>
+	
+	<div id="loader"></div>
+	<div id="txtErrMsg" style="color:red"></div>
+	<button class="button small" style="background:#008080" onclick="DoLogin()">Iniciar Sesión</button> 
+	</div>
+		
+	</div>
+	
+		<hr class="vertical-space1">
+      <div class="pagination2">
+       <!-- 2 -->
+      </div>
+	  <hr class="vertical-space2">
+	</section>
+    <!-- end-main-content -->
+    <aside class="four columns offset-by-one sidebar">
+		<div id="divCar">
+			<!--3-->
+		</div>
+	  <br class="clear">
+  
+
+      <br class="clear">
+  
+      <br class="clear">
+      
+      <br class="clear">
+     </aside>
+  
+    <br class="clear">
+  </section>
 
 {include file="{$DOC_ROOT}/templates/lists/pages.tpl" pages=$registros.pages info=$registros.info}

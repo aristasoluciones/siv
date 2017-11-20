@@ -15,5 +15,3 @@
 <p class="total">Subtotal: <strong>$ {$lstCar.total}</strong></p>
 <button class="button small" onclick=" location.href='{$WEB_ROOT}/car' ">Carrito</button> 
 <button class="button small" style="background:#990000" onclick=" location.href='{$WEB_ROOT}/checkout' ">Realizar Pedido</button>
-
-</div>

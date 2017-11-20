@@ -29,9 +29,17 @@
 		'checkout',
 		'index_dev',
 		'account',
+		'encuentro',
+		'realizar',
+		'envioentrega',
+		'estadop',
+		'promo',
+		'fechaentrega',
+		'enviomoto',
 		#reportes
 		'lista',
 		'smarttest',
+		'tipsCompras',
 	);
 	
 

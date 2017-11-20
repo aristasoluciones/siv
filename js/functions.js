@@ -2,10 +2,10 @@ var urlLoc = document.location.hostname;
 
 if(urlLoc == "localhost")
 	var WEB_ROOT = "http://" + urlLoc + "/siv";
-else if(urlLoc == "desarrollot.no-ip.biz" || urlLoc == "192.168.1.200")
+else if(urlLoc == "192.168.1.200")
 	var WEB_ROOT = "http://" + urlLoc + "/siv";
 else
-	var WEB_ROOT = "http://" + urlLoc + "/";
+	var WEB_ROOT = "http://" + urlLoc + "/siv";
 
 var LOADER = "<img src='"+WEB_ROOT+"/images/loading.gif'><br>Cargando...";
 var LOADER2 = "<img src='"+WEB_ROOT+"/images/loader.gif'>";
@@ -82,3 +82,6 @@ function cambiar(cambiar_foto)
 {
     document.getElementById('cambiar').src=cambiar_foto
 }
+
+//</script> esta linea era el error aqui no lleva script porque es un archivo .js
+

@@ -197,9 +197,9 @@ class Pedido extends Main
         $filtro  = "";
         $group = "";
         if($_POST["finicial"]!="" && $this->Util()->isValidateDate($_POST["finicial"]))
-            $filtro .= " AND a.fecha>='".$_POST['finicial']."'";
+            $filtro .= " AND d.fecha>='".$_POST['finicial']."'";
         if($_POST["ffinal"]!="" && $this->Util()->isValidateDate($_POST["ffinal"]))
-            $filtro .= " AND a.fecha<='".$_POST['ffinal']."'";
+            $filtro .= " AND d.fecha<='".$_POST['ffinal']."'";
 
         if($_POST['categoria']!="" && $_POST['productoId']==""){
             $filtro .=" AND b.categoria_id =".$_POST['categoria']."";
@@ -211,6 +211,7 @@ class Pedido extends Main
         }
          $sql =  "SELECT b.nombre as articulo,c.nombre as categoria,sum(a.cantidad) totalVenta FROM detalleventas a INNER JOIN productos_categorias b ON a.productoId = b.producto_categoria_id
                   INNER JOIN categoria c  ON b.categoria_id=c.categoriaId
+                  LEFT JOIN ventas d ON a.ventaId=d.ventaId                  
                   WHERE 1 ".$filtro." GROUP BY b.producto_categoria_id ";
          $this->Util()->DB()->setQuery($sql);
          $result = $this->Util()->DB()->GetResult();
