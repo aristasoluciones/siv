@@ -34,43 +34,12 @@ include_once(DOC_ROOT.'/libraries.php');
 		
 		case 'inicio':
 		
-
-			// $student->setUserId($_POST["usuarioId"]);
-			// $info = $student->GetInfo();
-			// echo DOC_ROOT."/alumnos/".$info["userId"].".jpg";
-			// if(file_exists(DOC_ROOT."/alumnos/".$info["userId"].".jpg"))
-			// {
-				// echo 'si';
-				// $urlFoto = "<img src='".WEB_ROOT."/alumnos/".$info["userId"].".jpg?".rand()."' style='width:100px; height:100px; border-radius: 50%;' />";
-				// $fotoHeader = "<img src='".WEB_ROOT."/alumnos/".$info["userId"].".jpg?".rand()."' style='width:30px; border-radius: 50%;' />";
-			// }else{
-				// echo  'no';
-				// $urlFoto = "<img src='".WEB_ROOT."/alumnos/no_foto.JPG' style='width:100px; border-radius: 50%;' />";
-				// $fotoHeader = "<img src='".WEB_ROOT."/alumnos/no_foto.JPG' style='width:30px; border-radius: 50%;' />";
-			// }
+			$lstmenu = $imagen->loadMenu();
+			echo 'ok[#]';
 			
-			// $activeCourses = $student->StudentCourses("activo", "si");
-			// $inactiveCourses = $student->StudentCourses("inactivo", "si");
-			// $finishedCourses = $student->StudentCourses("finalizado");
-			
-			
-			// echo "ok[#]";
-			// echo $fotoHeader;
-			// echo "[#]";
-			// include(DOC_ROOT.'/ajax/app/view/perfil-inicio.php');
-			// echo "[#]";
-			// include(DOC_ROOT.'/ajax/app/view/curricula-activa.php');
-			// echo "[#]";
-			// include(DOC_ROOT.'/ajax/app/view/curricula-inactiva.php');
-			// echo "[#]";
-			// include(DOC_ROOT.'/ajax/app/view/curricula-finalizada.php');
-			// echo "[#]";
-			// echo count($activeCourses);
-			// echo "[#]";
-			// echo count($inactiveCourses);
-			// echo "[#]";
-			// echo count($finishedCourses);
-					
+			// echo '<pre>'; print_r($lstmenu);
+			include(DOC_ROOT.'/ajax/app/view/menu.php');
+			// echo 'hola';
 		break;
 		
 	

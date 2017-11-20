@@ -9,7 +9,7 @@ include_once(DOC_ROOT.'/libraries.php');
 	switch($_POST["type"])
 	{
 		
-		 case '1':
+		 case '2':
 		 
 			
 			$lstProducto = $imagen->EnumeraProductos();
@@ -20,7 +20,18 @@ include_once(DOC_ROOT.'/libraries.php');
 			
         break;
 		
-		case '2':
+		case '3':
+		 
+			
+			$producto->setClienteId($_POST['usuarioId']);
+			$lstdata = $producto->misPedidos();
+			echo 'ok[#]';
+			include(DOC_ROOT.'/ajax/app/view/mis-pedidos.php');
+
+			
+        break;
+		
+		case '6':
 			$infoVta = $producto->appinfoVenta($_POST['usuarioId']); 	
 			$lstDir = $producto->appmisDirecciones($_POST['usuarioId']);
 			$lstRFC = $producto->appmisRFC($_POST['usuarioId']);
@@ -36,6 +47,13 @@ include_once(DOC_ROOT.'/libraries.php');
 			include(DOC_ROOT.'/ajax/app/view/checkout.php');
 		break;
 		
+		case '7':
+
+			$lstdata = $producto->appdetalleCarrito($_POST['usuarioId']);
+			// echo '<pre>'; print_r($lstdata);
+			echo 'ok[#]';
+			include(DOC_ROOT.'/ajax/app/view/carrito.php');
+		break;
 		
 	
 	}
