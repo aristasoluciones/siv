@@ -1,4 +1,4 @@
-var AJAX_PATH = WEB_ROOT+"/ajax/encuentro.php";
+var AJAX_PATH = WEB_ROOT+"/ajax/fechaentrega.php";
 
 
 

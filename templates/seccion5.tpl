@@ -20,14 +20,8 @@
 		&nbsp;
 		&nbsp;
 		&nbsp;
-		&nbsp;
-		&nbsp;
-
+		&nbsp;		
 	  </div>
-
-
-	
-
  {/foreach}
 
 <div class="eight columns">
@@ -41,8 +35,7 @@
   <br>
   <a class="button jade">Purchase Now</a>	 
   </div>-->
- 
-  </div>
+ </div>
   
 </article>
 </section>

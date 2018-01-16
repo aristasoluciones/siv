@@ -17,7 +17,8 @@
 								<br>
 								<img src="{$WEB_ROOT}/images/camion-de-entrega-de-la-logistica-en-el-movimiento.png" class="ls-bg" alt="" width="2%">
 								&nbsp;
-								<font color="black">Servicio a Domicilio</font>
+								<font color="black"><a href="{$WEB_ROOT}/producto">Servicio a Domicilio</a></font>
+								      
 								<br>
 								<font color="black" size='5'>{$countCar} </font><b><font color="black">Articulo(s)</font></b>
 							</div>
