@@ -1347,7 +1347,51 @@ class Imagen extends Main
 		return true;
 		
 	}
-						
+	
+	public function loadMenu(){
+		
+		 $sql = '
+				SELECT 
+					* 
+				FROM 
+					  menu
+				WHERE  dependeId = 0';
+		$this->Util()->DB()->setQuery($sql);
+		$info = $this->Util()->DB()->GetResult();
+		
+		foreach($info as $key=>$aux){
+			
+			 $sql = '
+				SELECT 
+					* 
+				FROM 
+					  menu
+				WHERE  dependeId = '.$aux['menuId'].'';
+			$this->Util()->DB()->setQuery($sql);
+			$info55 = $this->Util()->DB()->GetResult();	
+			$info[$key]['count'] = count($info55);			
+			$info[$key]['submenu'] = $info55;
+		
+		}
+		return $info;		
+	}
+
+	
+	public function loadSubMenu($Id){
+		
+		
+			
+		$sql = '
+				SELECT 
+					* 
+				FROM 
+					  menu
+				WHERE  dependeId = '.$Id.'';
+			$this->Util()->DB()->setQuery($sql);
+			$info = $this->Util()->DB()->GetResult();	
+
+		return $info;		
+	}
 }
 
 ?>

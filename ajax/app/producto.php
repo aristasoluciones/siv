@@ -1,7 +1,5 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-// echo '<pre>'; print_r($_POST);
-// exit; 
 include_once('../../init.php');
 include_once('../../config.php');
 include_once(DOC_ROOT.'/libraries.php');
@@ -14,10 +12,14 @@ session_start();
 		 case 'verProductos':
 			$imagen->setValor($_POST["Id"]);
 			$InfoCategoria = $imagen->InfoCategoria();
+			$lstSub = $imagen->loadSubMenu(5);
+			$countcar = $producto->countProductosinCar($_POST['usuarioId']);
 			echo 'ok[#]';
 			include(DOC_ROOT.'/ajax/app/view/productos.php');
 			echo '[#]';
 			include(DOC_ROOT.'/ajax/app/view/sub-menu.php');
+			echo '[#]';
+			echo trim($countcar);
 			
 		break;
 		
@@ -32,7 +34,10 @@ session_start();
 		$producto->setCosto($info['precioActual']);
 		$producto->setClienteId($_POST['usuarioId']);
 		$producto->appAddCar();
-			echo "ok[#]";
+		$countcar = $producto->countProductosinCar($_POST['usuarioId']);
+		echo "ok[#]";
+		echo "[#]";
+		echo $countcar;
 
 		break;
 		

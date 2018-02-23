@@ -39,34 +39,34 @@
 
 
 <form id="frm_1">
-	<table>
+	<table class='formsjj'>
 		<tr>
-			<td><font color="black">Calle:</font><input type="text" name="calle" id="calle" value="<?php echo $infoVta['calle']?>"></td>
+			<td>Calle:<input class="form-control" type="text" name="calle" id="calle" value="<?php echo $infoVta['calle']?>"></td>
 		</tr>
 		<tr>
-			<td><font color="black">Numero Interior:</font><input type="text" name="numInterior" id="numInterior" value="<?php echo $infoVta['numeroInterior']?>"></td>
+			<td>Numero Interior:<input class="form-control" type="text" name="numInterior" id="numInterior" value="<?php echo $infoVta['numeroInterior']?>"></td>
 		</tr>	
 		<tr>	
-			<td><font color="black">Numero Exterior:</font><input type="text" name="numExterior" id="numExterior" value="<?php echo $infoVta['numeroExterior']?>"></td>
+			<td>Numero Exterior:<input class="form-control" type="text" name="numExterior" id="numExterior" value="<?php echo $infoVta['numeroExterior']?>"></td>
 		</tr>
 		<tr>
-			<td><font color="black">Entre Calle 1:</font><input type="text" name="entre1" id="entre1" value="<?php echo $infoVta['entreCalle1']?>"></td>
+			<td>Entre Calle 1:<input class="form-control" type="text" name="entre1" id="entre1" value="<?php echo $infoVta['entreCalle1']?>"></td>
 		</tr>	
 		<tr>	
-		<td><font color="black">Entre Calle 2:</font><input type="text" name="entre2" id="entre2" value="<?php echo $infoVta['entreCalle2']?>" ></td>
+		<td>Entre Calle 2:<input type="text" class="form-control" name="entre2" id="entre2" value="<?php echo $infoVta['entreCalle2']?>" ></td>
 		</tr>
 		<tr>
-		<td><font color="black">Referencias de tu domicilio:</font><input type="text" name="referencia" id="referencia" value="<?php echo $infoVta['referencias']?>" ></td>
+		<td>Referencias de tu domicilio:<input type="text" class="form-control" name="referencia" id="referencia" value="<?php echo $infoVta['referencias']?>" ></td>
 		</tr>
 		<tr>
-			<td><font color="black">Codigo Postal:</font><input type="text" name="cp" id="cp"  value="<?php echo $infoVta['cp']?>"></td>
+			<td>Codigo Postal:<input type="text" class="form-control" name="cp" id="cp"  value="<?php echo $infoVta['cp']?>"></td>
 		</tr>
 		<tr>
-		<td><font color="black">Colonia:</font><input type="text" name="colonia" id="colonia"  value="<?php echo $infoVta['colonia']?>"></td>
+		<td>Colonia:<input type="text" class="form-control" name="colonia" id="colonia"  value="<?php echo $infoVta['colonia']?>"></td>
 		</tr>	
 		<tr>	
-			<td><font color="black">Delegación o Municipio:</font>
-			<select name="municipio" id="municipio">
+			<td>Delegación o Municipio:
+			<select name="municipio" id="municipio" class="form-control">
 				<option></option>
 				<font color="black">{foreach from=$lstM item=item key=key}</font>
 					<option value="{$item.municipioId}" {if $infoVta.municipio eq $item.municipioId} selected {/if}><font color="black"><?php echo $infoVta['nombre']?></font></option>
@@ -77,10 +77,10 @@
 		</tr>
 		<tr>
 			
-			<td>Coordenada X<input type="text" name="coordenadax" id="coordenadax"></td>
+			<td>Coordenada X<input type="text" name="coordenadax" id="coordenadax" class="form-control"></td>
 		</tr>
 		<tr>
-			<td>Coordenada Y<input type="text" name="coordenaday" id="coordenaday"></td>
+			<td>Coordenada Y<input type="text" name="coordenaday" id="coordenaday" class="form-control"></td>
 			<td><br><br></td>
 		</tr>
 	</table>

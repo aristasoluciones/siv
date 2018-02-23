@@ -1430,6 +1430,20 @@ class Producto extends Main
 		
 	}
 	
+	public function countProductosinCar($Id){
+		
+		
+		$sql = "SELECT 
+					count(*)
+				FROM 
+					detalleventas as dv
+				WHERE clienteId =  ".$Id." and estatus = 'captura'";
+			$this->Util()->DB()->setQuery($sql);
+		$infoClt = $this->Util()->DB()->GetSingle();
+		
+		return $infoClt;
+		
+	}
 	
 	public function appAddCar(){
 						
@@ -1460,6 +1474,22 @@ class Producto extends Main
 		return true;
 		
 	}//Save
+	
+	
+	public function misPedidos(){
+		
+		
+		$sql = "SELECT 
+					*
+				FROM 
+					ventas 
+				WHERE clienteId =  ".$this->clienteId."";
+			$this->Util()->DB()->setQuery($sql);
+		$infoClt = $this->Util()->DB()->GetResult();
+		
+		return $infoClt;
+		
+	}
 }
 
 ?>

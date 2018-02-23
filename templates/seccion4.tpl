@@ -4,6 +4,17 @@
     	<div class="latest-f-blog clearfix">
     		<div class="sixteen columns">
     			<div class="sub-content">
+				
+				
+	<form id="frmFiltro">
+		Productos<input type="text" name="producto" id="producto" onkeyup="LoadPage()">
+	</form>
+	<button class="btn yellow" onclick="LoadPage()">Buscar</button>
+	<div class="portlet-body" id="tblContent">
+		
+	</div>
+				
+		
 					<h1 class="h-sub-content">PRECIOS BAJOS GARANTIZADOS</h1>
 				</div>
     		</div>

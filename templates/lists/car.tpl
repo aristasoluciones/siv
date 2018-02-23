@@ -26,7 +26,7 @@
 				{$item.descripcion}
 			</td>
 			<td><div align="center"><font color="black">${$item.precioActual|number_format:2:'.':','}</font></div></td>
-            <td><div align="center"><input type="" name="cantidad_{$key}" id="cantidad_{$key}" value="{$item.cantidad}" style="width:50px"></div></td>
+            <td><div align="center"><input type="number" name="cantidad_{$key}" id="cantidad_{$key}" value="{$item.cantidad}" style="width:50px"></div></td>
             <td><div align="center">${$item.total|number_format:2:'.':','}</div></td>
             <td><div align="center">
 				<a class="btn btn-xs red" button type="button" class="close" data-dismiss="alert" onClick="deleteCar('{$item.key}')">&times;</button>
@@ -51,6 +51,7 @@
 			</a>
 			</td>
 		</tr>
+		
 		<tr>
 			<td></td>
 			<td></td>
